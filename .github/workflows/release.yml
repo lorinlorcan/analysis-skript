@@ -1,0 +1,49 @@
+name: Release new version
+
+on:
+  push:
+    tags: 
+      - v*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install TeX Live
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y texlive-base texlive-xetex
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r matplotlib/requirements.txt
+    - name: Generate 3d Plots with MatPlotLib
+      run: |
+        python matplotlib/plot.py
+    - name: Add version in document
+      run: |
+        sed -i "s/\\\\newcommand{\\\\version}{}/\\\\newcommand{\\\\version}{${GITHUB_REF##*/}}/" config.tex
+    - name: Compile LaTeX document
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: main.tex
+    - name: Rename document
+      run: |
+        mv main.pdf Analysis-Skript.pdf
+    - name: Create release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        draft: true
+        prerelease: false
+        files: |
+          Analysis-Skript.pdf
+

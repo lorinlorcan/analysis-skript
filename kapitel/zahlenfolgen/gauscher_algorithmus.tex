@@ -1,0 +1,19 @@
+\subsection{Gaußscher Algorithmus}
+
+\begin{align*}
+    \sum_{i=1}^n a_i &= a_1 + a_2 + a_3 + \cdots + a_{n-1} + a_n \\
+    \\
+    \sum_{i=1}^n a_i &= a + (a + d) + (a + 2d) + \cdots + (a +(n-2) d) + (a + (n - 1) d) \\
+    \sum_{i=1}^n a_i &= (a + (n-1)d) + (a +(n-2) d) + \cdots + (a + 2d) + (a + d) + a \\
+    \cline{1-2}
+    2 \cdot \sum_{i=1}^n a_i &= (2a+(n-1)d) + (2a+(n-1)d) + \cdots + (2a+(n-1)d) \\
+    \\
+    2 \cdot \sum_{i=1}^n a_i &= n (2a+(n-1)d) = 2n a + n(n-1)d
+\end{align*}
+
+\begin{gesetz}
+    \paragraph{Summe einer arithmetischen Folge bis \(n\)}
+    \[
+        \sum_{i=1}^n a_i = n a + \frac{n(n-1)}{2} d
+    \]
+\end{gesetz}

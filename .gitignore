@@ -1,0 +1,11 @@
+*.toc
+*.log
+*.aux
+*.fdb_latexmk
+*.gz
+*.fls
+*.pdf
+*.afdesign
+*.synctex(busy)
+*.out
+*.pgf

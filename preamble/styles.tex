@@ -1,0 +1,34 @@
+% Eigene Farben für eigenes Farbschema
+\definecolor{mkblue}{RGB}{56,159,224}
+\definecolor{mkgreen}{RGB}{94,166,21}
+\definecolor{mkyellow}{RGB}{237,162,9}
+\definecolor{mkred}{RGB}{214,0,113}
+
+% Basisstil für TikZ-Graphen
+\pgfplotsset{defaultpure/.style={
+    xmin=-4.2, xmax=4.2,
+    ymin=-4.2, ymax=4.2,
+    width=6cm,
+    grid=both,
+    axis lines=middle,
+    grid style={line width=.1pt, draw=gray!20},
+    major grid style={line width=.2pt,draw=gray!50},    
+    ticklabel style={font=\tiny},
+    xlabel style={font=\tiny},
+    ylabel style={font=\tiny},
+    xlabel={x}, ylabel={y}
+}}
+
+% Graphenstil, der das Basisprofil um 1:1 Skalierung ergänzt
+\pgfplotsset{default/.style={
+    defaultpure,
+    unit vector ratio*=1 1 1
+}}
+    
+% Graphenstil, der nicht beschriftete Achsen hat 
+\pgfplotsset{defaultnonumbers/.style={
+    default,
+    xticklabels={},
+    yticklabels={}
+}}
+

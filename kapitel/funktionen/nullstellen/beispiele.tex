@@ -1,0 +1,80 @@
+\subsubsection{Beispiele}
+
+\paragraph{1. Beispiel}
+
+\[
+    f(x) = 9x^2-x^4
+\]
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            defaultpure,
+            xmin=-4.2, xmax=4.2,
+            ymin=-2.2, ymax=22.2,
+            width=6cm
+            ]
+            \draw [orange, smooth, samples=100, domain=-4:4] plot (\x, {9 * pow(\x, 2) -
+            pow(\x, 4)});
+        \end{axis}
+    \end{tikzpicture}
+    \caption{\(f(x) = 9x^2-x^4\)}\label{fig:nullstellen_grad4}
+\end{figure}
+
+
+\begin{align*}
+    D_f = \{ x \mid x \in \mathbb{R} \} \\  
+    \text{Symmetrie:} f(x) \text{ ist gerade} \\
+    -x^4 \rightarrow \text{geht ins negative} \\
+    \lim_{x\rightarrow\pm\infty} = - \infty
+\end{align*}
+
+Nullstellen:
+
+\[
+    f(x) = x^2(9-x^2) = x^2 (3^2 - x^2) = \underbrace{x^2}_{0\ \text{(doppelt)}} (3 - \underbrace{x}_{3}) (3 + \underbrace{x}_{-3}) 
+\]
+
+\paragraph{2. Beispiel}
+
+\[
+    f(x) = (x^2 - 1)(x^2 - 4) x  
+\]
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            default,
+            xmin=-4.2, xmax=4.2,
+            ymin=-4.2, ymax=4.2,
+            width=6cm
+            ]
+            \draw [orange, smooth, samples=100, domain=-2.5:2.5] plot (\x, {(pow(\x,
+            2) - 1) * (pow(\x, 2) - 4) * \x});
+        \end{axis}
+    \end{tikzpicture}
+    \caption{\(f(x) = (x^2 - 1)(x^2 - 4)x\)}\label{fig:nullstellen_grad5}
+\end{figure}
+
+\begin{align*}
+    f(x) &= \underbrace{(x^2-1)}_{x = \pm 1}
+            \underbrace{(x^2-4)}_{x = \pm 2}
+            \underbrace{x}_{x = 0} \\
+    &= (x^4 - x^2 - 4x^2 + 4)x \\
+    &= x^5 - x^3 - 4x^3 +4x \\
+    &= x^5 - 5x^3 + 4x
+\end{align*}
+
+\begin{align*}
+    \limtoinfty{x} f(x) &= \infty \\
+    \limtomininfty{x} f(x) &= -\infty
+\end{align*}
+
+\begin{itemize}
+    \item ungerade Exponenten: punktsymetrisch zum Ursprung
+    \item Höchster Exponent:5 \\
+        \textrightarrow\ Funktion 5. Grades \\
+        \textrightarrow\ 5 Nullstellen
+\end{itemize}

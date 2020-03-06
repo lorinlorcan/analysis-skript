@@ -1,0 +1,61 @@
+\subsubsection{Quadratische Funktion}
+
+\[
+    y = \underbrace{\underbrace{ax^2}_{\text{Potenzfunktion}} + bx + c}
+        _{\text{Polynom / ganze Funktion}}
+\]
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            defaultnonumbers,
+            xmin=-2.2, xmax=6.2,
+            ymin=-2.2, ymax=6.2,
+            width=8.8cm
+            ]
+            \draw [cyan, smooth, samples=100] plot (\x, {pow(\x, 2)});
+            \draw [orange, smooth, samples=100] plot (\x, {pow(\x, 2) - 6 * \x + 11});
+            \node at (axis cs: -2/3, 2) {\( b \)};
+            \node at (axis cs: -2/3, 3) {\( y_0 \)};
+            \node at (axis cs: 3, -2/3) {\( a \)};
+            \node at (axis cs: 4, -2/3) {\( x_0 \)};
+            \draw[-, gray] (0,2) -- (3,2);
+            \draw[-, gray] (0,3) -- (4,3);
+            \draw[-, gray] (3,0) -- (3,2);
+            \draw[-, gray] (4,0) -- (4,3);
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}
+
+\begin{align*}
+    y &= x^2 & \rightarrow y' &= x'^2 \\
+    x_0 &= a + x'_0 & \Rightarrow x'_0 &= x_0 - a \\
+    y_0 &= b + y'_0 & \Rightarrow y'_0 &= y_0 - b \\
+    \\
+    y' &= x'^2 \\
+    (y_0 - b) &= {(x_0 -a)}^2 \\
+    y_0 &= {(x_0 - a)}^2 + b \\
+    y &= {(x - a)}^2 + b
+\end{align*}
+
+\paragraph{Verschiebung auf der x-Achse}
+
+\begin{description}[style=nextline]
+    \item[negatives \(a\)] Verschiebung nach rechts
+    \item[positives \(a\)] Verschiebung nach links
+\end{description}
+
+\paragraph{Herleitung der p-q-Formel}
+
+\begin{align*}
+    && y = a x^2 + b x +c &= 0 \\
+    \\
+    && x^2 + px + q &= 0 \\
+    \Leftrightarrow&& x^2 + px &= -q &\mid \text{Quadratische Ergänzung} \\
+    \Leftrightarrow&& x^2 + px + {\left(\frac{p}{2}\right)}^2 &= -q + {\left(\frac{p}{2}\right)}^2 \\
+    \Leftrightarrow&& {\left( x+\frac{p}{2} \right)}^2 &= {\left(\frac{p}{2}\right)}^2 - q \\
+    \Rightarrow&& x + \frac{p}{2} &= \pm \sqrt{{\left(\frac{p}{2}\right)}^2 - q} \\
+    \Leftrightarrow&& x_{1,2} &= -\frac{p}{2} \pm \sqrt{{\left(\frac{p}{2}\right)}^2 - q}
+\end{align*}
+

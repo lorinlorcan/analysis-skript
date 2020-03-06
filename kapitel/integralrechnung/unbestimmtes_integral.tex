@@ -1,0 +1,72 @@
+\subsection{Unbestimmtes Integral}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            default,
+            xmin=-1.5, xmax=4.5,
+            ymin=-0.5, ymax=4.5,
+            width=10cm,
+            xlabel=t,
+            xticklabels={},
+            yticklabels={}
+            ]
+            \addplot[name path=e, orange, smooth, samples=100, domain=-2.5:4.5]
+            {0.5*e^(0.5*x)};
+            \addplot[name path=o, transparent, smooth, samples=100, domain=-0.5:4.5]
+            {0};
+            
+            \addplot[mkyellow, opacity=0.5]
+            fill between [of=e and o, soft clip={domain=2.5:4}];
+            \addplot[mkblue, opacity=0.5]
+            fill between [of=e and o, soft clip={domain=0.5:2.5}];
+            
+            \draw (0.5, 0) -- (0.5, 0.6420);
+            \draw (2.5, 0) -- (2.5, 1.7452);
+            \draw (4.0, 0) -- (4.0, 3.6945);
+            
+            \node[below] at (0.5, -0.1) {\( a \)};
+            \node[below] at (2.5, -0.1) {\( \leftarrow x \rightarrow \)};
+            \node[below] at (4.0, -0.1) {\( x + \Delta x \)};
+            
+            \draw[dashed] (-0.1, 1.7452) -- (2.5, 1.7452);
+            \draw[dashed] (-0.1, 3.6945) -- (4.0, 3.6945);
+            
+            \node[left] at (-0.1, 1.7452) {\( f(x) \)};
+            \node[left] at (-0.1, 3.6945) {\( f(x + \Delta x) \)};
+            
+            \node at (3.0, 1.0) {\( \Delta I \)};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{align*}
+    I(x) &= \int_a^x f(x) \,\mathrm{d}x \\
+    I(x + \Delta x) &= \int_a^{x + \Delta x} f(x) \,\mathrm{d}x \\
+    \Delta I &= I(x + \Delta x) - I(x) 
+\end{align*}
+
+\begin{bigarray}
+    \begin{array}{rcl}
+        f(x) \cdot \Delta x \leq & \Delta I & \leq f(x + \Delta x) \cdot x \qquad | : \Delta x \\
+        f(x) \leq & \frac{\Delta I}{\Delta x} & \leq f(x + \Delta x) \\
+        \limtoinfty{\Delta x} f(x) \leq & \underbrace{\limtoinfty{\Delta x} \frac{\Delta I}{\Delta x}}_{I'(x)} & \leq \limtoinfty{\Delta x} f(x + \Delta x)
+    \end{array}  
+\end{bigarray}
+
+\begin{align*}
+    \Rightarrow f(x) = I'(x) \\
+    \left[ I(x) \right]' = \left[ \int_a^x f(x) \,\mathrm{d}x \right]' = f(x)
+\end{align*}
+
+\[
+    I(x) = \int_a^x f(x) \,\mathrm{d}x = F(x) + C    
+\]
+
+\begin{gesetz}
+    \[
+        \int f(x) \,\mathrm{d}x  
+    \]
+\end{gesetz}

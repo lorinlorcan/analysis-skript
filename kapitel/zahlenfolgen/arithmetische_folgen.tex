@@ -1,0 +1,113 @@
+\subsection{Arithmetische Folgen}
+
+\subsubsection{Bildungsgesetz}
+
+\begin{align*}
+	a_n     & = \frac{a_{n+1} + a_{n-1}}{2} \\
+	2 a_n   & = a_{n+1} + a_{n-1}           \\
+	a_{n+1} & = 2 a_n - a_{n-1}             
+\end{align*}
+
+\begin{gesetz}
+	\paragraph{Rekursives Bildungsgesetz}
+	
+	\[
+		a_{n+1} = 2 a_n - a_{n-1}
+	\]
+\end{gesetz}
+
+\paragraph{Beispiel}
+
+\subparagraph{Anfangsbedingung:}
+
+\begin{align*}
+	a_1 & = a     \\
+	a_2 & = a + d 
+\end{align*}
+
+\[
+	\begin{alignedat}{4}
+		a_3 & : a_{2+1} & = 2a_2 - a_1 & \Rightarrow a_3 = 2(a+d) - a       & = a + 2d \\
+		a_4 & : a_{3+1} & = 2a_3 - a_2 & \Rightarrow a_4 = 2(a+2d) - (a+d)  & = a + 3d \\
+		a_5 & : a_{4+1} & = 2a_4 - a_3 & \Rightarrow a_4 = 2(a+3d) - (a+2d) & = a + 4d 
+	\end{alignedat}
+\]
+
+
+\begin{gesetz}
+	\paragraph{Explizites Bildungsgesetz}
+	
+	\[
+		a_n = a + (n - 1)d
+	\]
+\end{gesetz}
+
+\subsubsection{Beispiel für eine Folge 1. Ordnung}
+
+\[
+	\langle a_n \rangle = 6 \underbrace{,}_{4} 10 \underbrace{,}_{4} 14 \underbrace{,}_{4} 18,\ \ldots \\
+\]
+
+\paragraph{Allgemeine Lösung}
+
+\[
+	a_n = c_1 \cdot n + c_2 \\
+\]
+
+\paragraph{Lösungsweg}
+
+\begin{align*}
+	\left.
+		\begin{array}{l}
+			6 = c_1 \cdot 1 + c_2 \\
+			10 = c_1 \cdot 2 + c_2
+		\end{array}
+	\right \}
+	\left.
+		\begin{array}{l}
+			c_1 = 4 \\
+			c_2 = 2
+		\end{array}
+	\right.
+\end{align*}
+
+\paragraph{Lösung}
+
+\[
+	*a_n = 6 + (n - 1) \cdot 4 = 2 + 4 n
+\]
+
+\subsubsection{Beispiel für eine Folge 2. Ordnung}
+
+\[
+	\langle a_n \rangle = 1,\ 7,\ 17,\ 31,\ 49,\ \ldots 
+\]
+
+\[
+	\begin{tabular}{ccccccccccccc}
+		1&,&7&,&17&,&31&,&49\\[-3pt]
+		& \ubf&&\ubf&&\ubf&&\ubf \\
+		& 6&&10&&14&&18\\[-3pt]
+		&  &\ubf&&\ubf&&\ubf \\
+		&  &4&&4&&4
+  	\end{tabular}
+\]
+
+\paragraph{Allgemeine Lösung}
+
+\[
+	a_n = c_1\ n^2 + c_2\ n + c_3
+\]
+
+\paragraph{Lösungsweg}
+
+\[
+	\left.
+		\begin{array}{lcl}
+			1 & = c_1 \cdot 1^2 + c_2 \cdot 1 + c_3 \\
+			7 & = c_1 \cdot 2^2 + c_2 \cdot 2 + c_3 \\
+			17 & = c_1 \cdot 3^2 + c_2 \cdot 3 + c_3
+		\end{array}
+	\right \}
+	a_n = 2n^2 {-} 1
+\]

@@ -1,0 +1,86 @@
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+% Rand
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm]{geometry}
+
+% Kopf- und Fußzeilen
+\usepackage[footsepline]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\clearpairofpagestyles
+
+\automark{section}
+\ifoot{\footnotesize\textnormal\headmark}
+\cfoot{\footnotesize\textnormal\thepage}
+\ofoot{\footnotesize\textnormal\version}
+
+% Fonts
+\usepackage[sfdefault]{FiraSans}
+\usepackage{newtxsf}
+
+% Anführungszeichen
+\usepackage[autostyle=true,german=quotes]{csquotes}
+
+% AMS-Pakete
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Polynomdivision
+\usepackage{polynom}
+
+% Durchstreichen von Formeln
+\usepackage{cancel}
+
+% Symbole im Textmodus
+\usepackage{textcomp}
+
+% Griechische Buchstaben im Textmodus
+\usepackage{textgreek}
+
+% Definitionslisten
+\usepackage[shortlabels]{enumitem}
+
+% für das Einbinden von Grafiken
+\usepackage{graphicx}
+\usepackage{svg}
+
+% Gegen Einrückung von neuen Absätzen
+\setlength{\parindent}{0em}
+
+% Farbinge Boxen
+\usepackage{tcolorbox}
+
+% Farben
+\usepackage{xcolor}
+
+% Float für Bilder etc
+\usepackage{float}
+
+% Tikz
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\usepgfplotslibrary{fillbetween}
+
+% Muster als Füllung
+\usetikzlibrary{patterns}
+
+% Tables
+\usepackage{booktabs}
+
+\usepackage{multirow}
+
+% Bilder neben Text
+%\usepackage{wrapfig}
+
+% PDF Meta
+\usepackage[pdftex,
+            pdfauthor={},
+            pdftitle={Analysis: Das inoffizielle Skript},
+            pdfsubject={Analysis Vorlesung},
+            pdfkeywords={Analysis Skript},
+            hidelinks]{hyperref}
+
+% Akzeptiert Kommas in Mathe
+\usepackage{icomma}

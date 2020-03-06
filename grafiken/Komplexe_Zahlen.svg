@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 340 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-60,0)">
+        <rect id="Komplexe_Zahlen" x="0" y="0" width="400" height="400" style="fill:none;"/>
+        <g id="Komplexe_Zahlen1" serif:id="Komplexe_Zahlen">
+            <path d="M200,340L200,40" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(0.8125,0,0,1,67.5,0)">
+                <path d="M40,200L360,200" style="fill:none;stroke:black;stroke-width:1.1px;"/>
+            </g>
+            <g transform="matrix(0.5,0,0,1,100,0)">
+                <path d="M190,50L200,40L210,50" style="fill:none;stroke:black;stroke-width:1.26px;"/>
+            </g>
+            <g transform="matrix(3.06162e-17,0.5,-1,6.12323e-17,400,100)">
+                <path d="M190,50L200,40L210,50" style="fill:none;stroke:black;stroke-width:1.26px;"/>
+            </g>
+            <path d="M190,100L200,100" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(6.12323e-17,1,-1,6.12323e-17,400,10)">
+                <path d="M190,100L200,100" style="fill:none;stroke:black;stroke-width:1px;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,2.9921,-8.94937)">
+                <text x="293.709px" y="232.061px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">a</text>
+            </g>
+            <g transform="matrix(1,0,0,1,-117.008,-128.949)">
+                <text x="293.709px" y="232.061px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">b</text>
+            </g>
+            <g transform="matrix(1,0,0,1,0,200.479)">
+                <path d="M190,100L200,100" style="fill:none;stroke:black;stroke-width:1px;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,-117.008,71.5291)">
+                <text x="293.709px" y="232.061px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;">-b</text>
+            </g>
+            <path d="M300,100L200,200" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-dasharray:1,2,1,0;"/>
+            <g transform="matrix(1,0,0,-1,0,400)">
+                <path d="M300,100L200,200" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-dasharray:1,2,1,0;"/>
+            </g>
+            <g>
+                <g transform="matrix(0.707107,0.707107,-0.707107,0.707107,158.579,-182.843)">
+                    <path d="M295,95L305,105" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;"/>
+                </g>
+                <g transform="matrix(-0.707107,0.707107,-0.707107,-0.707107,582.843,-41.4214)">
+                    <path d="M295,95L305,105" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;"/>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,0,200)">
+                <g transform="matrix(0.707107,0.707107,-0.707107,0.707107,158.579,-182.843)">
+                    <path d="M295,95L305,105" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;"/>
+                </g>
+                <g transform="matrix(-0.707107,0.707107,-0.707107,-0.707107,582.843,-41.4214)">
+                    <path d="M295,95L305,105" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;"/>
+                </g>
+            </g>
+            <text x="306.887px" y="93.338px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;">z = a+ib</text>
+            <g transform="matrix(1,0,0,1,-2.42449,217.957)">
+                <text x="306.887px" y="93.338px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;">z = a-ib</text>
+            </g>
+            <text x="359.177px" y="219.889px" style="font-family:'Alef-Regular', 'Alef';font-size:12px;">Re(z)</text>
+            <g transform="matrix(1,0,0,1,-150.261,-176.113)">
+                <text x="359.177px" y="219.889px" style="font-family:'Alef-Regular', 'Alef';font-size:12px;">Im(z)</text>
+            </g>
+        </g>
+    </g>
+</svg>

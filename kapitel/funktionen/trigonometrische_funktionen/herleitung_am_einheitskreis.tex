@@ -1,0 +1,78 @@
+\subsubsection{Herleitung am Einheitskreiss}
+
+Der Einheitskreis wird beschrieben durch:
+
+\[
+    y^2+x^2 = 1
+\]
+
+oder auch
+
+\[
+    \sin^2(\alpha) + \cos^2(\alpha) = 1
+\]
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                defaultnonumbers,
+                xmin=-1.2, xmax=1.2,
+                ymin=-1.2, ymax=1.2,
+                width=8cm
+            ]
+            \draw (1, 0) arc (0:360:1);
+            \draw (0,0) -- (1.2, 1);
+            \node at (axis cs: -1.1, 0.1) {1};
+            \node at (axis cs: -0.1, -0.1) {M};
+            \node at (axis cs: -0.1, 1.1) {D};
+            \node at (axis cs: 1.1, -0.1) {B};
+            \node at (axis cs: 0.9, 10/11) {C};
+            \node at (axis cs: 0.6, 0.64) {P};
+            \node at (axis cs: 0.77, -0.1) {A};
+            \node at (axis cs: 1.1, 1.1) {E};
+            \node at (axis cs: 0.2, 0.08) {\textalpha};
+            \draw (0.3,0) arc (0:39.81:0.3);
+            \draw[mkred, thick] (0,1) -- (1.2, 1);
+            \node[mkred] at (axis cs: 0.5, 1.1) {cot(\textalpha)};
+            \draw[mkgreen, thick] (0.77,0) -- (0.77, 0.64);
+            \node[mkgreen, left] at (axis cs: 0.8, 0.25) {sin(\textalpha)};
+            \draw[mkyellow, thick] (1,0) -- (1, 5/6);
+            \node[mkyellow, rotate=90] at (axis cs: 1.1, 0.4) {tan(\textalpha)};
+            \draw[mkblue, thick] (0,0) -- (0.77,0);
+            \node[mkblue, below] at (axis cs: 0.4, 0) {cos(\textalpha)};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Herleitung der trigonometrischen Funktionen am Einheitskreis}
+\end{figure}
+
+Die Funktionen:
+
+\begin{itemize}
+    \item {
+        \color{mkgreen}
+        \textbf{Sinus:}
+    }\\
+    \(\overline{PA} = \sin(\alpha)\)
+    \item {
+        \color{mkblue}
+        \textbf{Cosinus\footnote{wird auch \enquote{Kosinus} geschrieben}:}
+    }\\
+    \(\overline{MA} = \cos(\alpha)\)
+    \item {
+        \color{mkyellow}
+        \textbf{Tangens:}
+    }\\
+    \(\overline{BC} = \tan(\alpha)\)
+    \item {
+        \color{mkred}
+        \textbf{Cotangens\footnote{wird auch \enquote{Kotangens} geschrieben}:}
+    }\\
+    \(\overline{DE} = \cot(\alpha)\)
+\end{itemize}
+
+
+\begin{align*}
+    \frac{\sin(\alpha)}{\cos(\alpha)} &= \tan(\alpha) \\  
+    \frac{\cos(\alpha)}{\sin(\alpha)} &= \cot(\alpha)  
+\end{align*}

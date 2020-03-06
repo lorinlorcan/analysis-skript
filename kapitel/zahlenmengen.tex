@@ -1,0 +1,69 @@
+\section{Zahlenmengen}
+
+\subsection{Natürliche Zahlen}
+
+\[
+	\mathbb{N} = \{0, 1, 2, 3, 4, \ldots \}
+\]
+
+Die Menge der natürlichen Zahlen ist bzgl. Addition, Multiplikation
+abgeschlossen.
+
+Wenn für \(a \cdot x = b\) nicht gelten soll, dass \(a\)
+größer oder gleich \(b\) ist, muss die Menge erweitert werden.
+
+\subsection{Ganze Zahlen}
+
+\[
+	\mathbb{Z} = \{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots \}
+\]
+
+Die Menge der ganzen Zahlen ist bzgl. Addition, Multiplikation und Subtraktion
+abgeschlossen.
+
+Wenn für \(a \cdot x = b\) nicht gelten soll, dass \(a\) ein Teil
+von \(b\) ist, muss die Menge erweitert werden.
+
+\subsection{Rationale Zahlen}
+
+\[
+	\mathbb{Q} = \left \{r = \frac{n}{m} \mid n \in \mathbb{Z}, m \in \mathbb{Z},
+	\text{n und m sind teilerfremd} \right \}
+\]
+
+Die Menge der rationalen Zahlen ist abgeschlossen bzgl. Addition,
+Multiplikation, Subtraktion und Division.
+
+Die rationalen Zahlen belegen einen Zahlenstrahl dicht.
+
+\subsection{Irrationale Zahlen}
+
+Eine irrationale Zahl ist eine nicht periodische Dezimalzahl.
+Sie ist nicht als Bruch zweier ganzen Zahlen darstellbar.
+
+Die Gleichung \(x^2 = 2\) hat keine Lösung in \(\mathbb{Q}\).
+
+Irrationale Zahlen lassen sich in algebraischen Zahlen, z.B. \(\sqrt{2}\) und
+transzendenten Zahlen (z.B. \(\pi, e\)) unterscheiden.
+
+\subsubsection{Indirekter Beweis (Euklid)}
+
+\[
+	\begin{alignedat}{2}
+		\sqrt{2} &= \frac{p}{q} \\
+		q \cdot \sqrt{2} &= p &\mid {()}^2 \\
+		q^2 \cdot 2 &= p^2 &p^2 \text{ ist gerade} \\
+		r = \frac{p}{2} \Rightarrow q^2 \cdot 2 &= 4r^2  &\mid :2 \\
+		q^2 &= 2r^2 &\Rightarrow \sqrt{2} \text{ ist keine rationale Zahl!}
+	\end{alignedat}
+\]
+
+\subsection{Reelle Zahlen}
+
+\[
+	\mathbb{R} = \{\mathbb{Q} \cup \text{Irrationale Zahlen}\}
+\]
+
+Die reellen Zahlen belegen einen Zahlenstrahl dicht und lückenlos.
+
+\input{kapitel/zahlenmengen/komplexe_zahlen.tex}

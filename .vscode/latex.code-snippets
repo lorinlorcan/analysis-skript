@@ -1,0 +1,28 @@
+{
+	"dx": {
+		"scope": "latex",
+		"prefix": "dx",
+		"body": [
+			"\\;\\mathrm{d}x"
+		],
+		"description": "dx for integrals"
+	},
+	"tgraph": {
+		"scope": "latex",
+		"prefix": "tgraph",
+		"body": [
+			"\\begin{tikzpicture}",
+			"\t\\begin{axis}[",
+			"\t\tdefault,",
+			"\t\txmin=$1, xmax=$2,",
+			"\t\tymin=$3, ymax=$4,",
+			"\t\twidth=$5cm,",
+			"\t]",
+			"\t\t\\addplot[orange, smooth, samples=100, domain=$1:$2]",
+			"\t\t{$6};",
+			"\t\\end{axis}",
+			"\\end{tikzpicture}"
+		],
+		"description": "Basic Graph"
+	}
+}

@@ -1,0 +1,108 @@
+\subsection{Logarithmusfunktionen}
+
+Die Lösung \( x \) der Gleichung \( a^x = b \) nennt man
+den Logarithmus von \( b \) zur Basis \( a \):
+
+\[
+    x = \log_a(b)
+\]
+
+Der Logarithmus von \( b \) zur Basis \( a \) ist jene reelle
+Zahl \( x \) mit der man \( a \) potenzieren muss, um \( b \)
+zu erhalten:
+
+\[
+    a^{\log_a(b)} = b    
+\]
+
+Die Logarithmusfunktion ist damit die Umkehrfunktion zur
+Exponentialfunktion.
+
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                default,
+                xmin=-2.2, xmax=2.2,
+                ymin=-1.2, ymax=3.2,
+                width=8cm
+            ]
+            \addplot[orange, smooth, samples=100, domain=0:2.2] {ln(x)};
+            \addplot[cyan, smooth, samples=100, domain=0:2.2] {-ln(x)};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{exponentiell steigend (\( e^x \)) und fallend( \( e^{-x} \))}
+\end{figure}
+
+
+\paragraph{Basis:}
+\begin{equation*}
+    \begin{array}{lll}
+        a = e &\Rightarrow \log_e(x) &= \ln(x) \\
+        a = 2 &\Rightarrow \log_2(x) &= \ld(x) = \lb(x) \\
+        a = 10 &\Rightarrow \log_10(x) &= \lg(x)
+    \end{array}
+\end{equation*}
+
+\subsubsection{Rechenregeln}
+
+\begin{align*}
+    \ln(a \cdot b) &= \ln(e^{\alpha} \cdot e^{\beta}) \\
+    &= ln(e^{(\alpha + \beta)}) \\
+    &= \alpha + \beta \\
+    &= \ln(e^{\alpha}) + \ln(e^{\beta}) \\
+    &= \ln(a) + \ln (b) \\
+    \\
+    \ln(a^3) &= \ln(a^2 \cdot a) \\
+    &= \ln(a^2) + \ln(a) \\
+    &= \ln(a) + \ln(a) + \ln(a) \\
+    &= 3 \cdot \ln(a) \\
+    \\
+    \ln(a^n) &= n \cdot \ln(a) \\
+    \\
+    \ln(\frac{a}{b}) &= \ln(a) + \ln(b^{-1}) \\
+    &= \ln(a) - \ln(b)
+\end{align*}
+
+\subsubsection{Basiswechsel}
+\[
+    \log_a(x) \rightarrow \log_b(x)    
+\]
+
+\begin{align*}
+    \log_a(x) = \log_a\left(b^{\log_b(x)}\right)
+    &= \log_b(x) \cdot \log_a(b) \\
+    \Rightarrow \log_a(x) &= \log_b(x) \cdot \frac{1}{\log_b(a)} \\
+    \Rightarrow \log_a(x) &= \frac{\log_b(x)}{\log_b(a)} \\
+    \text{wenn \(x = a\):} \\
+    \log_a(a) &= \log_b(a) \cdot \log_a(b) = 1 \\
+    \Rightarrow \log_a(b) &= \frac{1}{\log_b(a)} \\
+    \\
+    \text{Beispiel:} \\
+    \log_3(5) &= \frac{\ln(5)}{\ln(3)}
+\end{align*}
+
+\paragraph{Beispiele}
+
+\begin{align*}
+    & \log(2) - \log(a) + \frac{1}{2} \log(b) \\
+    &= \log\left(\frac{2}{a}\right) + \log\left(b^{\frac{1}{2}}\right) \\
+    &= \log\left(\frac{2}{a}\right) + \log\left(\sqrt{b}\right) \\
+    &= \log\left(\frac{2 \sqrt{b}}{a}\right)
+\end{align*}
+
+\begin{align*}
+    \log(1-x) + \log(1+x) - 2 \log(x) \\
+    &= \log((1-x)(1+x)) - \log\left(x^2\right) \\
+    &= \log(1-x^2) - \log\left(x^2\right) \\
+    &= \log\left(\frac{1-x^2}{x^2}\right) = \log\left(\frac{1}{x^2}-1\right)
+\end{align*}
+
+\begin{align*}
+    10^x &= 2 \\
+    \lg\left(10^x\right) &= \lg(2) \\
+    x \lg(10) &= \lg(2) \\
+    x \cdot 1 &= \lg(2) \\
+    x &= \lg(2)
+\end{align*}

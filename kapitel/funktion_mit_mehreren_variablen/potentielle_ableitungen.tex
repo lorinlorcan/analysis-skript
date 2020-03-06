@@ -1,0 +1,48 @@
+\subsection{Potentielle Ableitungen}
+
+% TODO: 3D-Graph
+
+\begin{align*}
+    y' &= \frac{\diff y}{\diff x} \\
+    y'' &= \frac{\diff^2 y}{\diff x^2} \\
+    \\
+    \frac{\partial f}{\partial x} &= f_x \qquad f_y \\
+    \frac{\partial^2 f}{\partial x^2} &= 
+    \begin{array}{ll}
+        f_{xx} & f_{yx} \\
+        f_{xy} & f_{yy}
+    \end{array} \\
+    \\
+    f_{yxy} &= f_{xyy} = f_{yyx}
+\end{align*}
+
+\begin{align*}
+    z &= f(x, y) = e^{x^2 + y^2} \\
+    f_x &= \left( x^2 + y^2 \right)' = e^{x^2 + y^2} \cdot 2 x
+    &f_{xy} = 2y \cdot e^{x^2 + y^2} \cdot 2x \\
+    f_y &= \left( e^{x^2 + y^2} \right)' = e^{x^2 + y^2} \cdot 2 y
+    &f_{yx} = 2x \cdot e^{x^2 + y^2} \cdot 2y
+\end{align*}
+
+\paragraph{Übungen}
+
+\subparagraph{1)}
+
+\begin{align*}
+    f(x, y) &= a^x \cdot y^a \\
+    f_x &= a^x \cdot \ln a \cdot y^a \\
+    f_y &= a^x \cdot a \cdot y^{a-1} \\
+    &= a^{x+1} \cdot y^{a-1}
+\end{align*}
+
+\subparagraph{2)}
+
+\begin{align*}
+    f(x, y) &= e^{x y} \cdot \frac{x}{y} \\
+    f_x &= e^{x y} \cdot \frac{1}{y} + e^{x y} \cdot y \cdot \frac{x}{y} \\
+    &= e^{x y} \left( \frac{1}{y} + x \right) \\
+    f_y &= \frac{x}{y} \cdot e^{x y} \cdot x + e^{x y} \left(-x y^{-2} \right) \\
+    &= e^{x y} \left( \frac{x^2}{y} - \frac{x}{y^2} \right) \\
+    f_{xy} &= e^{x y} \cdot x \left( \frac{1}{y} + x \right) + e^{x y} \left( - \frac{1}{y^2} \right) \\
+    &= e^{x y} \left( \frac{x}{y} + x^2 - \frac{1}{y^2} \right)
+\end{align*}

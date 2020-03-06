@@ -1,0 +1,96 @@
+\subsection{Symmetrie}
+
+\subsubsection{Achsensymmetrie}
+
+\[
+    f(-x) = f(x)  
+\]
+
+Ist der Fall für jede \enquote{gerade Funktion}, d.h.\ eine Funktion mit
+ausschließlich geraden Exponetenten.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            defaultnonumbers,
+            xmin=-4.2, xmax=4.2,
+            ymin=-2.2, ymax=6.2,
+            width=6cm
+            ]
+            \addplot[orange, smooth, samples=100] {x^2};
+            \draw[dotted, thick] (2,0) -- (2,4);
+            \draw[dotted, thick] (-2,0) -- (-2,4);
+            \draw[dotted, thick] (-2,4) -- (2,4);
+            \node at (axis cs: 2, -2/3) {\( x_0 \)};
+            \node at (axis cs: -2, -2/3) {\( -x_0 \)};
+            \node at (axis cs: -2/3, 4 + 2/3) {\( y_0 \)};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Achsensymmetrie}\label{fig:achsensymmetrie}
+\end{figure}
+
+\subsubsection{Punktsymmetrie (zum Ursprung)}
+
+\[
+    f(-x) = -f(x)  
+\]
+
+Ist der Fall für jede \enquote{ungerade Funktion}, d.h.\ eine Funktion mit
+ausschließlich ungeraden Exponetenten.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            defaultnonumbers,
+            xmin=-4.2, xmax=4.2,
+            ymin=-4.2, ymax=4.2,
+            width=6cm
+            ]
+            \draw[orange, smooth, samples=100] plot (\x, {pow(\x, 3)});
+            \draw[dotted, thick] (1.5,0) -- (1.5,27/8);
+            \draw[dotted, thick] (-1.5,0) -- (-1.5,-27/8);
+            \draw[dotted, thick] (0,27/8) -- (1.5,27/8);
+            \draw[dotted, thick] (0,-27/8) -- (-1.5,-27/8);
+            \node at (axis cs: 1.5, -2/3) {\( x_0 \)};
+            \node at (axis cs: -1.5, 2/3) {\( -x_0 \)};
+            \node at (axis cs: -2/3, 27/8) {\( y_0 \)};
+            \node at (axis cs: 2/3, -27/8) {\( -y_0 \)};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Punktsymmetrie}\label{fig:punktsymmetrie}
+\end{figure}
+
+\subsubsection{Symmetrie bei gebrochenen Funktionen}
+
+\begin{align*}
+    f(x) &= \frac{\text{gerade}}{\text{ungerade}} &&\hat{=}\ \text{ungerade Funktion} \\
+    f(x) &= \frac{\text{ungerade}}{\text{gerade}} &&\hat{=}\ \text{ungerade Funktion} \\
+    f(x) &= \frac{\text{gerade}}{\text{gerade}} &&\hat{=}\ \text{gerade Funktion} \\
+    f(x) &= \frac{\text{ungerade}}{\text{ungerade}} &&\hat{=}\ \text{gerade Funktion}
+\end{align*}
+
+\subsubsection{Beispiele}
+
+\begin{align*}
+    y = f(x) &= x^2 + 2x - 5 \\
+    f(-x) &= {(-x)}^2 + 2(-x) - 5 = x^2 - 2x - 5 &&\rightarrow \text{keine Achsensymmetrie} \\
+    -f(x) &= -1(x^2 + 2x - 5) = x^2 - 2x +5 &&\rightarrow \text{keine Punktsymmetrie}
+\end{align*}
+
+\textit{\(f(x)\) ist weder gerade noch ungerade, somit kann man auch direkt sehen,
+    dass die Funktion nicht symmetrisch ist.}
+
+
+\[
+    f(x) = x^7 + 3x^3 \rightarrow \text{punktsymmetrisch, da ungerade}
+\]
+
+\begin{align*}
+    y &= \sqrt{x^2 - 25} &&\rightarrow \text{gerade Funktion} &&\rightarrow \text{Achsensymmetrie} \\
+    y &= \sin(x) - \cos(x) &&\rightarrow \text{ungerade Funktion, (\(\sin(x)\) ist ungerade)} &&\rightarrow \text{Punktsymmetrie} \\
+    y &= 4 \cdot \sin^2(x) &&\rightarrow \text{gerade Funktion} &&\rightarrow \text{Achsensymmetrie}
+\end{align*}
+
+\input{kapitel/funktionen/symmetrie/quadrantenhalbierende.tex}

@@ -1,0 +1,47 @@
+\subsection{Stetigkeit und Grenzwert von Funktionen}
+
+\[
+    \lim_{x \rightarrow x_0} f(x) = g
+\]
+
+\( f(x) \) hat an der Stelle \( x_0 \) den Grenzwert \( g \),
+wenn es zu einem beliebig kleinen \( \epsilon > 0 \) eine Zahl \( \delta(\epsilon) \)
+gibt, so dass \( \mid f(x) - g \mid < \epsilon \) ist,
+\( \forall x \) für die \( \mid x - x_0 \mid < \delta \) gibt. 
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+                default,
+                xmin=-2.5, xmax=3.5,
+                ymin=-0.5, ymax=3.5,
+                width=8cm,
+                xticklabels={},
+                yticklabels={}
+            ]
+            \addplot[orange, smooth, samples=100, domain=-4:4] {1.5^x};
+            
+            \draw [dotted, thick] (1, -0.2) -- (1, 1.5);
+            \draw [dotted, thick] (2, -0.2) -- (2, 2.25);
+            \draw [dotted, thick] (3, -0.2) -- (3, 3.375);
+
+            \draw [dotted, thick] (-0.2, 1.5) -- (1, 1.5);
+            \draw [dotted, thick] (-0.2, 2.25) -- (2, 2.25);
+            \draw [dotted, thick] (-0.2, 3.375) -- (3, 3.375);
+
+            \node at (axis cs: 1, -0.3) {\( x_0 - \delta \)};
+            \node at (axis cs: 2, -0.3) {\( x_0 \)};
+            \node at (axis cs: 3, -0.3) {\( x_0 + \delta \)};
+
+            \node[left] at (axis cs: -0.2, 1.5) {\( y_0 - \epsilon \)};
+            \node[left] at (axis cs: -0.2, 2.25) {\( f(x_0) = y_0 \)};
+            \node[left] at (axis cs: -0.2, 3.375) {\( y_0 + \epsilon \)};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\input{kapitel/funktionen/stetigkeit_und_grenzwerte/definitionsluecke.tex}
+\input{kapitel/funktionen/stetigkeit_und_grenzwerte/sprungstelle.tex}
+\input{kapitel/funktionen/stetigkeit_und_grenzwerte/polstelle.tex}
