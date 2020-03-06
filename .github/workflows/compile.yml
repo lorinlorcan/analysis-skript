@@ -45,5 +45,5 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: Analysis-Skript
-        path: Analysis-Skript.pdf
+        path: Analysis-Skript-*.pdf
 
