@@ -40,7 +40,7 @@ jobs:
         root_file: main.tex
     - name: Rename document
       run: |
-        mv main.pdf Analysis-Skript.pdf
+        mv main.pdf Analysis-Skript-$(git rev-parse --short HEAD).pdf
     - name: Upload document
       uses: actions/upload-artifact@v1
       with:

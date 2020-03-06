@@ -37,7 +37,7 @@ jobs:
         root_file: main.tex
     - name: Rename document
       run: |
-        mv main.pdf Analysis-Skript.pdf
+        mv main.pdf Analysis-Skript-${GITHUB_REF##*/}.pdf
     - name: Create release
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
