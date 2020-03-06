@@ -12,7 +12,6 @@ Wenn du auf Fehler stößt oder sonstige Anmerkungen hast, dann kannst du eines 
 
 - Einen [Pull-Request](github.com/lorinlorcan/analysis-skript/pulls) auf GitHub stellen
 - Ein [Ticket](github.com/lorinlorcan/analysis-skript/issues) auf GitHub anlegen
-- Eine Mail schreiben an lorin.lorcan@gmail.com
 
 ## Lokal bauen/bearbeiten
 
