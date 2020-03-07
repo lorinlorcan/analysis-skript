@@ -43,6 +43,11 @@ jobs:
         mv main.pdf Analysis-Skript-$(git rev-parse --short HEAD)-Classic.pdf
     - id: getfilenamenormal
       run: echo "::set-output name=file::$(ls Analysis-Skript-*-Classic.pdf)"
+    - name: Upload document (Classic)
+      uses: actions/upload-artifact@v1
+      with:
+        name: Analysis-Skript-Classic
+        path: ${{ steps.getfilenamenormal.outputs.file }}
     - name: Set config notes = true
       run: |
         sed -i 's/\notesfalse/\notestrue' config.tex
@@ -55,10 +60,8 @@ jobs:
         mv main.pdf Analysis-Skript-$(git rev-parse --short HEAD)-Notizrand.pdf
     - id: getfilenamenotes
       run: echo "::set-output name=file::$(ls Analysis-Skript-*-Notizrand.pdf)"
-    - name: Upload document
+    - name: Upload document (Notes)
       uses: actions/upload-artifact@v1
       with:
-        name: Analysis-Skript
-        path:
-          - ${{ steps.getfilenamenormal.outputs.file }}
-          - ${{ steps.getfilenamenotes.outputs.file }}
+        name: Analysis-Skript-Notes
+        path: ${{ steps.getfilenamenotes.outputs.file }}
