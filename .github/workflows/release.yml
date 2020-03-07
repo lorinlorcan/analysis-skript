@@ -31,13 +31,23 @@ jobs:
     - name: Add version in document
       run: |
         sed -i "s/\\\\newcommand{\\\\version}{}/\\\\newcommand{\\\\version}{${GITHUB_REF##*/}}/" config.tex
-    - name: Compile LaTeX document
+    - name: Compile document (classic)
       uses: xu-cheng/latex-action@master
       with:
         root_file: main.tex
-    - name: Rename document
+    - name: Rename document (classic)
       run: |
         mv main.pdf Analysis-Skript-${GITHUB_REF##*/}.pdf
+    - name: Switch config notes -> true
+      run: |
+        sed -i 's/\\notesfalse/\\notestrue/' config.tex
+    - name: Compile document (notes)
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: main.tex
+    - name: Rename document (notes)
+      run: |
+        mv main.pdf Analysis-Skript-${GITHUB_REF##*/}-Notizrand.pdf
     - name: Create release
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
