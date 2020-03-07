@@ -12,8 +12,8 @@ Dieses Dokument ist eine digitalisierte Mitschrift der Analysisvorlesung an der 
 
 Wenn du auf Fehler stößt oder sonstige Anmerkungen hast, dann kannst du eines der folgenden Dinge tun:
 
-- Einen [Pull-Request](github.com/lorinlorcan/analysis-skript/pulls) auf GitHub stellen
-- Ein [Ticket](github.com/lorinlorcan/analysis-skript/issues) auf GitHub anlegen
+- Einen [Pull-Request](https://github.com/lorinlorcan/analysis-skript/pulls) auf GitHub stellen
+- Ein [Ticket](https://github.com/lorinlorcan/analysis-skript/issues) auf GitHub anlegen
 
 ## Lokal bauen/bearbeiten
 
