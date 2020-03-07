@@ -1,4 +1,4 @@
-name: Release new version
+name: Create release draft
 
 on:
   push:
@@ -30,14 +30,15 @@ jobs:
         python matplotlib/plot.py
     - name: Add version in document
       run: |
-        sed -i "s/\\\\newcommand{\\\\version}{}/\\\\newcommand{\\\\version}{${GITHUB_REF##*/}}/" config.tex
+        version=${GITHUB_REF##*/}
+        sed -i "s/\\\\newcommand{\\\\version}{}/\\\\newcommand{\\\\version}{$version}/" config.tex
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@master
       with:
         root_file: main.tex
     - name: Rename document
       run: |
-        mv main.pdf Analysis-Skript-${GITHUB_REF##*/}.pdf
+        mv main.pdf Analysis-Skript-${version}.pdf
     - name: Create release
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
@@ -45,5 +46,5 @@ jobs:
         draft: true
         prerelease: false
         files: |
-          Analysis-Skript.pdf
+          Analysis-Skript-*.pdf
 
