@@ -3,7 +3,11 @@
 \usepackage[T1]{fontenc}
 
 % Rand
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm]{geometry}
+\ifnotes
+    \usepackage[left=2cm,right=6cm,top=2cm,bottom=3cm]{geometry}
+\else 
+    \usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm]{geometry}
+\fi
 
 % Kopf- und Fußzeilen
 \usepackage[footsepline]{scrlayer-scrpage}

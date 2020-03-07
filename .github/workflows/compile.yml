@@ -34,18 +34,31 @@ jobs:
     - name: Add git-hash in document
       run: |
         sed -i "s/\\\\newcommand{\\\\version}{}/\\\\newcommand{\\\\version}{$(git rev-parse --short HEAD)}/" config.tex
-    - name: Compile LaTeX document
+    - name: Compile LaTeX document (classic)
       uses: xu-cheng/latex-action@master
       with:
         root_file: main.tex
     - name: Rename document
       run: |
-        mv main.pdf Analysis-Skript-$(git rev-parse --short HEAD).pdf
-    - id: getfilename
-      run: echo "::set-output name=file::$(ls Analysis-Skript-*.pdf)"
+        mv main.pdf Analysis-Skript-$(git rev-parse --short HEAD)-Classic.pdf
+    - id: getfilenamenormal
+      run: echo "::set-output name=file::$(ls Analysis-Skript-*-Classic.pdf)"
+    - name: Set config notes = true
+      run: |
+        sed -i 's/\notesfalse/\notestrue' config.tex
+    - name: Compile LaTeX document (for notes)
+      uses: xu-cheng/latex-action@master
+      with:
+        root_file: main.tex
+    - name: Rename document
+      run: |
+        mv main.pdf Analysis-Skript-$(git rev-parse --short HEAD)-Notizrand.pdf
+    - id: getfilenamenotes
+      run: echo "::set-output name=file::$(ls Analysis-Skript-*-Notizrand.pdf)"
     - name: Upload document
       uses: actions/upload-artifact@v1
       with:
         name: Analysis-Skript
-        path: ${{ steps.getfilename.outputs.file }}
-
+        path:
+          - ${{ steps.getfilenamenormal.outputs.file }}
+          - ${{ steps.getfilenamenotes.outputs.file }}
