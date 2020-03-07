@@ -42,9 +42,11 @@ jobs:
     - name: Rename document
       run: |
         mv main.pdf Analysis-Skript-${githash}.pdf
+    - id: getfilename
+      run: echo "::set-output name=file::$(ls Analysis-Skript-*.pdf)"
     - name: Upload document
       uses: actions/upload-artifact@v1
       with:
         name: Analysis-Skript
-        path: Analysis-Skript-${githash}.pdf
+        path: ${{ steps.getfilename.outputs.file }}
 
