@@ -27,7 +27,7 @@
 	},
 	"uhref": {
 		"scope": "latex",
-		"prefix": "\\uhref",
+		"prefix": "uhref",
 		"body": "\\uhref{$1}{$2}",
 		"description": "Underlined href"
 	}
