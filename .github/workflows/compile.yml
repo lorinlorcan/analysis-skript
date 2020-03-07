@@ -50,7 +50,7 @@ jobs:
         path: ${{ steps.getfilenamenormal.outputs.file }}
     - name: Set config notes = true
       run: |
-        sed -i 's/\notesfalse/\notestrue' config.tex
+        sed -i 's/\notesfalse/\notestrue/' config.tex
     - name: Compile LaTeX document (for notes)
       uses: xu-cheng/latex-action@master
       with:
