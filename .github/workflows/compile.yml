@@ -33,15 +33,14 @@ jobs:
         python matplotlib/plot.py
     - name: Add git-hash in document
       run: |
-        githash=$(git rev-parse --short HEAD)
-        sed -i "s/\\\\newcommand{\\\\version}{}/\\\\newcommand{\\\\version}{$githash}/" config.tex
+        sed -i "s/\\\\newcommand{\\\\version}{}/\\\\newcommand{\\\\version}{$(git rev-parse --short HEAD)}/" config.tex
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@master
       with:
         root_file: main.tex
     - name: Rename document
       run: |
-        mv main.pdf Analysis-Skript-${githash}.pdf
+        mv main.pdf Analysis-Skript-$(git rev-parse --short HEAD).pdf
     - id: getfilename
       run: echo "::set-output name=file::$(ls Analysis-Skript-*.pdf)"
     - name: Upload document
