@@ -3,7 +3,7 @@
 \usepackage[T1]{fontenc}
 
 % Rand
-\ifnotes
+\ifnotes{}
     \usepackage[left=2cm,right=6cm,top=2cm,bottom=3cm]{geometry}
 \else 
     \usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm]{geometry}
@@ -12,7 +12,7 @@
 % Kopf- und Fußzeilen
 \usepackage[footsepline]{scrlayer-scrpage}
 \pagestyle{scrheadings}
-\clearpairofpagestyles
+\clearpairofpagestyles{}
 
 \automark{section}
 \ifoot{\footnotesize\textnormal\headmark}
