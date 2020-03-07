@@ -24,5 +24,11 @@
 			"\\end{tikzpicture}"
 		],
 		"description": "Basic Graph"
+	},
+	"uhref": {
+		"scope": "latex",
+		"prefix": "\\uhref",
+		"body": "\\uhref{$1}{$2}",
+		"description": "Underlined href"
 	}
 }
