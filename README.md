@@ -4,7 +4,7 @@
 
 ![Aktuelle Version](https://img.shields.io/github/v/release/lorinlorcan/analysis-skript.svg?label=Version&style=flat-square) 
 
-[**Zum Download**](https://github.com/lorinlorcan/skript-test/releases/tag/latest)
+[**Zum Download**](https://github.com/lorinlorcan/analysis-skript/releases/tag/latest)
 
 Dieses Dokument ist eine digitalisierte Mitschrift der Analysisvorlesung an der **[FH Wedel](https://www.fh-wedel.de/)**. Es soll dazu dienen, der Vorlesung besser folgen zu können und ist über viele Stunden in größtmöglicher Sorgfalt entstanden. Dennoch ist nicht auszuschließen, ja sogar davon auszugehen, dass das Dokument noch einige Fehler enthält.
 
