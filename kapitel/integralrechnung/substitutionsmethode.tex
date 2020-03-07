@@ -21,12 +21,14 @@
 
 \begin{align*}
     &\int_0^1 \frac{1-x}{\sqrt{2x-x^2}} \;\mathrm{d}x
-    \qquad z = 2x - x^2
-    \qquad \frac{\mathrm{d}z}{\mathrm{d}x} = 2 - 2x = (1-x)2
+    \qquad z = 2x - x^2 \\
+    \\
+    &\qquad \frac{\mathrm{d}z}{\mathrm{d}x} = 2 - 2x = (1-x)2
     \qquad \frac{\mathrm{d}z}{2(1-x)} = \mathrm{d}x \\
+    \\
     &\Rightarrow - \int_{z_n}^{z_0} \frac{1-x}{\sqrt{z}} - \frac{\mathrm{d}z}{2(1-x)}
-    = \frac{1}{2} \int_{z_n}^{z_0} \frac{1}{\sqrt{2}} \mathrm{d}z
-    = \frac{1}{2} \int_{z_n}^{z_0} z^{-\frac{1}{2}} \mathrm{d}z
+    = \frac{1}{2} \int_{z_n}^{z_0} \frac{1}{\sqrt{2}} \mathrm{d}z \\
+    &= \frac{1}{2} \int_{z_n}^{z_0} z^{-\frac{1}{2}} \mathrm{d}z 
     = \frac{1}{2} \left[ \frac{z^{\frac{1}{2}}}{\frac{1}{2}} \right]_{z_n}^{z_0}
     = \left[ \left( 2x-x^2 \right)^\frac{1}{2} \right]_0^1 \\
     &\text{oder} \\
