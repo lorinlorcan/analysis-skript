@@ -9,13 +9,13 @@
     f^{IV}(x) &= -\frac{1 \cdot 2 \cdot 3}{x^4} & f^{IV}(1) &= -1 \cdot 2 \cdot 3 \\
     f^{V}(x) &= \frac{1 \cdot 2 \cdot 3 \cdot 4}{x^5} & f^{V}(1) &= 1 \cdot 2 \cdot 3 \cdot 4 \\
     \\
-    f^n(x) &= (-1)^{n+1} \cdot (n-1)! \cdot \frac{1}{x^n} & f^n(1) &= (-1)^{n+1} \cdot (n-1)!
+    f^n(x) &= {(-1)}^{n+1} \cdot (n-1)! \cdot \frac{1}{x^n} & f^n(1) &= {(-1)}^{n+1} \cdot (n-1)!
 \end{align*}
 
 \begin{align*}
     \ln(x)
-    &= (x - 1) &- \frac{1}{2!} (x - 1)^2 &+ \frac{1 \cdot 2}{3!} (x - 1)^3 &- \frac{1 \cdot 2 \cdot 3}{4!} (x - 1)^4 &+ \ldots &+ (-1)^{n+1} \frac{(n-1)!}{n!} \cdot (x - 1)^n &+ \ldots \\
-    &= (x - 1) &- \frac{1}{2} (x - 1)^2 &+ \frac{1}{3} (x - 1)^3 &- \frac{1}{4} (x - 1)^4 &+ \ldots &+ \frac{(-1)^{n+1}}{n} (x - 1)^n &+ \ldots
+    &= (x - 1) &- \frac{1}{2!} {(x - 1)}^2 &+ \frac{1 \cdot 2}{3!} {(x - 1)}^3 &- \frac{1 \cdot 2 \cdot 3}{4!} {(x - 1)}^4 &+ \cdots &+ {(-1)}^{n+1} \frac{(n-1)!}{n!} \cdot {(x - 1)}^n &+ \ldots \\
+    &= (x - 1) &- \frac{1}{2} {(x - 1)}^2 &+ \frac{1}{3} {(x - 1)}^3 &- \frac{1}{4} {(x - 1)}^4 &+ \cdots &+ \frac{{(-1)}^{n+1}}{n} {(x - 1)}^n &+ \cdots
 \end{align*}
 
 \begin{align*}
@@ -56,7 +56,7 @@
 
 \begin{align*}
     \underline{x_1 = 0:} \\
-    P(x_1) &= -1 - \frac{1}{2} (-1)^2 + \frac{1}{3} (-1)^3 - \frac{1}{4} (-1)^4 + \frac{1}{5} (-1)^5 \pm \ldots \\
+    P(x_1) &= -1 - \frac{1}{2} {(-1)}^2 + \frac{1}{3} {(-1)}^3 - \frac{1}{4} {(-1)}^4 + \frac{1}{5} {(-1)}^5 \pm \ldots \\
     &= -1 - \frac{1}{2} - \frac{1}{3} - \frac{1}{4} - \frac{1}{5} - \ldots \\
     &= (-1) \underbrace{\left( 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \ldots \right)}_{\text{harmonische Reihe \(\Rightarrow\) divergent}}
 \end{align*}
@@ -75,9 +75,9 @@ Konvergenzradius:
 Fehlerabschätzung: Abbruch nach viertem Glied
 
 \begin{align*}
-    R_6 &= \frac{1}{5} (x - 1)^5 \\
-    R_5(1,1) &= \frac{1}{5} (0,1)^5 = 0,000002 \\
-    \ln (1,1) &= 0,1 - \frac{1}{2} (0,1)^2 + \frac{1}{3} (0,1)^3 - \frac{1}{4} (0,1)^4 = 0,095308333 \\
+    R_6 &= \frac{1}{5} {(x - 1)}^5 \\
+    R_5(1,1) &= \frac{1}{5} {(0,1)}^5 = 0,000002 \\
+    \ln (1,1) &= 0,1 - \frac{1}{2} {(0,1)}^2 + \frac{1}{3} {(0,1)}^3 - \frac{1}{4} {(0,1)}^4 = 0,095308333 \\
     \ln (1,1) &= 0,0953101798
 \end{align*}
 
@@ -85,7 +85,7 @@ Fehlerabschätzung: Abbruch nach viertem Glied
     \begin{array}{*{12}{c@{\,}}}
         & 0, & 0 & 9 & 5 & 3 & 1 & 0 & 1 & 7 & 9 & 8 \\
         - & 0, & 0 & 9 & 5 & 3 & 0 & 8 & 3 & 3 & 3 & 0 \\
-        \hline
+        \midrule
         & 0, & 0 & 0 & 0 & 0 & 0 & 1 & 8 & 4 & 6 & 8
     \end{array}
 \]
