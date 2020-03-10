@@ -22,12 +22,12 @@
 
 \begin{align*}
     & \limtozero{\Delta x} \frac{\sin(x_0 + \Delta x) - \sin(x_0)}{\Delta x} \\
-    &= \limtozero{\Delta x} \frac{sin(x_0) \cdot \cos(\Delta x) + \cos(x_0) \cdot \sin(\Delta x) - \sin(x_0)}{\Delta x} \\
+    &= \limtozero{\Delta x} \frac{\sin(x_0) \cdot \cos(\Delta x) + \cos(x_0) \cdot \sin(\Delta x) - \sin(x_0)}{\Delta x} \\
     &= \limtozero{\Delta x} \underbrace{\sin(x_0)}_{\text{A}} \underbrace{\frac{\cos(\Delta x) - 1}{\Delta x}}_{\text{B}} +
     \limtozero{\Delta x} \underbrace{\cos(x_0)}_{\text{A}} \underbrace{\frac{\sin(\Delta x)}{\Delta x}}_{\text{B}} \\
     \\
-    \text{A: } & \text{fester Wert} \\
-    \text{B: } & \text{unbestimmter Ausdruck} \\
+    \text{A:\;} & \text{fester Wert} \\
+    \text{B:\;} & \text{unbestimmter Ausdruck} \\
     \\
     &= \sin(x_0) \limtozero{\Delta x} \frac{\cos(\Delta x) - 1}{\Delta x} + \cos(x_0) \limtozero{\Delta x} \frac{\sin(\Delta x)}{\Delta x} \\
     &= \sin(x_0) \limtozero{\Delta x} \frac{(\cos(\Delta x) - 1) \cdot (\cos(\Delta x) + 1)}{\Delta x \cdot (\cos(\Delta x) + 1)} + \cdots \\
@@ -58,7 +58,7 @@
 \subsubsection{Cotangens}
 
 \begin{align*}
-    y &= \cot(x) = (\tan(x))^{-1} &&\mid z = \tan(x) \\
+    y &= \cot(x) = {(\tan(x))}^{-1} &&\mid z = \tan(x) \\
     & &&\mid \frac{\diff z}{\diff x} = \frac{1}{\cos^2(x)},\ \frac{\diff y}{\diff z} = -z^{-2} \\
     y' &= \frac{1}{\cos^2(x)} \cdot \left( -\frac{1}{\tan^2(x)} \right) \\
     &= -\frac{1}{\cos^2(x) \frac{\sin^2(x)}{\cos^2(x)}} \\
