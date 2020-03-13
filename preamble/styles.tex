@@ -6,31 +6,31 @@
 
 % Basisstil für TikZ-Graphen
 \pgfplotsset{defaultpure/.style={
-    xmin=-4.2, xmax=4.2,
-    ymin=-4.2, ymax=4.2,
-    width=6cm,
-    grid=both,
-    axis lines=middle,
-    grid style={line width=.1pt, draw=gray!20},
-    major grid style={line width=.2pt,draw=gray!50},    
-    ticklabel style={font=\tiny},
-    xlabel style={font=\tiny},
-    ylabel style={font=\tiny},
-    xlabel={x}, ylabel={y},
-    /pgf/number format/use comma,
-    /pgf/number format/1000 sep={.}
-}}
+			xmin=-4.2, xmax=4.2,
+			ymin=-4.2, ymax=4.2,
+			width=6cm,
+			grid=both,
+			axis lines=middle,
+			grid style={line width=.1pt, draw=gray!20},
+			major grid style={line width=.2pt,draw=gray!50},
+			ticklabel style={font=\tiny},
+			xlabel style={font=\tiny},
+			ylabel style={font=\tiny},
+			xlabel={x}, ylabel={y},
+			/pgf/number format/use comma,
+			/pgf/number format/1000 sep={.}
+		}}
 
 % Graphenstil, der das Basisprofil um 1:1 Skalierung ergänzt
 \pgfplotsset{default/.style={
-    defaultpure,
-    unit vector ratio*=1 1 1
-}}
-    
+			defaultpure,
+			unit vector ratio*=1 1 1
+		}}
+
 % Graphenstil, der nicht beschriftete Achsen hat 
 \pgfplotsset{defaultnonumbers/.style={
-    default,
-    xticklabels={},
-    yticklabels={}
-}}
+			default,
+			xticklabels={},
+			yticklabels={}
+		}}
 

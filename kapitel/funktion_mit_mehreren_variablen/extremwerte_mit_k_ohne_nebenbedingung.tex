@@ -1,8 +1,8 @@
 \subsection{Extremwerte mit k ohne Nebenbedingung}
 
 \begin{align*}
-    \frac{\partial f}{\partial x} &= 0 \\
-    \frac{\partial f}{\partial y} &= 0 \\
+	\frac{\partial f}{\partial x} & = 0 \\
+	\frac{\partial f}{\partial y} & = 0 \\
 \end{align*}
 
 \paragraph{Hinreichende Bedingung}
@@ -10,21 +10,21 @@
 % TODO: Korrigieren!
 
 \begin{align*}
-    f_{xx} f_{yy} - f_{{(xy)}^2} &> 0 \Rightarrow \text{Extremwert} \\
-    &< 0 \Rightarrow \text{Sattelpunkt}
+	f_{xx} f_{yy} - f_{{(xy)}^2} & > 0 \Rightarrow \text{Extremwert}  \\
+	                             & < 0 \Rightarrow \text{Sattelpunkt}
 \end{align*}
 
 \begin{align*}
-    \begin{rcases}
-        f_{xx} (P) &< 0 \\
-        \text{oder}\quad f_{yy} (P) &< 0
-    \end{rcases}
-    &\text{Maximum} \\
-    \begin{rcases}
-        f_{xx} (P) &> 0 \\
-        \text{oder}\quad f_{yy} (P) &> 0
-    \end{rcases}
-    &\text{Minimum}
+	\begin{rcases}
+		f_{xx} (P) &< 0 \\
+		\text{oder}\quad f_{yy} (P) &< 0
+	\end{rcases}
+	 & \text{Maximum} \\
+	\begin{rcases}
+		f_{xx} (P) &> 0 \\
+		\text{oder}\quad f_{yy} (P) &> 0
+	\end{rcases}
+	 & \text{Minimum}
 \end{align*}
 
 \paragraph{Beispiel}
@@ -32,72 +32,72 @@
 \subparagraph{1)}
 
 \begin{align*}
-    z &= f(x, y) = 2x + y - \frac{x^2 + y^2}{4} \\
-    f_x &= 2 - \frac{x}{2} \overset{!}{=} 0 \Rightarrow x_0 = 4 \\
-    f_z &= 1 - \frac{y}{2} \overset{!}{=} 0 \Rightarrow y_0 = 2 \\
-    \\
-    R &= \{ (x, y) x^2 + y^2 - 9 = 0 \} \\
-    & 0 \leq x, y \leq 3
+	z   & = f(x, y) = 2x + y - \frac{x^2 + y^2}{4}               \\
+	f_x & = 2 - \frac{x}{2} \overset{!}{=} 0 \Rightarrow x_0 = 4 \\
+	f_z & = 1 - \frac{y}{2} \overset{!}{=} 0 \Rightarrow y_0 = 2 \\
+	\\
+	R   & = \{ (x, y) x^2 + y^2 - 9 = 0 \}                       \\
+	    & 0 \leq x, y \leq 3
 \end{align*}
 
 \begin{align*}
-    L(x, y, \lambda) &= f(x, y) + \lambda \cdot R(x, y) \\
-    &= 2x + y - \frac{x^2 + y^2}{4} + \lambda(x^2 + y^2 - 9) \\
-    \begin{rcases}
-        \frac{\partial L}{\partial x} &\overset{!}{=} 0 \\
-        \frac{\partial L}{\partial y} &\overset{!}{=} 0 \\
-        \frac{\partial L}{\partial \lambda} &\overset{!}{=} 0
-    \end{rcases}
-    &x, y, \lambda \\
-    x &= \frac{2}{\frac{1}{x} - 2 \lambda} \\
-    y &= \frac{2}{\frac{1}{2} + 2 \lambda}
+	L(x, y, \lambda) & = f(x, y) + \lambda \cdot R(x, y)                       \\
+	                 & = 2x + y - \frac{x^2 + y^2}{4} + \lambda(x^2 + y^2 - 9) \\
+	\begin{rcases}
+		\frac{\partial L}{\partial x} &\overset{!}{=} 0 \\
+		\frac{\partial L}{\partial y} &\overset{!}{=} 0 \\
+		\frac{\partial L}{\partial \lambda} &\overset{!}{=} 0
+	\end{rcases}
+	                 & x, y, \lambda                                           \\
+	x                & = \frac{2}{\frac{1}{x} - 2 \lambda}                     \\
+	y                & = \frac{2}{\frac{1}{2} + 2 \lambda}
 \end{align*}
 
 \subparagraph{2)}
 
 \begin{align*}
-    U(x, y) = 2 \cdot x \cdot y \\
-    p_x = 3, p_y = 2 \qquad &C = 60 = p_x x + p_y y = 3x + 2y \\
-    &\Rightarrow R = 3x + 2y - 60
+	U(x, y) = 2 \cdot x \cdot y                                \\
+	p_x = 3, p_y = 2 \qquad & C = 60 = p_x x + p_y y = 3x + 2y \\
+	                        & \Rightarrow R = 3x + 2y - 60
 \end{align*}
 \begin{align*}
-    L(x, y, \lambda) = 2xy + \lambda (3x + 2y - 60) \\
-    L_x = 2 y + 3 \lambda &\overset{!}{=} 0 &&\Rightarrow y = - \frac{3}{2} \lambda &&\Rightarrow y = 15 \\
-    L_y = 2 x + 3 \lambda &\overset{!}{=} 0 &&\Rightarrow x = - \lambda  &&\Rightarrow x = 10 \\
-    L_\lambda = 3 x + 2 y - 60 &\overset{!}{=} 0 && &&\Rightarrow - 3 \lambda - 3 \lambda - 60 = 0 \\
-    & && &&\lambda = -10
+	L(x, y, \lambda) = 2xy + \lambda (3x + 2y - 60)                                                                                            \\
+	L_x = 2 y + 3 \lambda      & \overset{!}{=} 0 &  & \Rightarrow y = - \frac{3}{2} \lambda &  & \Rightarrow y = 15                           \\
+	L_y = 2 x + 3 \lambda      & \overset{!}{=} 0 &  & \Rightarrow x = - \lambda             &  & \Rightarrow x = 10                           \\
+	L_\lambda = 3 x + 2 y - 60 & \overset{!}{=} 0 &  &                                       &  & \Rightarrow - 3 \lambda - 3 \lambda - 60 = 0 \\
+	                           &                  &  &                                       &  & \lambda = -10
 \end{align*}
 
 
 \subparagraph{3)}
 
 \begin{align*}
-    & Z = f(x, y) = \sqrt{1 - x^2 - y^2} \\
-    & L(x, y, \lambda) = \sqrt{1 - x^2 - y^2} + \lambda \left( {\left( x - \frac{1}{2} \right)}^2 + y^2 - \frac{1}{16} \right) \\
-    &1)\quad L_x = - \frac{\cancel{2} x}{\cancel{2} \sqrt{1 - x^2 - y^2}} + \lambda 2 \left( x - \frac{1}{2} \right) \overset{!}{=} 0 \\
-    &2)\quad L_y = - \frac{\cancel{2} y}{\cancel{2} \sqrt{1 - x^2 - y^2}} + 2 y \lambda \overset{!}{=} 0 \\
-    & \Rightarrow 2 y \lambda = \frac{y}{\sqrt{1 - x^2 - y^2}} \\
-    & \text{(a)} \quad y = 0;\qquad \text{(b)} \quad \lambda = \frac{1}{\sqrt{1 - x^2 - y^2}} \\
-    &3)\quad R(x, y) = {\left( x - \frac{1}{2} \right)}^2 + y^2 - \frac{1}{16} = 0 \quad \text{\Lightning}
+	 & Z = f(x, y) = \sqrt{1 - x^2 - y^2}                                                                                               \\
+	 & L(x, y, \lambda) = \sqrt{1 - x^2 - y^2} + \lambda \left( {\left( x - \frac{1}{2} \right)}^2 + y^2 - \frac{1}{16} \right)         \\
+	 & 1)\quad L_x = - \frac{\cancel{2} x}{\cancel{2} \sqrt{1 - x^2 - y^2}} + \lambda 2 \left( x - \frac{1}{2} \right) \overset{!}{=} 0 \\
+	 & 2)\quad L_y = - \frac{\cancel{2} y}{\cancel{2} \sqrt{1 - x^2 - y^2}} + 2 y \lambda \overset{!}{=} 0                              \\
+	 & \Rightarrow 2 y \lambda = \frac{y}{\sqrt{1 - x^2 - y^2}}                                                                         \\
+	 & \text{(a)} \quad y = 0;\qquad \text{(b)} \quad \lambda = \frac{1}{\sqrt{1 - x^2 - y^2}}                                          \\
+	 & 3)\quad R(x, y) = {\left( x - \frac{1}{2} \right)}^2 + y^2 - \frac{1}{16} = 0 \quad \text{\Lightning}
 \end{align*}
 
 \begin{align*}
-    \underline{\text{(b) in } 1)}: \\
-    - \frac{x}{\sqrt{1 - x^2 - y^2}} + \frac{x - \frac{1}{2}}{\sqrt{1 - x^2 - y^2}} = 0 \\ %BLITZ  \\
-    \\
-    \underline{\text{(a) in } 3)}: \\
-    x^2 - x + \frac{3}{16} = 0 \\
-    x_1 = \frac{1}{4} \quad y_1 = 0 \\
-    x_2 = \frac{3}{4} \quad y_2 = 0
+	\underline{\text{(b) in } 1)}:                                                      \\
+	- \frac{x}{\sqrt{1 - x^2 - y^2}} + \frac{x - \frac{1}{2}}{\sqrt{1 - x^2 - y^2}} = 0 \\ %BLITZ  \\
+	\\
+	\underline{\text{(a) in } 3)}:                                                      \\
+	x^2 - x + \frac{3}{16} = 0                                                          \\
+	x_1 = \frac{1}{4} \quad y_1 = 0                                                     \\
+	x_2 = \frac{3}{4} \quad y_2 = 0
 \end{align*}
 
 \begin{align*}
-    z &= \sqrt{1 - x^2 - y^2} \\
-    z^2 &= \sqrt{1 - x^2 - y^2} \\
-    z^2 + x^2 + y^2 = 1 \Leftarrow \text{(Einheits-) Kugel} \\
+	z   & = \sqrt{1 - x^2 - y^2}                            \\
+	z^2 & = \sqrt{1 - x^2 - y^2}                            \\
+	z^2 + x^2 + y^2 = 1 \Leftarrow \text{(Einheits-) Kugel} \\
 \end{align*}
 \[
-    R(x,y) \Leftarrow \text{Kreis mit } r = \frac{1}{16} \text{ um } \frac{1}{2} \text{ in x-Richtung verschoben}
+	R(x,y) \Leftarrow \text{Kreis mit } r = \frac{1}{16} \text{ um } \frac{1}{2} \text{ in x-Richtung verschoben}
 \]
 
 % TODO: Add Skizze

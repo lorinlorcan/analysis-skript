@@ -1,152 +1,152 @@
 \subsubsection{Kostenfunktion}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            defaultpure,
-            xmin=-0.5, xmax=3.5,
-            ymin=-0.5, ymax=3.5,
-            width=8cm,
-            xlabel={x (Stück)}, ylabel={k},
-            xticklabels={}, yticklabels={}
-        ]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				defaultpure,
+				xmin=-0.5, xmax=3.5,
+				ymin=-0.5, ymax=3.5,
+				width=8cm,
+				xlabel={x (Stück)}, ylabel={k},
+				xticklabels={}, yticklabels={}
+			]
 
-        \addplot[orange, smooth, samples=100, domain=0:8] {0.5*(x-1)^3 + 1.5};
-        \addplot[mkred, smooth, samples=100, domain=0:5] {(1.86)/(1.89) * x};
-        
+			\addplot[orange, smooth, samples=100, domain=0:8] {0.5*(x-1)^3 + 1.5};
+			\addplot[mkred, smooth, samples=100, domain=0:5] {(1.86)/(1.89) * x};
 
-        \draw[dotted, thick] (1, 0) -- (1, 4);
-        \draw[dotted, thick] (1.86, 0) -- (1.86, 6.51);
-        
-        \node[below] at (1, 0) {\( x_W \)};
-        \node[below] at (1.86, 0) {\( x_D* \)};
-    \end{axis}
-    \end{tikzpicture}
-    \caption{Skizze Kostenfunktion}
+
+			\draw[dotted, thick] (1, 0) -- (1, 4);
+			\draw[dotted, thick] (1.86, 0) -- (1.86, 6.51);
+
+			\node[below] at (1, 0) {\( x_W \)};
+			\node[below] at (1.86, 0) {\( x_D* \)};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Skizze Kostenfunktion}
 \end{figure}
 
 \begin{tabular}{l l}
-    \( \overline{k_D} = \frac{k}{x} \) & Durchschnittskosten/Stück \\
-    \( k' = \frac{\diff k}{\diff x} \) & Grenzkosten \\
-    \( E(k,x) = \frac{k'}{\overline{k_D}} \)
+	\( \overline{k_D} = \frac{k}{x} \) & Durchschnittskosten/Stück \\
+	\( k' = \frac{\diff k}{\diff x} \) & Grenzkosten               \\
+	\( E(k,x) = \frac{k'}{\overline{k_D}} \)
 \end{tabular}
 
 \paragraph{Beispiel}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            defaultpure,
-            xmin=-100, xmax=2000,
-            ymin=-100, ymax=100000,
-            width=8cm,
-            xlabel={p}, ylabel={x},
-        ]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				defaultpure,
+				xmin=-100, xmax=2000,
+				ymin=-100, ymax=100000,
+				width=8cm,
+				xlabel={p}, ylabel={x},
+			]
 
-        \addplot[orange, smooth, samples=100, domain=0:25000] {-60*x+90000};
-        
+			\addplot[orange, smooth, samples=100, domain=0:25000] {-60*x+90000};
 
-        \draw[dotted, thick] (1, 0) -- (1, 4);
-        \draw[dotted, thick] (1.86, 0) -- (1.86, 6.51);
-        
-        \node[below] at (1, 0) {\( x_W \)};
-        \node[below] at (1.86, 0) {\( x_D* \)};
-    \end{axis}
-    \end{tikzpicture}
-    \caption{Skizze Beispiel}
+
+			\draw[dotted, thick] (1, 0) -- (1, 4);
+			\draw[dotted, thick] (1.86, 0) -- (1.86, 6.51);
+
+			\node[below] at (1, 0) {\( x_W \)};
+			\node[below] at (1.86, 0) {\( x_D* \)};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Skizze Beispiel}
 \end{figure}
 
 \begin{alignat*}{2}
-    x(p) &= 90\,000-60p\quad &&1) p=500\\
-    \frac{\diff x}{\diff p} &= -60 &&2) p=1000 \\
-    x_1 &= 90\,000 - 60 \cdot 500 &&= 60\,000  \\
-    x_2 &= 90\,000 - 60 \cdot 1000 &&= 30\,000 
+	x(p)                    & = 90\,000-60p\quad        &  & 1) p=500  \\
+	\frac{\diff x}{\diff p} & = -60                     &  & 2) p=1000 \\
+	x_1                     & = 90\,000 - 60 \cdot 500  &  & = 60\,000 \\
+	x_2                     & = 90\,000 - 60 \cdot 1000 &  & = 30\,000
 \end{alignat*}
 
 \begin{align*}
-    E(x, p) &= \frac{\diff x}{\diff p} \cdot \frac{\diff p}{\diff x} \\
-    E(x_1, p_1) &= -60 \cdot \frac{500}{60\,000} = -0,5 \\
-    E(x_2, p_2) &= -60 \cdot \frac{1000}{30\,000} = -2
+	E(x, p)     & = \frac{\diff x}{\diff p} \cdot \frac{\diff p}{\diff x} \\
+	E(x_1, p_1) & = -60 \cdot \frac{500}{60\,000} = -0,5                  \\
+	E(x_2, p_2) & = -60 \cdot \frac{1000}{30\,000} = -2
 \end{align*}
 
 \paragraph{Polypol \& Monopol}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            defaultpure,
-            xmin=-0.5, xmax=3.5,
-            ymin=-0.5, ymax=3.5,
-            width=8cm,
-            xlabel={x}, ylabel={G, E, K},
-            xticklabels={},
-            yticklabels={}
-        ]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				defaultpure,
+				xmin=-0.5, xmax=3.5,
+				ymin=-0.5, ymax=3.5,
+				width=8cm,
+				xlabel={x}, ylabel={G, E, K},
+				xticklabels={},
+				yticklabels={}
+			]
 
-        \addplot[name path=k, orange, smooth, samples=100, domain=0:4] {(x - 1.5)^3 + (x-2)^2 +1};
-        \addplot[name path=e, mkred, smooth, samples=100, domain=0:4] {x};
-        \addplot[mkblue, smooth, samples=100, domain=0:4] {1};
-        
-        \addplot fill between [of = k and e, split,
-            every even segment/.style = {transparent},
-            every odd segment/.style = {mkgreen!30}];
+			\addplot[name path=k, orange, smooth, samples=100, domain=0:4] {(x - 1.5)^3 + (x-2)^2 +1};
+			\addplot[name path=e, mkred, smooth, samples=100, domain=0:4] {x};
+			\addplot[mkblue, smooth, samples=100, domain=0:4] {1};
 
-        \draw[dotted, thick] (1.38, 0) -- (1.38, 4);
-        \draw[dotted, thick] (1.84, 0) -- (1.84, 4);
-        \draw[dotted, thick] (2.58, 0) -- (2.58, 4);
-        
-        \node[below] at (1.38, 0) {\( G_S \)};
-        \node[below] at (1.84, 0) {\( G_{Max} \)};
-        \node[below] at (2.58, 0) {\( G_G \)};
+			\addplot fill between [of = k and e, split,
+					every even segment/.style = {transparent},
+					every odd segment/.style = {mkgreen!30}];
 
-        \node[above, mkblue] at (3, 1) {\( p(x) \)};
-        \node[below, mkred] at (3, 3) {\( E \)};
-        \node[above, orange] at (2.9, 3.2) {\( K \)};
-    \end{axis}
-    \end{tikzpicture}
-    \quad
-    \begin{tikzpicture}
-        \begin{axis}[
-            defaultpure,
-            xmin=-0.5, xmax=3.5,
-            ymin=-0.5, ymax=3.5,
-            width=8cm,
-            xlabel={x}, ylabel={G, E, K},
-            xticklabels={},
-            yticklabels={}
-        ]
+			\draw[dotted, thick] (1.38, 0) -- (1.38, 4);
+			\draw[dotted, thick] (1.84, 0) -- (1.84, 4);
+			\draw[dotted, thick] (2.58, 0) -- (2.58, 4);
 
-        \addplot[name path=k, orange, smooth, samples=100, domain=0:4] {(x - 1.5)^3 + (x-2)^2 +1};
-        \addplot[name path=e, mkred, smooth, samples=100, domain=0:4] {-(x - 1.4)^2 + 2};
-        \addplot[mkblue, smooth, samples=100, domain=0:4] {-(2.2 / 2.81) * x + 2.2};
-        
-        \addplot fill between [of = k and e, split,
-            every even segment/.style = {transparent},
-            every odd segment/.style = {mkgreen!30}];
+			\node[below] at (1.38, 0) {\( G_S \)};
+			\node[below] at (1.84, 0) {\( G_{Max} \)};
+			\node[below] at (2.58, 0) {\( G_G \)};
 
-        \draw[dotted, thick] (1.02, 0) -- (1.02, 4);
-        \draw[dotted, thick] (1.6, 0) -- (1.6, 4);
-        \draw[dotted, thick] (2.19, 0) -- (2.19, 4);
-        
-        \node[below] at (1.02, 0) {\( G_S \)};
-        \node[below] at (1.6, 0) {\( G_{Max} \)};
-        \node[below] at (2.19, 0) {\( G_G \)};
-        \node[below] at (2.8, 0) {\( \frac{P}{P_G} \)};
-        
-        \node[below, left] at (1.6, 0.9) {\( P_{opt} \)};
-        \draw (1.5, 0.85) -- (1.7, 1.05);
-        \draw (1.7, 0.85) -- (1.5, 1.05);
+			\node[above, mkblue] at (3, 1) {\( p(x) \)};
+			\node[below, mkred] at (3, 3) {\( E \)};
+			\node[above, orange] at (2.9, 3.2) {\( K \)};
+		\end{axis}
+	\end{tikzpicture}
+	\quad
+	\begin{tikzpicture}
+		\begin{axis}[
+				defaultpure,
+				xmin=-0.5, xmax=3.5,
+				ymin=-0.5, ymax=3.5,
+				width=8cm,
+				xlabel={x}, ylabel={G, E, K},
+				xticklabels={},
+				yticklabels={}
+			]
 
-        \node[left, mkblue] at (0, 2.2) {\( P \)};
-        \node[above, mkblue] at (3, 0) {\( p(x) \)};
-        \node[below, mkred] at (3, 1) {\( E \)};
-        \node[above, orange] at (2.9, 3.2) {\( K \)};
-    \end{axis}
-    \end{tikzpicture}
-    \caption{Polypol (l.) vs Monopol (r.)}
+			\addplot[name path=k, orange, smooth, samples=100, domain=0:4] {(x - 1.5)^3 + (x-2)^2 +1};
+			\addplot[name path=e, mkred, smooth, samples=100, domain=0:4] {-(x - 1.4)^2 + 2};
+			\addplot[mkblue, smooth, samples=100, domain=0:4] {-(2.2 / 2.81) * x + 2.2};
+
+			\addplot fill between [of = k and e, split,
+					every even segment/.style = {transparent},
+					every odd segment/.style = {mkgreen!30}];
+
+			\draw[dotted, thick] (1.02, 0) -- (1.02, 4);
+			\draw[dotted, thick] (1.6, 0) -- (1.6, 4);
+			\draw[dotted, thick] (2.19, 0) -- (2.19, 4);
+
+			\node[below] at (1.02, 0) {\( G_S \)};
+			\node[below] at (1.6, 0) {\( G_{Max} \)};
+			\node[below] at (2.19, 0) {\( G_G \)};
+			\node[below] at (2.8, 0) {\( \frac{P}{P_G} \)};
+
+			\node[below, left] at (1.6, 0.9) {\( P_{opt} \)};
+			\draw (1.5, 0.85) -- (1.7, 1.05);
+			\draw (1.7, 0.85) -- (1.5, 1.05);
+
+			\node[left, mkblue] at (0, 2.2) {\( P \)};
+			\node[above, mkblue] at (3, 0) {\( p(x) \)};
+			\node[below, mkred] at (3, 1) {\( E \)};
+			\node[above, orange] at (2.9, 3.2) {\( K \)};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Polypol (l.) vs Monopol (r.)}
 \end{figure}
 
 \subparagraph{Polypol}
@@ -154,11 +154,11 @@
 Polypol \( \rightarrow \) Wettbewerb \( \rightarrow p(x) = \) konstant
 
 \begin{align*}
-    E &= p(x) \cdot x \\
-    G &= E - K \\
-    G' &= E' - K' \overset{!}{=} 0 \Rightarrow E' = K' \\
-    G_S &: \text{Gewinnspanne} \\
-    G_G &: \text{Gewinngrenze}
+	E   & = p(x) \cdot x                                 \\
+	G   & = E - K                                        \\
+	G'  & = E' - K' \overset{!}{=} 0 \Rightarrow E' = K' \\
+	G_S & : \text{Gewinnspanne}                          \\
+	G_G & : \text{Gewinngrenze}
 \end{align*}
 
 \subparagraph{Monopol}
@@ -166,47 +166,47 @@ Polypol \( \rightarrow \) Wettbewerb \( \rightarrow p(x) = \) konstant
 Monopol \( \rightarrow \) Preisdiktatur \( \rightarrow p(x) = P - P_G(x) \)
 
 \begin{align*}
-    P &: Prohibitivpreis \\
-    P_{opt} &: Gaurnotscher Punkt \\
-    E &= p(x) \cdot x = Px - P_G \cdot x^2 &= x(p - P_G x) \\
-    G &= E - K \\
-    G' &= E' - K' \overset{!}{=} 0 \Rightarrow E' = K'
+	P       & : Prohibitivpreis                                               \\
+	P_{opt} & : Gaurnotscher Punkt                                            \\
+	E       & = p(x) \cdot x = Px - P_G \cdot x^2            & = x(p - P_G x) \\
+	G       & = E - K                                                         \\
+	G'      & = E' - K' \overset{!}{=} 0 \Rightarrow E' = K'
 \end{align*}
 
 \paragraph{Beispiel}
 
 \begin{align*}
-    K(x) &= {(x - 2)}^3 + 12 \\
-    E(x) &= 12x
+	K(x) & = {(x - 2)}^3 + 12 \\
+	E(x) & = 12x
 \end{align*}
 
 a) Bei welchem \( x \) werden die Grenzkosten minimal? \\
 b) Bei welchem \( x \) wird der Gewinn maximal?
 
 \begin{align*}
-    \text{a)}\quad K(x) &= {(x-2)}^3 + 12 \\
-    K'(x) &= 3{(x-2)}^2 \leftarrow \text{Grenzkosten} \\
-    K''(x) &= 6(x-2) \\
-    \Rightarrow 0 &= 6(x-2) \\
-    6x - 12 &= 0 \\
-    6x = 12 \\
-    x = 2 \\
-    \\
-    K''(x) &= 6 > 0 \Rightarrow \text{Minimum}
+	\text{a)}\quad K(x) & = {(x-2)}^3 + 12                           \\
+	K'(x)               & = 3{(x-2)}^2 \leftarrow \text{Grenzkosten} \\
+	K''(x)              & = 6(x-2)                                   \\
+	\Rightarrow 0       & = 6(x-2)                                   \\
+	6x - 12             & = 0                                        \\
+	6x = 12                                                          \\
+	x = 2                                                            \\
+	\\
+	K''(x)              & = 6 > 0 \Rightarrow \text{Minimum}
 \end{align*}
 
 \begin{align*}
-    \text{b)}\quad G &= E - K \\
-    &= 12x - {(x-2)}^3 + 12 \\
-    \\
-    G' &= E'-K' \Rightarrow E' = K' \\
-    12 - 3{(x-2)}^2 &\overset{!}{=} 0 \\
-    12 - 3{(x-2)}^2 &= 0 \\
-    12 &= 3{(x-2)}^2 \\
-    4 &= {(x-2)}^2 \\
-    2 &= x-2 \\
-    4 &= x \\
-    \\
-    G''(x) &= -6(x-2) \\
-    G''(x) &= -6(x-2) < 0 \Rightarrow \text{Maximum}
+	\text{b)}\quad G & = E - K                                  \\
+	                 & = 12x - {(x-2)}^3 + 12                   \\
+	\\
+	G'               & = E'-K' \Rightarrow E' = K'              \\
+	12 - 3{(x-2)}^2  & \overset{!}{=} 0                         \\
+	12 - 3{(x-2)}^2  & = 0                                      \\
+	12               & = 3{(x-2)}^2                             \\
+	4                & = {(x-2)}^2                              \\
+	2                & = x-2                                    \\
+	4                & = x                                      \\
+	\\
+	G''(x)           & = -6(x-2)                                \\
+	G''(x)           & = -6(x-2) < 0 \Rightarrow \text{Maximum}
 \end{align*}

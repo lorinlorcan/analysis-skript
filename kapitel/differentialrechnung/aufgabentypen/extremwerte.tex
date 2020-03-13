@@ -1,59 +1,59 @@
 \subsubsection{Extremwerte}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                default,
-                xmin=-0.5, xmax=3.5,
-                ymin=-0.5, ymax=3.5,
-                width=8cm,
-                xticklabels={},
-                yticklabels={}
-            ]
-            \addplot[orange, smooth, samples=100, domain=-1:4] {(x-2)^3- 2 * x+6};
-            
-            \draw (0.7835034190722739, 3.0886621079036347) -- (1.583503419072274, 3.0886621079036347);
-            \draw (2.4164965809277263, 0.9113378920963653) -- (3.2164965809277257, 0.9113378920963653);
-            
-            \draw[mkred, dotted, thick] (1.1835, -0.2) -- (1.1835, 4.2);
-            \draw[mkred, dotted, thick] (2.8164, -0.2) -- (2.8164, 4.2);
-        \end{axis}
-    \end{tikzpicture}
-    \qquad
-    \begin{tikzpicture}
-        \begin{axis}[
-                default,
-                xmin=-0.5, xmax=3.5,
-                ymin=-0.5, ymax=3.5,
-                width=8cm,
-                xticklabels={},
-                yticklabels={}
-            ]
-            \addplot[orange, smooth, samples=100, domain=-1:4] {(x-1.5)^2 + 1.5};
-            
-            \draw (1.1, 1.5) -- (1.9, 1.5);
-            
-            \draw[mkred, dotted, thick] (1.5, -0.2) -- (1.5, 4.2);
-            
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Funktionen mit Extremwerten}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				default,
+				xmin=-0.5, xmax=3.5,
+				ymin=-0.5, ymax=3.5,
+				width=8cm,
+				xticklabels={},
+				yticklabels={}
+			]
+			\addplot[orange, smooth, samples=100, domain=-1:4] {(x-2)^3- 2 * x+6};
+
+			\draw (0.7835034190722739, 3.0886621079036347) -- (1.583503419072274, 3.0886621079036347);
+			\draw (2.4164965809277263, 0.9113378920963653) -- (3.2164965809277257, 0.9113378920963653);
+
+			\draw[mkred, dotted, thick] (1.1835, -0.2) -- (1.1835, 4.2);
+			\draw[mkred, dotted, thick] (2.8164, -0.2) -- (2.8164, 4.2);
+		\end{axis}
+	\end{tikzpicture}
+	\qquad
+	\begin{tikzpicture}
+		\begin{axis}[
+				default,
+				xmin=-0.5, xmax=3.5,
+				ymin=-0.5, ymax=3.5,
+				width=8cm,
+				xticklabels={},
+				yticklabels={}
+			]
+			\addplot[orange, smooth, samples=100, domain=-1:4] {(x-1.5)^2 + 1.5};
+
+			\draw (1.1, 1.5) -- (1.9, 1.5);
+
+			\draw[mkred, dotted, thick] (1.5, -0.2) -- (1.5, 4.2);
+
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Funktionen mit Extremwerten}
 \end{figure}
 
 \paragraph{Notwendige Bedingung}
 
 \[
-    y'(x) = 0
+	y'(x) = 0
 \]
 
 \paragraph{Hinreichende Bedingung}
 
 \[
-    y^{(k)}(x_E)
-    \begin{cases}
-        < 0\ \text{Maximum} \\
-        > 0\ \text{Minimum}    
-    \end{cases}
-    k \geq 2,\ \underbrace{\text{gerade, minimal}}_{\text{ungerade} \Rightarrow \text{Sattelpunkt}}
+	y^{(k)}(x_E)
+	\begin{cases}
+		< 0\ \text{Maximum} \\
+		> 0\ \text{Minimum}
+	\end{cases}
+	k \geq 2,\ \underbrace{\text{gerade, minimal}}_{\text{ungerade} \Rightarrow \text{Sattelpunkt}}
 \]

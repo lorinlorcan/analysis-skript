@@ -1,52 +1,52 @@
 \subsubsection{Tangens \& Cotangens}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \tikzstyle{polstelle}=[dotted, thick]
-        \begin{axis}[
-            default,
-            xmin=-1.2, xmax=7.2,
-            ymin=-2.2, ymax=2.2,
-            width=12cm
-            ]
-            \draw [mkyellow, smooth, samples=100, domain=-1.2:5/12*pi] plot (\x, {tan(\x r)});
-            \draw [mkyellow, smooth, samples=100, domain=7/12*pi:17/12*pi] plot (\x, {tan(\x r)});
-            \draw [mkyellow, smooth, samples=100, domain=19/12*pi:29/12*pi] plot (\x, {tan(\x r)});
-            \draw [mkred, smooth, samples=100, domain=-11/12*pi:-1/12*pi] plot
-            (\x, {cos(\x r) / sin(\x r)});
-            \draw [mkred, smooth, samples=100, domain=1/12*pi:11/12*pi] plot
-            (\x, {cos(\x r) / sin(\x r)});
-            \draw [mkred, smooth, samples=100, domain=13/12*pi:23/12*pi] plot
-            (\x, {cos(\x r) / sin(\x r)});
-            \draw [mkred, smooth, samples=100, domain=25/12*pi:35/12*pi] plot
-            (\x, {cos(\x r) / sin(\x r)});
-            \draw[mkred, polstelle] (pi,-2.5) -- (pi,2.5);
-            \draw[mkred, polstelle] (2*pi,-2.5) -- (2*pi,2.5);
-            \draw[mkred, polstelle] (3*pi,-2.5) -- (3*pi,2.5);
-            \draw[mkyellow, polstelle] (1/2*pi,-2.5) -- (1/2*pi,2.5);
-            \draw[mkyellow, polstelle] (3/2*pi,-2.5) -- (3/2*pi,2.5);
-            \draw[mkyellow, polstelle] (5/2*pi,-2.5) -- (5/2*pi,2.5);
+	\centering
+	\begin{tikzpicture}
+		\tikzstyle{polstelle}=[dotted, thick]
+		\begin{axis}[
+				default,
+				xmin=-1.2, xmax=7.2,
+				ymin=-2.2, ymax=2.2,
+				width=12cm
+			]
+			\draw [mkyellow, smooth, samples=100, domain=-1.2:5/12*pi] plot (\x, {tan(\x r)});
+			\draw [mkyellow, smooth, samples=100, domain=7/12*pi:17/12*pi] plot (\x, {tan(\x r)});
+			\draw [mkyellow, smooth, samples=100, domain=19/12*pi:29/12*pi] plot (\x, {tan(\x r)});
+			\draw [mkred, smooth, samples=100, domain=-11/12*pi:-1/12*pi] plot
+			(\x, {cos(\x r) / sin(\x r)});
+			\draw [mkred, smooth, samples=100, domain=1/12*pi:11/12*pi] plot
+			(\x, {cos(\x r) / sin(\x r)});
+			\draw [mkred, smooth, samples=100, domain=13/12*pi:23/12*pi] plot
+			(\x, {cos(\x r) / sin(\x r)});
+			\draw [mkred, smooth, samples=100, domain=25/12*pi:35/12*pi] plot
+			(\x, {cos(\x r) / sin(\x r)});
+			\draw[mkred, polstelle] (pi,-2.5) -- (pi,2.5);
+			\draw[mkred, polstelle] (2*pi,-2.5) -- (2*pi,2.5);
+			\draw[mkred, polstelle] (3*pi,-2.5) -- (3*pi,2.5);
+			\draw[mkyellow, polstelle] (1/2*pi,-2.5) -- (1/2*pi,2.5);
+			\draw[mkyellow, polstelle] (3/2*pi,-2.5) -- (3/2*pi,2.5);
+			\draw[mkyellow, polstelle] (5/2*pi,-2.5) -- (5/2*pi,2.5);
 
-            \draw[] (pi,-0.1) -- (pi,0.1);
-            \node[] at (axis cs: pi, 0.3) {\(\pi\)};
-            \draw[] (2*pi,-0.1) -- (2*pi,0.1);
-            \node[] at (axis cs: 2*pi, 0.3) {\(2\pi\)};
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Tangens und Cotangens}
-    \textbf{\color{mkyellow}---} \(\tan(x)\)
-    \textbf{\color{mkred}---} \(\cot(x)\)
+			\draw[] (pi,-0.1) -- (pi,0.1);
+			\node[] at (axis cs: pi, 0.3) {\(\pi\)};
+			\draw[] (2*pi,-0.1) -- (2*pi,0.1);
+			\node[] at (axis cs: 2*pi, 0.3) {\(2\pi\)};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Tangens und Cotangens}
+	\textbf{\color{mkyellow}---} \(\tan(x)\)
+	\textbf{\color{mkred}---} \(\cot(x)\)
 \end{figure}
 
 \begin{align*}
-    \tan(-x) &= -\tan(x) &&\Rightarrow \text{punktsymmetrisch} \\
-    \cot(-x) &= -\cot(x) &&\Rightarrow \text{punktsymmetrisch} \\
-    \\
-    \tan(x + k \pi) &= \tan(x) &&k \in \mathbb{Z} \\
-    \cot(x + k \pi) &= \cot(x) &&k \in \mathbb{Z} \\
+	\tan(-x)        & = -\tan(x) &  & \Rightarrow \text{punktsymmetrisch} \\
+	\cot(-x)        & = -\cot(x) &  & \Rightarrow \text{punktsymmetrisch} \\
+	\\
+	\tan(x + k \pi) & = \tan(x)  &  & k \in \mathbb{Z}                    \\
+	\cot(x + k \pi) & = \cot(x)  &  & k \in \mathbb{Z}                    \\
 \end{align*}
 
 \begin{center}
-    \(\tan(x)\) und \(\cot(x)\) sind periodisch mit \(\pi \).
+	\(\tan(x)\) und \(\cot(x)\) sind periodisch mit \(\pi \).
 \end{center}

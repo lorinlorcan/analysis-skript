@@ -3,46 +3,46 @@
 \paragraph{Beispiel}
 
 \[
-    y = \frac{x^2 - 1}{x - 1}
+	y = \frac{x^2 - 1}{x - 1}
 \]
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                default,
-                xmin=-0.5, xmax=3.5,
-                ymin=-0.5, ymax=3.5,
-                width=8cm
-            ]
-            \addplot[orange, smooth, samples=100, domain=-4:4] {(x^2 - 1) / (x - 1)};
-            \addplot[mark=o] coordinates {(1,2)};
-            \node[right] at (axis cs: 1, 2) {Definitionslücke};
-        \end{axis}
-    \end{tikzpicture}
-    \caption{\(\frac{x^2 - 1}{x - 1}\)}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				default,
+				xmin=-0.5, xmax=3.5,
+				ymin=-0.5, ymax=3.5,
+				width=8cm
+			]
+			\addplot[orange, smooth, samples=100, domain=-4:4] {(x^2 - 1) / (x - 1)};
+			\addplot[mark=o] coordinates {(1,2)};
+			\node[right] at (axis cs: 1, 2) {Definitionslücke};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{\(\frac{x^2 - 1}{x - 1}\)}
 \end{figure}
 
 \[
-    \lim_{x \rightarrow 1} \frac{x^2 - 1^2}{x - 1}
-    = \lim_{x \rightarrow 1} \frac{(x - 1)(x + 1)}{x - 1}
-    = \lim_{x \rightarrow 1} (x+1)
-    = 2    
+	\lim_{x \rightarrow 1} \frac{x^2 - 1^2}{x - 1}
+	= \lim_{x \rightarrow 1} \frac{(x - 1)(x + 1)}{x - 1}
+	= \lim_{x \rightarrow 1} (x+1)
+	= 2
 \]
 
 \textbf{rechtseitiger Grenzwert}
 
 \[
-    x > x_0: \lim_{x \rightarrow x_0} f(x) = 2 = g_{+}
+	x > x_0: \lim_{x \rightarrow x_0} f(x) = 2 = g_{+}
 \]
 
 \textbf{rechtseitiger Grenzwert}
 
 \[
-    x < x_0: \lim_{x \rightarrow x_0} f(x) = 2 = g_{-}
+	x < x_0: \lim_{x \rightarrow x_0} f(x) = 2 = g_{-}
 \]
 
 
 \[
-    g_{+} = g_{-} \Rightarrow \text{\(f(x_0)\) ist nicht definiert}
+	g_{+} = g_{-} \Rightarrow \text{\(f(x_0)\) ist nicht definiert}
 \]

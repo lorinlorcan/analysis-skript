@@ -3,26 +3,26 @@
 Für Grenzwerte, die auf einem unbestimmten Ausdruck der Form \enquote{\( \frac{0}{0} \)} oder \enquote{\( \frac{\infty}{\infty} \)} führen, gilt:
 
 \[
-    \limfromto{x}{x_0} \frac{f(x)}{g(x)} \overset{H}{=}
-    \limfromto{x}{x_0} \frac{f'(x)}{g'(x)} =
-    \limfromto{x}{x_0} \frac{f^{(k)}(x)}{g^{(k)}(x)}
-    \quad k \geq 1,\ \text{minimal}
+	\limfromto{x}{x_0} \frac{f(x)}{g(x)} \overset{H}{=}
+	\limfromto{x}{x_0} \frac{f'(x)}{g'(x)} =
+	\limfromto{x}{x_0} \frac{f^{(k)}(x)}{g^{(k)}(x)}
+	\quad k \geq 1,\ \text{minimal}
 \]
 
 weitere unbestimmte Ausdrücke:
 
 \begin{description}[style=nextline]
-    \item[\( 0 \cdot \infty,\ \infty \cdot 0 \)]
-    \( u \cdot v
-    \Rightarrow \cfrac{u}{\cfrac{1}{v}} \)
-    \item[\( \infty - \infty \)]
-    \( u - v
-    \Rightarrow \cfrac{u \cdot v}{v} - \cfrac{v \cdot u}{u}
-    \Rightarrow \cfrac{\cfrac{1}{v}}{\cfrac{1}{u\ v}} - \cfrac{\cfrac{1}{u}}{\cfrac{1}{u\ v}} = \cfrac{\cfrac{1}{v}-\cfrac{1}{u}}{\cfrac{1}{u\ v}} \)
-    \item[\( 0^0,\ \infty^0,\ 1^\infty \)]
-    \(
-        u^v \Rightarrow e^{v \cdot \ln(u)} 
-    \) 
+	\item[\( 0 \cdot \infty,\ \infty \cdot 0 \)]
+	      \( u \cdot v
+	      \Rightarrow \cfrac{u}{\cfrac{1}{v}} \)
+	\item[\( \infty - \infty \)]
+	      \( u - v
+	      \Rightarrow \cfrac{u \cdot v}{v} - \cfrac{v \cdot u}{u}
+	      \Rightarrow \cfrac{\cfrac{1}{v}}{\cfrac{1}{u\ v}} - \cfrac{\cfrac{1}{u}}{\cfrac{1}{u\ v}} = \cfrac{\cfrac{1}{v}-\cfrac{1}{u}}{\cfrac{1}{u\ v}} \)
+	\item[\( 0^0,\ \infty^0,\ 1^\infty \)]
+	      \(
+	      u^v \Rightarrow e^{v \cdot \ln(u)}
+	      \)
 \end{description}
 
 \paragraph{Beispiel}
@@ -30,19 +30,19 @@ weitere unbestimmte Ausdrücke:
 \subparagraph{1}
 
 \begin{align*}
-    y &= \frac{\sin(x)}{x} \\
-    \limtozero{x} \frac{\sin(x)}{x} &\entspricht \frac{0}{0} \\
-    \limtozero{x} \frac{\sin(x)}{x} &\overset{H}{=} \limtozero{x} \frac{\cos(x)}{1} = 1
+	y                               & = \frac{\sin(x)}{x}                                \\
+	\limtozero{x} \frac{\sin(x)}{x} & \entspricht \frac{0}{0}                            \\
+	\limtozero{x} \frac{\sin(x)}{x} & \overset{H}{=} \limtozero{x} \frac{\cos(x)}{1} = 1
 \end{align*}
 
 \subparagraph{2}
 
 \begin{align*}
-    & \limtoinfty{x} {(1 + \frac{1}{x})}^x \\
-    &= \limtoinfty{x} e^{\ln {\left( 1 + \frac{1}{x} \right)}^x} \\
-    &= \limtoinfty{x} e^{x \ln \left( 1 + \frac{1}{x} \right)} \\
-    &= e^{\limtoinfty{x} \frac{\ln \left( 1 + \frac{1}{x} \right)}{\frac{1}{x}}} \\
-    &\overset{H}{=} e^{\limtoinfty{x} \frac{\frac{1}{\left(1 + \frac{1}{x}\right)} \left( -x^{-2} \right)}{\left( -x^{-2} \right)}} \\
-    &= e^{\limtoinfty{x} \frac{1}{1 + \frac{1}{x}}} \\
-    &= e^1 = e
+	 & \limtoinfty{x} {(1 + \frac{1}{x})}^x                                                                                           \\
+	 & = \limtoinfty{x} e^{\ln {\left( 1 + \frac{1}{x} \right)}^x}                                                                    \\
+	 & = \limtoinfty{x} e^{x \ln \left( 1 + \frac{1}{x} \right)}                                                                      \\
+	 & = e^{\limtoinfty{x} \frac{\ln \left( 1 + \frac{1}{x} \right)}{\frac{1}{x}}}                                                    \\
+	 & \overset{H}{=} e^{\limtoinfty{x} \frac{\frac{1}{\left(1 + \frac{1}{x}\right)} \left( -x^{-2} \right)}{\left( -x^{-2} \right)}} \\
+	 & = e^{\limtoinfty{x} \frac{1}{1 + \frac{1}{x}}}                                                                                 \\
+	 & = e^1 = e
 \end{align*}

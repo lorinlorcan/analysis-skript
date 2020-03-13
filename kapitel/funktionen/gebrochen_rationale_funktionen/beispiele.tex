@@ -3,74 +3,74 @@
 \paragraph{1. Beispiel (einfachste gebrochene Funktion) (siehe Abb.~\ref{fig:gebrochenefunktionen_beispiel1})}
 
 \[
-    y = f(x) = \frac{1}{x}  
+	y = f(x) = \frac{1}{x}
 \]
 
 punktsymmetrisch
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            default,
-            xmin=-4.2, xmax=4.2,
-            ymin=-4.2, ymax=4.2,
-            width=6cm
-            ]
-            \draw [orange, smooth, samples=100, domain=-4:-1/100] plot (\x, {1 / \x});
-            \draw [orange, smooth, samples=100, domain=1/100:4] plot (\x, {1 / \x});
-        \end{axis}
-    \end{tikzpicture}
-    \caption{\(f(x) = \frac{1}{x}\)}\label{fig:gebrochenefunktionen_beispiel1}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				default,
+				xmin=-4.2, xmax=4.2,
+				ymin=-4.2, ymax=4.2,
+				width=6cm
+			]
+			\draw [orange, smooth, samples=100, domain=-4:-1/100] plot (\x, {1 / \x});
+			\draw [orange, smooth, samples=100, domain=1/100:4] plot (\x, {1 / \x});
+		\end{axis}
+	\end{tikzpicture}
+	\caption{\(f(x) = \frac{1}{x}\)}\label{fig:gebrochenefunktionen_beispiel1}
 \end{figure}
 
 \paragraph{2. Beispiel  (siehe Abb.~\ref{fig:gebrochenefunktionen_beispiel2})}
 
 \[
-    y = f(x) = \frac{1}{x^2}  
+	y = f(x) = \frac{1}{x^2}
 \]
 
 achsensymmetrisch
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            default,
-            xmin=-4.2, xmax=4.2,
-            ymin=-4.2, ymax=4.2,
-            width=6cm
-            ]
-            \draw [orange, smooth, samples=100, domain=-4:-1/10] plot (\x, {1 /
-            (pow(\x, 2))});
-            \draw [orange, smooth, samples=100, domain=1/10:4] plot (\x, {1 /
-            (pow(\x, 2))});
-        \end{axis}
-    \end{tikzpicture}
-    \caption{\(f(x) = \frac{1}{x^2}\)}\label{fig:gebrochenefunktionen_beispiel2}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				default,
+				xmin=-4.2, xmax=4.2,
+				ymin=-4.2, ymax=4.2,
+				width=6cm
+			]
+			\draw [orange, smooth, samples=100, domain=-4:-1/10] plot (\x, {1 /
+					(pow(\x, 2))});
+			\draw [orange, smooth, samples=100, domain=1/10:4] plot (\x, {1 /
+					(pow(\x, 2))});
+		\end{axis}
+	\end{tikzpicture}
+	\caption{\(f(x) = \frac{1}{x^2}\)}\label{fig:gebrochenefunktionen_beispiel2}
 \end{figure}
 
 \paragraph{2. Beispiel verschoben}
 
 \[
-    y = f(x) = \frac{1}{{(x-1)}^2}  
+	y = f(x) = \frac{1}{{(x-1)}^2}
 \]
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            default,
-            xmin=-4.2, xmax=4.2,
-            ymin=-4.2, ymax=4.2,
-            width=6cm
-            ]
-            \draw [orange, smooth, samples=100, domain=-4:9/10] plot (\x, {1 /
-            (pow((\x - 1), 2))});
-            \draw [orange, smooth, samples=100, domain=11/10:4] plot (\x, {1 /
-            (pow((\x - 1), 2))});
-            \draw[dashed, gray] (1, -4) -- (1, 4);
-        \end{axis}
-    \end{tikzpicture}
-    \caption{\(f(x) = \frac{1}{{(x-1)}^2}\)}\label{fig:gebrochenefunktionen_beispiel3}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				default,
+				xmin=-4.2, xmax=4.2,
+				ymin=-4.2, ymax=4.2,
+				width=6cm
+			]
+			\draw [orange, smooth, samples=100, domain=-4:9/10] plot (\x, {1 /
+					(pow((\x - 1), 2))});
+			\draw [orange, smooth, samples=100, domain=11/10:4] plot (\x, {1 /
+					(pow((\x - 1), 2))});
+			\draw[dashed, gray] (1, -4) -- (1, 4);
+		\end{axis}
+	\end{tikzpicture}
+	\caption{\(f(x) = \frac{1}{{(x-1)}^2}\)}\label{fig:gebrochenefunktionen_beispiel3}
 \end{figure}

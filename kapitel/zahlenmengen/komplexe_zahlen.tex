@@ -22,8 +22,8 @@ und werden in der \textit{Gaußschen Zahlenebene} (siehe Abb.~\ref{fig:gausche_z
 
 
 \begin{align*}
-	z_1 &= a_1 + i b_1 \\
-	z_2 &= a_2 + i b_2
+	z_1 & = a_1 + i b_1 \\
+	z_2 & = a_2 + i b_2
 \end{align*}
 
 
@@ -31,20 +31,20 @@ und werden in der \textit{Gaußschen Zahlenebene} (siehe Abb.~\ref{fig:gausche_z
 
 
 \begin{align*}
-	z_3 &= z_1 + z_2 \\
-	&= (a_1 + i b_1) + (a_2 + i b_2) \\
-	&= a_1 + i b_1 + a_2 + i b_2 \\
-	&= \underbrace{(a_1 + a_2)}_{a_3 \in \mathbb{R}} +
+	z_3 & = z_1 + z_2                                       \\
+	    & = (a_1 + i b_1) + (a_2 + i b_2)                   \\
+	    & = a_1 + i b_1 + a_2 + i b_2                       \\
+	    & = \underbrace{(a_1 + a_2)}_{a_3 \in \mathbb{R}} +
 	\underbrace{i(b_1 + b_2)}_{b_3 \in \mathbb{C}}
 \end{align*}
 
 \subsubsection{Multiplikation}
 
 \begin{align*}
-	z_3 &= z_1 \cdot z_2 \\
-	&= (a_1 + i b_1) \cdot (a_2 + i b_2) \\
-	&= a_1 a_2 + a_1 ib_2 + ib_1 a_2 + ib_1 ib_2 \\
-	&= \underbrace{a_1 a_2 - b_1 b_2}_{a_3 \in \mathbb{R}} +
+	z_3 & = z_1 \cdot z_2                                         \\
+	    & = (a_1 + i b_1) \cdot (a_2 + i b_2)                     \\
+	    & = a_1 a_2 + a_1 ib_2 + ib_1 a_2 + ib_1 ib_2             \\
+	    & = \underbrace{a_1 a_2 - b_1 b_2}_{a_3 \in \mathbb{R}} +
 	\underbrace{i(a_1 b_2 + a_2 b_1)}_{b_3 \in \mathbb{C}}
 \end{align*}
 
@@ -74,7 +74,7 @@ Vergleichend dazu siehe Abb.~\ref{fig:trigonometrische_form}.
 
 \begin{align*}
 	z & = r (\cos(\phi)) + i \cdot \sin(\phi) \\
-	  & = r \cdot e^{i\ \phi}                 
+	  & = r \cdot e^{i\ \phi}
 \end{align*}
 
 \subsubsection{Eulersche Gleichung}
@@ -86,12 +86,12 @@ Vergleichend dazu siehe Abb.~\ref{fig:trigonometrische_form}.
 \paragraph{Multiplikation}
 
 \begin{align*}
-	z_1 &= r_1 \cdot e^{i\ \phi_1} \\
-	z_2 &= r_2 \cdot e^{i\ \phi_2} \\
+	z_1 & = r_1 \cdot e^{i\ \phi_1}                                                              \\
+	z_2 & = r_2 \cdot e^{i\ \phi_2}                                                              \\
 	\\
-	z_3 &= z_1 \cdot z_2 \\
-	&= r_1 \cdot e^{i\ \phi_1} \cdot r_2 \cdot e^{i\ \phi_2} \\
-	&= \underbrace{r_1 r_2}_{r_3} \cdot \underbrace{e^{i(\phi_1 + \phi_2)}}_{e^{i\ \phi_3}}
+	z_3 & = z_1 \cdot z_2                                                                        \\
+	    & = r_1 \cdot e^{i\ \phi_1} \cdot r_2 \cdot e^{i\ \phi_2}                                \\
+	    & = \underbrace{r_1 r_2}_{r_3} \cdot \underbrace{e^{i(\phi_1 + \phi_2)}}_{e^{i\ \phi_3}}
 \end{align*}
 
 \begin{uebung}
@@ -105,19 +105,19 @@ Vergleichend dazu siehe Abb.~\ref{fig:trigonometrische_form}.
 			\text{Es gilt:}
 			r \cdot e^{i\ \phi} = z
 		\]
-		
+
 		\subparagraph{Berechnung von \(z_1\):}
-		
-		
+
+
 		\begin{align*}
-			z^3 &= {\left(r \cdot e^{i\ \phi}\right)}^3 \\
-			z^3 &= r^3 \cdot e^{3 i\ \phi} \\
-			1 &= r^3 \cdot e^{3 i\ \phi} \\
-			1 &= r(\underbrace{\cos{(3 \phi)}}_{=1} + \underbrace{i \cdot \sin{(3 \phi)}}_{=0})
+			z^3 & = {\left(r \cdot e^{i\ \phi}\right)}^3                                           \\
+			z^3 & = r^3 \cdot e^{3 i\ \phi}                                                        \\
+			1   & = r^3 \cdot e^{3 i\ \phi}                                                        \\
+			1   & = r(\underbrace{\cos{(3 \phi)}}_{=1} + \underbrace{i \cdot \sin{(3 \phi)}}_{=0})
 		\end{align*}
-		
+
 		\subparagraph{Berechnung von \(z_2\) und \(z_3\):}
-		
+
 		\[
 			\begin{alignedat}{1}
 				\cos{(3 \phi)} &= 1 \\
@@ -129,13 +129,13 @@ Vergleichend dazu siehe Abb.~\ref{fig:trigonometrische_form}.
 			\end{alignedat}
 		\]
 	\end{loesungsweg}
-	
+
 	\begin{loesung}
 		\[
 			\begin{alignedat}{3}
 				z_1    &     & z_2       &                   & z_3       &                   \\
 				r_1    & = 1 & \quad r_2 & = 1               & \quad r_3 & = 1               \\
-				\phi_1 & = 0 & \phi_2    & = \frac{2}{3} \pi & \phi_3    & = \frac{4}{3} \pi 
+				\phi_1 & = 0 & \phi_2    & = \frac{2}{3} \pi & \phi_3    & = \frac{4}{3} \pi
 			\end{alignedat}
 		\]
 	\end{loesung}

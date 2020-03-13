@@ -3,13 +3,13 @@
 \paragraph{1)}
 
 \begin{align*}
-    \int_4^5 \frac{x^2}{x-2} \;\mathrm{d}x \\
-    &= \int_4^5 x+3 + \frac{9}{x-3} \;\mathrm{d}x \\
-    &= \int_4^5 x \;\mathrm{d}x + 3 \int_4^5 1 \;\mathrm{d}x + 9 \int_4^5 \frac{1}{x-3} \;\mathrm{d}x \\
-    &= {\left[ \frac{x^2}{2} \right]}_4^5 + 3 {[x]}_4^5 + 9 {[\ln (x-3)]}_4^5 \\
-    &= {\left[ \frac{x^2}{2} + 3x + 9 \cdot \ln(x-3) \right]}_4^5 \\
-    &= \frac{25}{2} + 15 + 9 \cdot \ln(2) - \frac{16}{2} - 12 -9 \cdot \ln(1) \\
-    &= \frac{15}{2} + 9 \ln(2) \approx 13,74\;\mathrm{FE}
+	\int_4^5 \frac{x^2}{x-2} \;\mathrm{d}x                                                              \\
+	 & = \int_4^5 x+3 + \frac{9}{x-3} \;\mathrm{d}x                                                     \\
+	 & = \int_4^5 x \;\mathrm{d}x + 3 \int_4^5 1 \;\mathrm{d}x + 9 \int_4^5 \frac{1}{x-3} \;\mathrm{d}x \\
+	 & = {\left[ \frac{x^2}{2} \right]}_4^5 + 3 {[x]}_4^5 + 9 {[\ln (x-3)]}_4^5                         \\
+	 & = {\left[ \frac{x^2}{2} + 3x + 9 \cdot \ln(x-3) \right]}_4^5                                     \\
+	 & = \frac{25}{2} + 15 + 9 \cdot \ln(2) - \frac{16}{2} - 12 -9 \cdot \ln(1)                         \\
+	 & = \frac{15}{2} + 9 \ln(2) \approx 13,74\;\mathrm{FE}
 \end{align*}
 
 % TODO: Nebenrechnung auch layoutmäßig daneben
@@ -22,70 +22,70 @@
 \paragraph{2)}
 
 \begin{align*}
-    &u(x) = \sin(x) \\
-    \\
-    I)\quad &\frac{\mathrm{d}u}{\mathrm{x}} = \cos(x) \Rightarrow \mathrm{d}x = \frac{\mathrm{d}u}{\cos(x)} \\
-    &u(\frac{\pi}{2}) = 1; U(0) = 0 \\
-    &\int_0^1 u^4 \cdot \cos(x) \cdot \frac{\mathrm{d}u}{\cos(x)} \\
-    &= {\left[ \frac{u^5}{5} \right]}_0^1 = \frac{1}{5} \\
-    II)\quad &u = \sin^4(x) \Rightarrow u' = 4 \sin^3 (x) \\
-    &v' = \cos(x) \Rightarrow v = \sin(x) \\
-    &\Rightarrow = {\left[ \sin^5(x) \right]}_0^{\frac{\pi}{2}} - 4 \int_0^{\frac{\pi}{2}} \sin^4 (x) \cdot \cos(x) \\
-    &\Rightarrow 5 \int_0^\frac{\pi}{2} \sin^4(x) \cdot \cos(x) \;\mathrm{d}x = {\left[ \sin^5(x) \right]}_0^\frac{0}{\frac{\pi}{2}} \\
-    &\Rightarrow \int_0^\pi \sin^4(x) \cdot \cos(x) \;\mathrm{d}x = \frac{1}{5} {\left[ \sin^5(x) \right]}_0^\frac{\pi}{2} \\
-    &= \frac{1}{5}
+	         & u(x) = \sin(x)                                                                                                                  \\
+	\\
+	I)\quad  & \frac{\mathrm{d}u}{\mathrm{x}} = \cos(x) \Rightarrow \mathrm{d}x = \frac{\mathrm{d}u}{\cos(x)}                                  \\
+	         & u(\frac{\pi}{2}) = 1; U(0) = 0                                                                                                  \\
+	         & \int_0^1 u^4 \cdot \cos(x) \cdot \frac{\mathrm{d}u}{\cos(x)}                                                                    \\
+	         & = {\left[ \frac{u^5}{5} \right]}_0^1 = \frac{1}{5}                                                                              \\
+	II)\quad & u = \sin^4(x) \Rightarrow u' = 4 \sin^3 (x)                                                                                     \\
+	         & v' = \cos(x) \Rightarrow v = \sin(x)                                                                                            \\
+	         & \Rightarrow = {\left[ \sin^5(x) \right]}_0^{\frac{\pi}{2}} - 4 \int_0^{\frac{\pi}{2}} \sin^4 (x) \cdot \cos(x)                  \\
+	         & \Rightarrow 5 \int_0^\frac{\pi}{2} \sin^4(x) \cdot \cos(x) \;\mathrm{d}x = {\left[ \sin^5(x) \right]}_0^\frac{0}{\frac{\pi}{2}} \\
+	         & \Rightarrow \int_0^\pi \sin^4(x) \cdot \cos(x) \;\mathrm{d}x = \frac{1}{5} {\left[ \sin^5(x) \right]}_0^\frac{\pi}{2}           \\
+	         & = \frac{1}{5}
 \end{align*}
 
 \paragraph{3)}
 
 \begin{align*}
-    &\int \frac{1}{x} \cdot \ln(x) \;\mathrm{d}x \\
-    \\
-    &\begin{array}{ll}
-        u = \ln x &\Rightarrow u'= \frac{1}{x} \\
-        v' = \frac{1}{x} &\Rightarrow v = \ln x 
-    \end{array} \\
-    &\Rightarrow{} \ln^2 x- \int\frac{1}{x} \cdot \ln(x) \;\mathrm{d}x = \frac{1}{x} \ln(x) \;\mathrm{d}x \\
-    &\Rightarrow{} 2 \cdot \int\frac{1}{x} \ln(x) \;\mathrm{d}x = \ln^2(x) \\
-    &\int\frac{1}{x} \ln(x) \;\mathrm{d}x = \frac{1}{2} \ln^2 (x) + C
+	 & \int \frac{1}{x} \cdot \ln(x) \;\mathrm{d}x                                                          \\
+	\\
+	 & \begin{array}{ll}
+		u = \ln x        & \Rightarrow u'= \frac{1}{x} \\
+		v' = \frac{1}{x} & \Rightarrow v = \ln x
+	\end{array}                                                                            \\
+	 & \Rightarrow{} \ln^2 x- \int\frac{1}{x} \cdot \ln(x) \;\mathrm{d}x = \frac{1}{x} \ln(x) \;\mathrm{d}x \\
+	 & \Rightarrow{} 2 \cdot \int\frac{1}{x} \ln(x) \;\mathrm{d}x = \ln^2(x)                                \\
+	 & \int\frac{1}{x} \ln(x) \;\mathrm{d}x = \frac{1}{2} \ln^2 (x) + C
 \end{align*}
 
 \paragraph{4)}
 
 \begin{align*}
-    &\int \frac{1-x}{1+\sqrt{x}} \;\mathrm{d}x = \int \frac{1^2 - \sqrt{2}}{1+ \sqrt{x}} \;\mathrm{d}x \\
-    \\
-    &\Rightarrow = \int \frac{(1 + \sqrt(x) (1 - \sqrt{x}))}{1 + \sqrt{x}} \\
-    &= \int 1 - \sqrt{x} \;\mathrm{d}x \\
-    &= \int \;\mathrm{d}x - \int \sqrt{x} \;\mathrm{d}x \\
-    &= x - \frac{2}{3} x^{\frac{3}{2}} + C     
+	 & \int \frac{1-x}{1+\sqrt{x}} \;\mathrm{d}x = \int \frac{1^2 - \sqrt{2}}{1+ \sqrt{x}} \;\mathrm{d}x \\
+	\\
+	 & \Rightarrow = \int \frac{(1 + \sqrt(x) (1 - \sqrt{x}))}{1 + \sqrt{x}}                             \\
+	 & = \int 1 - \sqrt{x} \;\mathrm{d}x                                                                 \\
+	 & = \int \;\mathrm{d}x - \int \sqrt{x} \;\mathrm{d}x                                                \\
+	 & = x - \frac{2}{3} x^{\frac{3}{2}} + C
 \end{align*}
 
 \paragraph{5)}
 
 \begin{align*}
-    &\int \ln(x) \;\mathrm{d}x \\
-    \\
-    &= \int \ln(x) \cdot 1 \;\mathrm{d}x \\
-    &\begin{array}{ll}
-        u = \ln(x) &\Rightarrow u' = \frac{1}{x} \\
-        v' = 1 &\Rightarrow v = x
-    \end{array} \\
-    &\Rightarrow\int\ln(x) \;\mathrm{d}x \\
-    &= \ln(x) \cdot x- \int\frac{1}{x} x \;\mathrm{d}x \\
-    &= \ln(x) x-x+C \\
-    &= x (\ln(x)-1) +C
+	 & \int \ln(x) \;\mathrm{d}x                         \\
+	\\
+	 & = \int \ln(x) \cdot 1 \;\mathrm{d}x               \\
+	 & \begin{array}{ll}
+		u = \ln(x) & \Rightarrow u' = \frac{1}{x} \\
+		v' = 1     & \Rightarrow v = x
+	\end{array}                         \\
+	 & \Rightarrow\int\ln(x) \;\mathrm{d}x               \\
+	 & = \ln(x) \cdot x- \int\frac{1}{x} x \;\mathrm{d}x \\
+	 & = \ln(x) x-x+C                                    \\
+	 & = x (\ln(x)-1) +C
 \end{align*}
 
 \paragraph{6)}
 
 \begin{align*}
-    &\int \frac{1}{x \cdot \ln x} \;\mathrm{d}x \\
-    \\
-    &z = \ln (x) \\
-    &\frac{\mathrm{d} z}{\mathrm{d} x} = \frac{1}{x} \Rightarrow \mathrm{d} x = x \cdot \mathrm{d} z \\
-    &= \int \frac{1}{x} \frac{1}{z} x \mathrm{d}z \\
-    &= \int \frac{1}{z} \mathrm{d} z \\
-    &= \ln|z| + C \\
-    &= \ln|\ln|x|| + C
+	 & \int \frac{1}{x \cdot \ln x} \;\mathrm{d}x                                                      \\
+	\\
+	 & z = \ln (x)                                                                                     \\
+	 & \frac{\mathrm{d} z}{\mathrm{d} x} = \frac{1}{x} \Rightarrow \mathrm{d} x = x \cdot \mathrm{d} z \\
+	 & = \int \frac{1}{x} \frac{1}{z} x \mathrm{d}z                                                    \\
+	 & = \int \frac{1}{z} \mathrm{d} z                                                                 \\
+	 & = \ln|z| + C                                                                                    \\
+	 & = \ln|\ln|x|| + C
 \end{align*}

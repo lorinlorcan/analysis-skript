@@ -1,48 +1,48 @@
 \subsubsection{Wendepunkte}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                default,
-                xmin=-0.5, xmax=3.5,
-                ymin=-0.5, ymax=3.5,
-                width=8cm,
-                xticklabels={},
-                yticklabels={}
-            ]
-            \addplot[orange, smooth, samples=100, domain=-1:4] {(x-1.5)^3 + 2};
-            
-            \draw[mkred, dotted, thick] (1.5, -0.2) -- (1.5, 4.2);
-        \end{axis}
-    \end{tikzpicture}
-    \qquad
-    \begin{tikzpicture}
-        \begin{axis}[
-                default,
-                xmin=-0.5, xmax=3.5,
-                ymin=-0.5, ymax=3.5,
-                width=8cm,
-                xticklabels={},
-                yticklabels={}
-            ]
-            \addplot[orange, smooth, samples=100, domain=-1:4] {-(x-1.5)^3 - 0.5*x + 2};
-                        
-            \draw[mkred, dotted, thick] (1.5, -0.2) -- (1.5, 4.2);
-            
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Funktionen mit Wendestellen}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				default,
+				xmin=-0.5, xmax=3.5,
+				ymin=-0.5, ymax=3.5,
+				width=8cm,
+				xticklabels={},
+				yticklabels={}
+			]
+			\addplot[orange, smooth, samples=100, domain=-1:4] {(x-1.5)^3 + 2};
+
+			\draw[mkred, dotted, thick] (1.5, -0.2) -- (1.5, 4.2);
+		\end{axis}
+	\end{tikzpicture}
+	\qquad
+	\begin{tikzpicture}
+		\begin{axis}[
+				default,
+				xmin=-0.5, xmax=3.5,
+				ymin=-0.5, ymax=3.5,
+				width=8cm,
+				xticklabels={},
+				yticklabels={}
+			]
+			\addplot[orange, smooth, samples=100, domain=-1:4] {-(x-1.5)^3 - 0.5*x + 2};
+
+			\draw[mkred, dotted, thick] (1.5, -0.2) -- (1.5, 4.2);
+
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Funktionen mit Wendestellen}
 \end{figure}
 
 \paragraph{Notwendige Bedingung}
 
 \[
-    y''(x_W) = 0
+	y''(x_W) = 0
 \]
 
 \paragraph{Hinreichende Bedingung}
 
 \[
-    y^{(k)}(x_W) \neq 0 \quad k \geq 3,\ \text{ungerade, minimal}
+	y^{(k)}(x_W) \neq 0 \quad k \geq 3,\ \text{ungerade, minimal}
 \]

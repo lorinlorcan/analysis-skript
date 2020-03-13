@@ -3,59 +3,58 @@
 \paragraph{1)}
 
 \begin{align*}
-    \int (x^2 + 2x - 5) \;\mathrm{d}x \\
-    &= \int x^2 \;\mathrm{d}x + \int 2x \;\mathrm{d}x - 5 \int \;\mathrm{d}x \\
-    &= \frac{x^3}{3} + 2 \frac{x^2}{2} - 5x + C \\
-    &= \frac{x^3}{3} + x^2 - 5x + C
+	\int (x^2 + 2x - 5) \;\mathrm{d}x                                          \\
+	 & = \int x^2 \;\mathrm{d}x + \int 2x \;\mathrm{d}x - 5 \int \;\mathrm{d}x \\
+	 & = \frac{x^3}{3} + 2 \frac{x^2}{2} - 5x + C                              \\
+	 & = \frac{x^3}{3} + x^2 - 5x + C
 \end{align*}
 
 \paragraph{2)}
 
 \begin{align*}
-    \int \frac{x^2 - 8x}{x^4} \;\mathrm{d}x;
-    &= \int \frac{x^2}{x^4} \;\mathrm{d}x - \int \frac{8x}{x^4} \;\mathrm{d}x \\
-    &= \int x^{-2} \;\mathrm{d}x - 8 \int x^{-3} \;\mathrm{d}x \\
-    &= \frac{x^{-1}}{-1} - 8 \frac{x^{-2}}{-2} + C \\
-    &= -\frac{1}{x} + 4 \frac{1}{x^2} + C
+	\int \frac{x^2 - 8x}{x^4} \;\mathrm{d}x;
+	 & = \int \frac{x^2}{x^4} \;\mathrm{d}x - \int \frac{8x}{x^4} \;\mathrm{d}x \\
+	 & = \int x^{-2} \;\mathrm{d}x - 8 \int x^{-3} \;\mathrm{d}x                \\
+	 & = \frac{x^{-1}}{-1} - 8 \frac{x^{-2}}{-2} + C                            \\
+	 & = -\frac{1}{x} + 4 \frac{1}{x^2} + C
 \end{align*}
 
 \paragraph{3)}
 
 \begin{align*}
-    \int_2^3 \frac{x-3}{x^2} \;\mathrm{d}x \\
-    &= \int_2^3 \frac{1}{x} \;\mathrm{d}x - 3 \int_2^3 \frac{1}{x^2} \;\mathrm{d}x \\
-    &= {[\ln x]}_2^3 - 3 {\left[- \frac{1}{x}\right]}_2^3 \\
-    &= \ln 3 - \ln 2 + 3 {\left[\frac{1}{x}\right]}_2^3 \\
-    &= \ln \frac{3}{2} + \left(\frac{3}{3} - \frac{3}{2}\right) \\
-    &= \ln \frac{3}{2} - \frac{1}{2} \\
-    &\approx -0.095
+	\int_2^3 \frac{x-3}{x^2} \;\mathrm{d}x                                           \\
+	 & = \int_2^3 \frac{1}{x} \;\mathrm{d}x - 3 \int_2^3 \frac{1}{x^2} \;\mathrm{d}x \\
+	 & = {[\ln x]}_2^3 - 3 {\left[- \frac{1}{x}\right]}_2^3                          \\
+	 & = \ln 3 - \ln 2 + 3 {\left[\frac{1}{x}\right]}_2^3                            \\
+	 & = \ln \frac{3}{2} + \left(\frac{3}{3} - \frac{3}{2}\right)                    \\
+	 & = \ln \frac{3}{2} - \frac{1}{2}                                               \\
+	 & \approx -0.095
 \end{align*}
 
 \paragraph{4)}
 
 \begin{align*}
-    \int \frac{x-5}{x^2 - x - 6} \;\mathrm{d}x \\
-    &= \int \frac{x-5}{(x+2)(x-3)} \;\mathrm{d}x \\
-    \text{NR:\;Partialbruchzerlegung} \\
-    \frac{x-5}{(x+2)(x-3)} &= \frac{A}{x+2} + \frac{B}{x-3} \\
-    x-5 &= A(x-3) + B(x+2) \\
-    x=-2:\quad -7 &= -5A \Rightarrow A = \frac{7}{5} \\
-    x=3:\quad -2 &= 5B \Rightarrow B = -\frac{2}{5} \\
-    \Rightarrow &= \frac{7}{5} \int \frac{1}{x+2} \;\mathrm{d}x - \frac{2}{5} \int \frac{1}{x-3} \;\mathrm{d}x
+	\int \frac{x-5}{x^2 - x - 6} \;\mathrm{d}x                                                                             \\
+	                       & = \int \frac{x-5}{(x+2)(x-3)} \;\mathrm{d}x                                                   \\
+	\text{NR:\;Partialbruchzerlegung}                                                                                      \\
+	\frac{x-5}{(x+2)(x-3)} & = \frac{A}{x+2} + \frac{B}{x-3}                                                               \\
+	x-5                    & = A(x-3) + B(x+2)                                                                             \\
+	x=-2:\quad -7          & = -5A \Rightarrow A = \frac{7}{5}                                                             \\
+	x=3:\quad -2           & = 5B \Rightarrow B = -\frac{2}{5}                                                             \\
+	\Rightarrow            & = \frac{7}{5} \int \frac{1}{x+2} \;\mathrm{d}x - \frac{2}{5} \int \frac{1}{x-3} \;\mathrm{d}x
 \end{align*}
 
 
 \begin{alignat*}{2}
-    \text{Substitutionsmethode} \\
-    \text{1.)}\quad &\int \frac{1}{x+2} \;\mathrm{d}x \,\text{mit}\, z &&= x + 2 \\
-    &\int \frac{1}{z} \;\mathrm{d}x &&= \;\mathrm{d}z \\
-    &\int \frac{1}{2} \;\mathrm{d}z = \ln z &&= \ln (x + 2) \\
-    \text{2.)}\quad &\int \frac{1}{x-3} \;\mathrm{d}x \,\text{mit}\, y &&= x - 3 \\
-    &\int \frac{1}{y} \;\mathrm{d}x \;\mathrm{d}x &&= \;\mathrm{d}y \\
-    &\int \frac{1}{y} \;\mathrm{d}y = \ln y &&= \ln(x-3)
+	\text{Substitutionsmethode}                                                              \\
+	\text{1.)}\quad & \int \frac{1}{x+2} \;\mathrm{d}x \,\text{mit}\, z &  & = x + 2         \\
+	                & \int \frac{1}{z} \;\mathrm{d}x                    &  & = \;\mathrm{d}z \\
+	                & \int \frac{1}{2} \;\mathrm{d}z = \ln z            &  & = \ln (x + 2)   \\
+	\text{2.)}\quad & \int \frac{1}{x-3} \;\mathrm{d}x \,\text{mit}\, y &  & = x - 3         \\
+	                & \int \frac{1}{y} \;\mathrm{d}x \;\mathrm{d}x      &  & = \;\mathrm{d}y \\
+	                & \int \frac{1}{y} \;\mathrm{d}y = \ln y            &  & = \ln(x-3)
 \end{alignat*}
 
 \[
-    \Rightarrow = \frac{7}{5} \ln(x+2) - \frac{2}{5} \ln(x-3) + C 
+	\Rightarrow = \frac{7}{5} \ln(x+2) - \frac{2}{5} \ln(x-3) + C
 \]
-    

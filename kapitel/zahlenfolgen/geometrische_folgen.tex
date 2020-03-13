@@ -3,65 +3,65 @@
 \subsubsection{Bildungsgesetz}
 
 \begin{align*}
-    a_n &= \sqrt{a_{n+1} \cdot a_{n-1}} \\
-    a_n^2 &= a_{n+1} \cdot a_{n-1}
+	a_n   & = \sqrt{a_{n+1} \cdot a_{n-1}} \\
+	a_n^2 & = a_{n+1} \cdot a_{n-1}
 \end{align*}
 
 \begin{gesetz}
-    \paragraph{Rekursives Bildungsgesetz}
-    \[
-        a_{n+1} = \frac{a_n^2}{a_{n-1}}  
-    \]
+	\paragraph{Rekursives Bildungsgesetz}
+	\[
+		a_{n+1} = \frac{a_n^2}{a_{n-1}}
+	\]
 \end{gesetz}
 
 \begin{align*}
-    a_1 &= a \\
-    a_2 &= a \cdot q \\
-    a_3 &= \frac{{(a \cdot q)}^2}{a} = a \cdot q^2 \\
-    a_4 &= \frac{{(a \cdot q^2)}^2}{a \cdot q} = a \cdot q^3
+	a_1 & = a                                                 \\
+	a_2 & = a \cdot q                                         \\
+	a_3 & = \frac{{(a \cdot q)}^2}{a} = a \cdot q^2           \\
+	a_4 & = \frac{{(a \cdot q^2)}^2}{a \cdot q} = a \cdot q^3
 \end{align*}
 
 \begin{gesetz}
-    \paragraph{Explizites Bildungsgesetz}
-    \[
-        a_n = a \cdot q^{n-1}  
-    \]
+	\paragraph{Explizites Bildungsgesetz}
+	\[
+		a_n = a \cdot q^{n-1}
+	\]
 \end{gesetz}
 
 \[
-    q = \frac{a_{n+1}}{a_n}
+	q = \frac{a_{n+1}}{a_n}
 \]
 
 \subsubsection{Summe einer geometrischen Folge}
 
 \[
-    \begin{array}{ccccccccc}
-        q \cdot S_n &=& & a q^1 &+ a q^2 &+ a q^3 &+ \cdots &+ a q^{n-1} &+ a q^n \\
-        S_n &=& a &+ a q^1 &+ a  q^2 &+ a q^3 &+ \cdots &+ a q^{n-1} & \\
-        \cline{1-9}
-        q \cdot S_n - S_n &=& -a &+ a \cdot a^n &&&&& \\
-        S_n(q-1) &=& a(q^n -1) &&&&&& \\
-        S_n &=& a \cdot \frac{q^n - 1}{q - 1} &&&&&& \\
-        &=& a \cdot \frac{(q^n - 1)(-1)}{(q - 1)(-1)} &&&&&& \\
-        &=& a \cdot \frac{1- q^n}{1 - q} &&&&&& \\
-    \end{array}  
+	\begin{array}{ccccccccc}
+		q \cdot S_n       & = &                                           & a q^1         & + a q^2  & + a q^3 & + \cdots & + a q^{n-1} & + a q^n \\
+		S_n               & = & a                                         & + a q^1       & + a  q^2 & + a q^3 & + \cdots & + a q^{n-1} &         \\
+		\cline{1-9}
+		q \cdot S_n - S_n & = & -a                                        & + a \cdot a^n &          &         &          &             &         \\
+		S_n(q-1)          & = & a(q^n -1)                                 &               &          &         &          &             &         \\
+		S_n               & = & a \cdot \frac{q^n - 1}{q - 1}             &               &          &         &          &             &         \\
+		                  & = & a \cdot \frac{(q^n - 1)(-1)}{(q - 1)(-1)} &               &          &         &          &             &         \\
+		                  & = & a \cdot \frac{1- q^n}{1 - q}              &               &          &         &          &             &         \\
+	\end{array}
 \]
 
 \begin{gesetz}
-    \paragraph{Summe einer geometrischen Folge bis \(n\)}
-    \[
-        S_n = a \cdot \frac{1 - q^n}{1 - q}
-    \]
+	\paragraph{Summe einer geometrischen Folge bis \(n\)}
+	\[
+		S_n = a \cdot \frac{1 - q^n}{1 - q}
+	\]
 \end{gesetz}
 
 \paragraph{1. Fall: \(q > 1, a > 0\)}
 
 \[
-    S_n \rightarrow \infty    
+	S_n \rightarrow \infty
 \]
 
 \paragraph{2. Fall: \(0 < q < 1, a > 0\)}
 
 \[
-    S_n = a \cdot \frac{1}{1-q} 
+	S_n = a \cdot \frac{1}{1-q}
 \]

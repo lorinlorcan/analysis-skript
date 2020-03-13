@@ -1,7 +1,7 @@
 \subsubsection{Partialbruchzerlegung}
 
 \[
-    y = \frac{5x + 11}{x^2 + 3x - 10}    
+	y = \frac{5x + 11}{x^2 + 3x - 10}
 \]
 
 \paragraph{I.\;Prüfen: Wirklich echt gebrochen?}
@@ -11,38 +11,38 @@
 \paragraph{II.\;Nullstellen des Nenners}
 
 \begin{gather*}
-    x^2 + 3x - 10 = 0 \\
-    x_{1,2} = -\frac{3}{2} \pm \sqrt{\frac{9}{4}+ \frac{40}{4}} = -\frac{3}{2} \pm \frac{7}{2} \\
-    x_1 = 2 \quad x_2 = -5
+	x^2 + 3x - 10 = 0 \\
+	x_{1,2} = -\frac{3}{2} \pm \sqrt{\frac{9}{4}+ \frac{40}{4}} = -\frac{3}{2} \pm \frac{7}{2} \\
+	x_1 = 2 \quad x_2 = -5
 \end{gather*}
 
 \[
-    \Rightarrow \frac{5x + 11}{(x-2)(x + 5)}
+	\Rightarrow \frac{5x + 11}{(x-2)(x + 5)}
 \]
 
 \paragraph{III.\;Aufstellen der Partialbrüche}
 
 \begin{align*}
-    \frac{5x + 11}{(x-2)(x + 5)} &= \frac{A}{x - 2} + \frac{B}{x + 5} &&\mid \cdot ((x-2)(x+5)) \\
-    5x + 11 &= A(x + 5) + B(x - 2)
+	\frac{5x + 11}{(x-2)(x + 5)} & = \frac{A}{x - 2} + \frac{B}{x + 5} &  & \mid \cdot ((x-2)(x+5)) \\
+	5x + 11                      & = A(x + 5) + B(x - 2)
 \end{align*}
 
 \paragraph{IV.\;Konstanten bestimmen} \leavevmode \\
 Durch Einsetzen von Werten (Optimalerweise den Nullstellen):
 
 \begin{align*}
-    5x + 11 &= A(x + 5) + B(x - 2) \\
-    \\
-    x = 2:\\
-    21 &= 7A  \Leftrightarrow A = \frac{21}{7} = 3 \\
-    x = -5:\\
-    -14 &= -7B \Leftrightarrow B = 2
+	5x + 11 & = A(x + 5) + B(x - 2)                      \\
+	\\
+	x = 2:                                               \\
+	21      & = 7A  \Leftrightarrow A = \frac{21}{7} = 3 \\
+	x = -5:                                              \\
+	-14     & = -7B \Leftrightarrow B = 2
 \end{align*}
 
 \paragraph{V.\;Einsetzen}
 
 \[
-    y = \frac{5x + 11}{x^2 + 3x - 10} = \frac{3}{x-2} + \frac{2}{x+5}  
+	y = \frac{5x + 11}{x^2 + 3x - 10} = \frac{3}{x-2} + \frac{2}{x+5}
 \]
 
 \paragraph{Anmerkung}
@@ -51,7 +51,7 @@ Die Partialbruchzerlegung ist ein Lösungsverfahren für Integrale, ist normaler
 die Kurvendiskussion:
 
 \[
-    \int \frac{5x + 11}{x^2 + 3x - 10} \diff x = \int \frac{3}{x-2} \diff x + \int \frac{2}{x+5} \diff x 
+	\int \frac{5x + 11}{x^2 + 3x - 10} \diff x = \int \frac{3}{x-2} \diff x + \int \frac{2}{x+5} \diff x
 \]
 
 \paragraph{Fallunterscheidung}
@@ -64,7 +64,7 @@ Nullstellen.
 Dann gehört zu \(x_i\) ein Partialbruch der Form:
 
 \[
-    \frac{A_i}{x - x_i}    
+	\frac{A_i}{x - x_i}
 \]
 
 \subparagraph{2. Fall}
@@ -74,5 +74,5 @@ Dann gehört zu \(x_i\) ein Partialbruch der Form:
 Dann gehören zu \(x_i\) \(k\) Partialbrüche der Form:
 
 \[
-    \frac{A_{i1}}{x - x_i}  + \frac{A_{i2}}{{(x - x_i)}^2} + \frac{A_{i3}}{{(x - x_i)}^3} + \cdots + \frac{A_{ik}}{{(x - x_i)}^k}   
+	\frac{A_{i1}}{x - x_i}  + \frac{A_{i2}}{{(x - x_i)}^2} + \frac{A_{i3}}{{(x - x_i)}^3} + \cdots + \frac{A_{ik}}{{(x - x_i)}^k}
 \]

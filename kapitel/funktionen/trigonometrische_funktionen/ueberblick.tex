@@ -1,61 +1,60 @@
 \subsubsection{Überblick}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \tikzstyle{polstelle}=[dotted, thick]
-        \begin{axis}[
-            default,
-            xmin=-0.2, xmax=8.2,
-            ymin=-2.2, ymax=2.2,
-            width=12cm
-            ]
-            \draw [mkgreen, smooth, samples=100, domain=-1:3*pi] plot (\x, {sin(\x r)});
-            \draw [mkblue, smooth, samples=100, domain=-1:3*pi] plot (\x, {cos(\x r)});
-            \draw [mkyellow, smooth, samples=100, domain=-1:5/12*pi] plot (\x, {tan(\x r)});
-            \draw [mkyellow, smooth, samples=100, domain=7/12*pi:17/12*pi] plot (\x, {tan(\x r)});
-            \draw [mkyellow, smooth, samples=100, domain=19/12*pi:29/12*pi] plot (\x, {tan(\x r)});
-            \draw [mkred, smooth, samples=100, domain=1/12*pi:11/12*pi] plot
-            (\x, {cos(\x r) / sin(\x r)});
-            \draw [mkred, smooth, samples=100, domain=13/12*pi:23/12*pi] plot
-            (\x, {cos(\x r) / sin(\x r)});
-            \draw [mkred, smooth, samples=100, domain=25/12*pi:35/12*pi] plot
-            (\x, {cos(\x r) / sin(\x r)});
-            \draw[mkred, polstelle] (pi,-2.5) -- (pi,2.5);
-            \draw[mkred, polstelle] (2*pi,-2.5) -- (2*pi,2.5);
-            \draw[mkred, polstelle] (3*pi,-2.5) -- (3*pi,2.5);
-            \draw[mkyellow, polstelle] (1/2*pi,-2.5) -- (1/2*pi,2.5);
-            \draw[mkyellow, polstelle] (3/2*pi,-2.5) -- (3/2*pi,2.5);
-            \draw[mkyellow, polstelle] (5/2*pi,-2.5) -- (5/2*pi,2.5);
-            
-            \draw[] (pi,-0.1) -- (pi,0.1);
-            \node[] at (axis cs: pi, 0.3) {\(\pi\)};
-            \draw[] (2*pi,-0.1) -- (2*pi,0.1);
-            \node[] at (axis cs: 2*pi, 0.3) {\(2\pi\)};
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Die trigonometrischen Funktionen}
-    \textbf{\color{mkgreen}---} \(\sin(x)\)
-    \textbf{\color{mkblue}---} \(\cos(x)\)
-    \textbf{\color{mkyellow}---} \(\tan(x)\)
-    \textbf{\color{mkred}---} \(\cot(x)\)
+	\centering
+	\begin{tikzpicture}
+		\tikzstyle{polstelle}=[dotted, thick]
+		\begin{axis}[
+				default,
+				xmin=-0.2, xmax=8.2,
+				ymin=-2.2, ymax=2.2,
+				width=12cm
+			]
+			\draw [mkgreen, smooth, samples=100, domain=-1:3*pi] plot (\x, {sin(\x r)});
+			\draw [mkblue, smooth, samples=100, domain=-1:3*pi] plot (\x, {cos(\x r)});
+			\draw [mkyellow, smooth, samples=100, domain=-1:5/12*pi] plot (\x, {tan(\x r)});
+			\draw [mkyellow, smooth, samples=100, domain=7/12*pi:17/12*pi] plot (\x, {tan(\x r)});
+			\draw [mkyellow, smooth, samples=100, domain=19/12*pi:29/12*pi] plot (\x, {tan(\x r)});
+			\draw [mkred, smooth, samples=100, domain=1/12*pi:11/12*pi] plot
+			(\x, {cos(\x r) / sin(\x r)});
+			\draw [mkred, smooth, samples=100, domain=13/12*pi:23/12*pi] plot
+			(\x, {cos(\x r) / sin(\x r)});
+			\draw [mkred, smooth, samples=100, domain=25/12*pi:35/12*pi] plot
+			(\x, {cos(\x r) / sin(\x r)});
+			\draw[mkred, polstelle] (pi,-2.5) -- (pi,2.5);
+			\draw[mkred, polstelle] (2*pi,-2.5) -- (2*pi,2.5);
+			\draw[mkred, polstelle] (3*pi,-2.5) -- (3*pi,2.5);
+			\draw[mkyellow, polstelle] (1/2*pi,-2.5) -- (1/2*pi,2.5);
+			\draw[mkyellow, polstelle] (3/2*pi,-2.5) -- (3/2*pi,2.5);
+			\draw[mkyellow, polstelle] (5/2*pi,-2.5) -- (5/2*pi,2.5);
+
+			\draw[] (pi,-0.1) -- (pi,0.1);
+			\node[] at (axis cs: pi, 0.3) {\(\pi\)};
+			\draw[] (2*pi,-0.1) -- (2*pi,0.1);
+			\node[] at (axis cs: 2*pi, 0.3) {\(2\pi\)};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Die trigonometrischen Funktionen}
+	\textbf{\color{mkgreen}---} \(\sin(x)\)
+	\textbf{\color{mkblue}---} \(\cos(x)\)
+	\textbf{\color{mkyellow}---} \(\tan(x)\)
+	\textbf{\color{mkred}---} \(\cot(x)\)
 \end{figure}
 
 
 
 \begin{center}
-    \begin{tabular}{ c c c c  } 
-        Funktion & Definitionsbereich & Wertebereich & Symmetrie \\
-        \toprule 
-        \( \sin(x) \) & \( -\infty \leq x \leq \infty \) & \( -1 \leq y \leq 1
-        \) & Punktsymmetrie \\
-        \( \cos(x) \) & \( -\infty \leq x \leq \infty \) & \( -1 \leq y \leq 1
-        \) & Achsensymmetrie \\
-        \( \tan(x) \) & \( x \neq \frac{k}{2} \pi \) & \( -\infty \leq y \leq
-        \infty \) & Punktsymmetrie \\
-        \( \cot(x) \) & \( x \neq k \pi \) & \( -\infty \leq y \leq \infty \) &
-        Punktsymmetrie \\
-    \end{tabular}
+	\begin{tabular}{ c c c c  }
+		Funktion      & Definitionsbereich               & Wertebereich                     & Symmetrie \\
+		\toprule
+		\( \sin(x) \) & \( -\infty \leq x \leq \infty \) & \( -1 \leq y \leq 1
+		\)            & Punktsymmetrie                                                                  \\
+		\( \cos(x) \) & \( -\infty \leq x \leq \infty \) & \( -1 \leq y \leq 1
+		\)            & Achsensymmetrie                                                                 \\
+		\( \tan(x) \) & \( x \neq \frac{k}{2} \pi \)     & \( -\infty \leq y \leq
+		\infty \)     & Punktsymmetrie                                                                  \\
+		\( \cot(x) \) & \( x \neq k \pi \)               & \( -\infty \leq y \leq \infty \) &
+		Punktsymmetrie                                                                                  \\
+	\end{tabular}
 \end{center}
-    
-    
+

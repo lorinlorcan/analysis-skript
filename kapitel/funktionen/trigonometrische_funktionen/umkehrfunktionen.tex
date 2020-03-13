@@ -1,197 +1,197 @@
 \subsubsection{Umkehrfunktionen}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}[font=\sffamily]
-        \begin{axis}[
-                defaultnonumbers,
-                xmin=-0.2, xmax=1.2,
-                ymin=-0.2, ymax=1.2,
-                width=8cm,
-                xlabel={}, ylabel={}
-            ]
-            \draw (1, 0) arc (0:360:1);
-            \draw (0, 0) -- (1.2, 1);
-            \node at (axis cs: -1.1, 0.1) {1};
-            \node at (axis cs: -0.1, -0.1) {M};
-            \node at (axis cs: 0.6, 0.64) {P};
-            \node at (axis cs: 0.77, -0.1) {A};
-            \node at (axis cs: 0.2, 0.08) {x};
-            \draw (0.3,0) arc (0:39.81:0.3);
-            
-            \draw[mkblue, thick] (1, 0) arc (0:39.81:1);
-            \node[mkblue, rotate=90] at (axis cs: 1.1, 0.25) {arcsin(x)};
-            \draw[mkgreen, thick] (0.77,0) -- (0.77, 0.64);
-            \node[mkgreen, left] at (axis cs: 0.8, 0.25) {sin(x)};
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Herleitung von \( \arcsin \) am Einheitskreis}
+	\centering
+	\begin{tikzpicture}[font=\sffamily]
+		\begin{axis}[
+				defaultnonumbers,
+				xmin=-0.2, xmax=1.2,
+				ymin=-0.2, ymax=1.2,
+				width=8cm,
+				xlabel={}, ylabel={}
+			]
+			\draw (1, 0) arc (0:360:1);
+			\draw (0, 0) -- (1.2, 1);
+			\node at (axis cs: -1.1, 0.1) {1};
+			\node at (axis cs: -0.1, -0.1) {M};
+			\node at (axis cs: 0.6, 0.64) {P};
+			\node at (axis cs: 0.77, -0.1) {A};
+			\node at (axis cs: 0.2, 0.08) {x};
+			\draw (0.3,0) arc (0:39.81:0.3);
+
+			\draw[mkblue, thick] (1, 0) arc (0:39.81:1);
+			\node[mkblue, rotate=90] at (axis cs: 1.1, 0.25) {arcsin(x)};
+			\draw[mkgreen, thick] (0.77,0) -- (0.77, 0.64);
+			\node[mkgreen, left] at (axis cs: 0.8, 0.25) {sin(x)};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Herleitung von \( \arcsin \) am Einheitskreis}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}[font=\sffamily]
-        \begin{axis}[
-                defaultnonumbers,
-                xmin=-0.2, xmax=1.2,
-                ymin=-0.2, ymax=1.2,
-                width=8cm,
-                xlabel={}, ylabel={}
-            ]
-            \addplot [domain=-1:1, samples=100] ({cos(x)},{sin(x)});
+	\centering
+	\begin{tikzpicture}[font=\sffamily]
+		\begin{axis}[
+				defaultnonumbers,
+				xmin=-0.2, xmax=1.2,
+				ymin=-0.2, ymax=1.2,
+				width=8cm,
+				xlabel={}, ylabel={}
+			]
+			\addplot [domain=-1:1, samples=100] ({cos(x)},{sin(x)});
 
-            \draw (0,0) -- (1.2, 1);
-            \node at (axis cs: -1.1, 0.1) {1};
-            \node at (axis cs: -0.1, -0.1) {M};
-            \node at (axis cs: 0.6, 0.64) {P};
-            \node at (axis cs: 0.77, -0.1) {A};
-            \node at (axis cs: 0.2, 0.08) {x};
-            \draw (0.3,0) arc (0:39.81:0.3);
-            
-            \draw[mkred, thick] (1, 0) arc (0:39.81:1);
-            \node[mkred, rotate=90] at (axis cs: 1.1, 0.25) {arccos(x)};
-            \draw[mkgreen, thick] (0,0) -- (1, 0);
-            \node[mkgreen] at (axis cs: 0.5, -0.1) {cos(x)};
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Herleitung von \( \arccos \) am Einheitskreis}
+			\draw (0,0) -- (1.2, 1);
+			\node at (axis cs: -1.1, 0.1) {1};
+			\node at (axis cs: -0.1, -0.1) {M};
+			\node at (axis cs: 0.6, 0.64) {P};
+			\node at (axis cs: 0.77, -0.1) {A};
+			\node at (axis cs: 0.2, 0.08) {x};
+			\draw (0.3,0) arc (0:39.81:0.3);
+
+			\draw[mkred, thick] (1, 0) arc (0:39.81:1);
+			\node[mkred, rotate=90] at (axis cs: 1.1, 0.25) {arccos(x)};
+			\draw[mkgreen, thick] (0,0) -- (1, 0);
+			\node[mkgreen] at (axis cs: 0.5, -0.1) {cos(x)};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Herleitung von \( \arccos \) am Einheitskreis}
 \end{figure}
 
 \begin{gesetz}
-    \begin{align*}
-      \arcsin(x) + \arccos(x) = \frac{\pi}{2} \\
-      \arctan(x) + \arccot(x) = \frac{\pi}{2}
-    \end{align*}
+	\begin{align*}
+		\arcsin(x) + \arccos(x) = \frac{\pi}{2} \\
+		\arctan(x) + \arccot(x) = \frac{\pi}{2}
+	\end{align*}
 \end{gesetz}
 
 \begin{achtung}
-    Auf dem Taschenrechner und auch in mancher Literatur findet sich die
-    Schreibweise \( \arcsin = \sin^{-1} \), dass bedeutet jedoch nicht \(
-    \frac{1}{\sin} \).
+	Auf dem Taschenrechner und auch in mancher Literatur findet sich die
+	Schreibweise \( \arcsin = \sin^{-1} \), dass bedeutet jedoch nicht \(
+	\frac{1}{\sin} \).
 \end{achtung}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \tikzstyle{polstelle}=[dotted, thick]
-        \begin{axis}[
-            default,
-            xmin=-2.2, xmax=4.2,
-            ymin=-2.2, ymax=4.2,
-            width=10cm,
-            xtick distance=1,
-            ytick distance=1,
-            extra y tick style={grid=none},
-            extra y ticks={pi, -pi/2, pi/2},
-            extra y tick labels={\(\pi\),\(-\frac{\pi}{2}\),\(\frac{\pi}{2}\)}   
-            ]
-            \draw[mkyellow, very thin, smooth, samples=100, domain=-4.2:4.2]
-            plot (\x, {sin(\x r)});
-            
-            \draw[mkred, very thin, smooth, samples=100, domain=-4.2:4.2]
-            plot (\x, {cos(\x r)});
-            
-            \draw[mkblue, very thick, smooth, samples=100, domain=-1:1]
-            plot (\x, {rad(asin(\x))});
+	\centering
+	\begin{tikzpicture}
+		\tikzstyle{polstelle}=[dotted, thick]
+		\begin{axis}[
+				default,
+				xmin=-2.2, xmax=4.2,
+				ymin=-2.2, ymax=4.2,
+				width=10cm,
+				xtick distance=1,
+				ytick distance=1,
+				extra y tick style={grid=none},
+				extra y ticks={pi, -pi/2, pi/2},
+				extra y tick labels={\(\pi\),\(-\frac{\pi}{2}\),\(\frac{\pi}{2}\)}
+			]
+			\draw[mkyellow, very thin, smooth, samples=100, domain=-4.2:4.2]
+			plot (\x, {sin(\x r)});
 
-            \draw[mkgreen, very thick, smooth, samples=100, domain=-1:1]
-            plot (\x, {rad(acos(\x))});
+			\draw[mkred, very thin, smooth, samples=100, domain=-4.2:4.2]
+			plot (\x, {cos(\x r)});
 
-            \draw[mkgreen, polstelle] (-2.2, pi) -- (4.2, pi); 
-            \draw[mkblue, polstelle] (-2.2, pi/2) -- (4.2, pi/2); 
-            \draw[mkblue, polstelle] (-2.2, -pi/2) -- (4.2, -pi/2); 
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Die Umkehrfunktionen zu Sinus und Cosinus}
-    \textbf{\color{mkblue}---} \(\arcsin(x)\)
-    \textbf{\color{mkgreen}---} \(\arccos(x)\)
-    \textbf{\color{mkyellow}---} \(\sin(x)\)
-    \textbf{\color{mkred}---} \(\cos(x)\)
+			\draw[mkblue, very thick, smooth, samples=100, domain=-1:1]
+			plot (\x, {rad(asin(\x))});
+
+			\draw[mkgreen, very thick, smooth, samples=100, domain=-1:1]
+			plot (\x, {rad(acos(\x))});
+
+			\draw[mkgreen, polstelle] (-2.2, pi) -- (4.2, pi);
+			\draw[mkblue, polstelle] (-2.2, pi/2) -- (4.2, pi/2);
+			\draw[mkblue, polstelle] (-2.2, -pi/2) -- (4.2, -pi/2);
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Die Umkehrfunktionen zu Sinus und Cosinus}
+	\textbf{\color{mkblue}---} \(\arcsin(x)\)
+	\textbf{\color{mkgreen}---} \(\arccos(x)\)
+	\textbf{\color{mkyellow}---} \(\sin(x)\)
+	\textbf{\color{mkred}---} \(\cos(x)\)
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \tikzstyle{polstelle}=[dotted, thick]
-        \tikzstyle{standardfunktion}=[very thin]
-        \begin{axis}[
-            default,
-            xmin=-4.2, xmax=4.2,
-            ymin=-4.2, ymax=4.2,
-            width=10cm,
-            extra x tick style={grid=none},
-            extra x ticks={-pi, pi},
-            extra x tick labels={\(-\pi\),\(\pi\)},
-            extra y tick style={grid=none},
-            extra y ticks={pi, -pi/2, pi/2},
-            extra y tick labels={\(\pi\),\(-\frac{\pi}{2}\),\(\frac{\pi}{2}\)}   
-            ]
-            \draw[mkyellow, standardfunktion, smooth, samples=100, domain=-4.2:-1.6]
-            plot (\x, {tan(\x r)});
-            \draw[mkyellow, standardfunktion, smooth, samples=100, domain=-1.4:1.4]
-            plot (\x, {tan(\x r)});
-            \draw[mkyellow, standardfunktion, smooth, samples=100, domain=1.6:4.2]
-            plot (\x, {tan(\x r)});
-            
-            % \draw[mkyellow, polstelle] (-1/2*pi, -4.2) -- (-1/2*pi, 4.2);
-            % \draw[mkyellow, polstelle] (1/2*pi, -4.2) -- (1/2*pi, 4.2);
+	\centering
+	\begin{tikzpicture}
+		\tikzstyle{polstelle}=[dotted, thick]
+		\tikzstyle{standardfunktion}=[very thin]
+		\begin{axis}[
+				default,
+				xmin=-4.2, xmax=4.2,
+				ymin=-4.2, ymax=4.2,
+				width=10cm,
+				extra x tick style={grid=none},
+				extra x ticks={-pi, pi},
+				extra x tick labels={\(-\pi\),\(\pi\)},
+				extra y tick style={grid=none},
+				extra y ticks={pi, -pi/2, pi/2},
+				extra y tick labels={\(\pi\),\(-\frac{\pi}{2}\),\(\frac{\pi}{2}\)}
+			]
+			\draw[mkyellow, standardfunktion, smooth, samples=100, domain=-4.2:-1.6]
+			plot (\x, {tan(\x r)});
+			\draw[mkyellow, standardfunktion, smooth, samples=100, domain=-1.4:1.4]
+			plot (\x, {tan(\x r)});
+			\draw[mkyellow, standardfunktion, smooth, samples=100, domain=1.6:4.2]
+			plot (\x, {tan(\x r)});
 
-            \draw[mkblue, very thick, smooth, samples=100, domain=-4.2:4.2]
-            plot (\x, {rad(atan(\x)});
+			% \draw[mkyellow, polstelle] (-1/2*pi, -4.2) -- (-1/2*pi, 4.2);
+			% \draw[mkyellow, polstelle] (1/2*pi, -4.2) -- (1/2*pi, 4.2);
 
-            \draw[mkgreen, very thick, smooth, samples=100, domain=-4.2:4.2]
-            plot (\x, {rad(90-atan(\x))});
+			\draw[mkblue, very thick, smooth, samples=100, domain=-4.2:4.2]
+			plot (\x, {rad(atan(\x)});
 
-            \draw [mkred, standardfunktion, smooth, samples=100, domain=-4.2:-3.2]
-            plot (\x, {cos(\x r) / sin(\x r)});
-            \draw [mkred, standardfunktion, smooth, samples=100, domain=-3:-0.1]
-            plot (\x, {cos(\x r) / sin(\x r)});
-            \draw [mkred, standardfunktion, smooth, samples=100, domain=0.1:3]
-            plot (\x, {cos(\x r) / sin(\x r)});
-            \draw [mkred, standardfunktion, smooth, samples=100, domain=3.2:4.2]
-            plot (\x, {cos(\x r) / sin(\x r)});
-            
-            % \draw[mkred, polstelle] (-pi, -4.2) -- (-pi, 4.2);
-            % \draw[mkred, polstelle] (pi, -4.2) -- (pi, 4.2);
+			\draw[mkgreen, very thick, smooth, samples=100, domain=-4.2:4.2]
+			plot (\x, {rad(90-atan(\x))});
 
-            % Vertikale Polstellen
-            \draw[mkgreen, polstelle] (-4.2, pi) -- (4.2, pi);
-            \draw[mkblue, polstelle] (-4.2, pi/2) -- (4.2, pi/2); 
-            \draw[mkblue, polstelle] (-4.2, -pi/2) -- (4.2, -pi/2);
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Die Umkehrfunktionen zu Tangens und Cotangens}
-    \textbf{\color{mkblue}---} \(\arctan(x)\)
-    \textbf{\color{mkgreen}---} \(\arccot(x)\)
-    \textbf{\color{mkyellow}---} \(\tan(x)\)
-    \textbf{\color{mkred}---} \(\cot(x)\)
+			\draw [mkred, standardfunktion, smooth, samples=100, domain=-4.2:-3.2]
+			plot (\x, {cos(\x r) / sin(\x r)});
+			\draw [mkred, standardfunktion, smooth, samples=100, domain=-3:-0.1]
+			plot (\x, {cos(\x r) / sin(\x r)});
+			\draw [mkred, standardfunktion, smooth, samples=100, domain=0.1:3]
+			plot (\x, {cos(\x r) / sin(\x r)});
+			\draw [mkred, standardfunktion, smooth, samples=100, domain=3.2:4.2]
+			plot (\x, {cos(\x r) / sin(\x r)});
+
+			% \draw[mkred, polstelle] (-pi, -4.2) -- (-pi, 4.2);
+			% \draw[mkred, polstelle] (pi, -4.2) -- (pi, 4.2);
+
+			% Vertikale Polstellen
+			\draw[mkgreen, polstelle] (-4.2, pi) -- (4.2, pi);
+			\draw[mkblue, polstelle] (-4.2, pi/2) -- (4.2, pi/2);
+			\draw[mkblue, polstelle] (-4.2, -pi/2) -- (4.2, -pi/2);
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Die Umkehrfunktionen zu Tangens und Cotangens}
+	\textbf{\color{mkblue}---} \(\arctan(x)\)
+	\textbf{\color{mkgreen}---} \(\arccot(x)\)
+	\textbf{\color{mkyellow}---} \(\tan(x)\)
+	\textbf{\color{mkred}---} \(\cot(x)\)
 \end{figure}
 
 \begin{uebung}
-    Vereinfachen.
+	Vereinfachen.
 
-    \begin{align*}
-        \frac{\sin(x)}{\cos(x)} \\
-        &= \frac{\tan(x) \cdot \cos(x)}{\tan(x)} = \cos(x)
-    \end{align*}
-    
-    \begin{align*}
-        \frac{\cos(x)}{\cot(x)} \\
-        &= \frac{\cos(x) \cdot \sin(x)}{\cos(x)} = \sin(x)
-    \end{align*}
+	\begin{align*}
+		\frac{\sin(x)}{\cos(x)}                              \\
+		 & = \frac{\tan(x) \cdot \cos(x)}{\tan(x)} = \cos(x)
+	\end{align*}
 
-    \begin{align*}
-        \sqrt{1+ \tan^2(x)} \cdot \cos(x) \\
-        &= \sqrt{1 + \frac{\sin^2(x)}{\cos^2(x)}} \cdot \sqrt{\cos^2(x)} \\
-        &= \sqrt{\left(1 + \frac{\sin^2(x)}{\cos^2{x}} \right) \cdot \cos^2(x)} \\
-        &= \sqrt{\cos^2(x) + \sin^2(x)} = \sqrt{1} = 1
-    \end{align*}
+	\begin{align*}
+		\frac{\cos(x)}{\cot(x)}                              \\
+		 & = \frac{\cos(x) \cdot \sin(x)}{\cos(x)} = \sin(x)
+	\end{align*}
 
-    \begin{align*}
-        \sqrt{1 + \tan^2(x)} \cdot \cos(x) \\
-        &= (1 + \tan(x)) \cdot \cos(x) \\
-        &= \cos(x) + \tan(x) \cdot \cos(x) \\
-        &= \cos(x) + \sin(x) 
-    \end{align*}
+	\begin{align*}
+		\sqrt{1+ \tan^2(x)} \cdot \cos(x)                                         \\
+		 & = \sqrt{1 + \frac{\sin^2(x)}{\cos^2(x)}} \cdot \sqrt{\cos^2(x)}        \\
+		 & = \sqrt{\left(1 + \frac{\sin^2(x)}{\cos^2{x}} \right) \cdot \cos^2(x)} \\
+		 & = \sqrt{\cos^2(x) + \sin^2(x)} = \sqrt{1} = 1
+	\end{align*}
+
+	\begin{align*}
+		\sqrt{1 + \tan^2(x)} \cdot \cos(x)   \\
+		 & = (1 + \tan(x)) \cdot \cos(x)     \\
+		 & = \cos(x) + \tan(x) \cdot \cos(x) \\
+		 & = \cos(x) + \sin(x)
+	\end{align*}
 
 \end{uebung}

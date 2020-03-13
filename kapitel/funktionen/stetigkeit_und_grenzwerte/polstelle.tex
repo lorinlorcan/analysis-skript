@@ -1,25 +1,25 @@
 \subsubsection{Polstelle}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                default,
-                xmin=-2.5, xmax=2.5,
-                ymin=-2.5, ymax=2.5,
-                width=8cm
-            ]
-            \addplot[orange, smooth, samples=100, domain=-4:-0.1] {1/x};
-            \addplot[orange, smooth, samples=100, domain=0.1:4] {1/x};
-        \end{axis}
-    \end{tikzpicture}
-    \caption{\(y = \frac{1}{x}\)}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				default,
+				xmin=-2.5, xmax=2.5,
+				ymin=-2.5, ymax=2.5,
+				width=8cm
+			]
+			\addplot[orange, smooth, samples=100, domain=-4:-0.1] {1/x};
+			\addplot[orange, smooth, samples=100, domain=0.1:4] {1/x};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{\(y = \frac{1}{x}\)}
 \end{figure}
 
 \begin{align*}
-    \begin{rcases}
-        \lim_{x \rightarrow 0_+} f(x) &= \infty \\
-        \lim_{x \rightarrow 0_-} f(x) &= -\infty
-    \end{rcases}
-    f(x), g\; \text{existieren nicht}
+	\begin{rcases}
+		\lim_{x \rightarrow 0_+} f(x) &= \infty \\
+		\lim_{x \rightarrow 0_-} f(x) &= -\infty
+	\end{rcases}
+	f(x), g\; \text{existieren nicht}
 \end{align*}

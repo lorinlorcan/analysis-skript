@@ -1,72 +1,72 @@
 % Box für Übungen
 \newenvironment{uebung}[1][\unskip]{
-    \begin{tcolorbox}[sharp corners, colback=white, colframe=orange, title=Übung #1]
-}
-{
-    \end{tcolorbox}
+	\begin{tcolorbox}[sharp corners, colback=white, colframe=orange, title=Übung #1]
+		}
+		{
+	\end{tcolorbox}
 }
 
 % "Box" für Aufgabe
 \newenvironment{aufgabe}{
-    \paragraph{Aufgabe}
+	\paragraph{Aufgabe}
 }{}
 
 % "Box" für Lösungsweg
 \newenvironment{loesungsweg}{
-    \paragraph{Lösungsweg}
+	\paragraph{Lösungsweg}
 }{}
 
 % "Box" für Lösung
 \newenvironment{loesung}{
-    \paragraph{Lösung}
+	\paragraph{Lösung}
 }{}
 
 % Box für Gesetze, die hervorgehoben werden sollen
 \newenvironment{gesetz}{
-    \begin{tcolorbox}[sharp corners, colback=white, colframe=mkblue]
-}
-{
-    \end{tcolorbox}
+	\begin{tcolorbox}[sharp corners, colback=white, colframe=mkblue]
+		}
+		{
+	\end{tcolorbox}
 }
 
 % Box für Gesetze, die hervorgehoben werden sollen
 \newenvironment{hilfe}{
-    \begin{tcolorbox}[sharp corners, colback=white, colframe=mkgreen]
-}
-{
-    \end{tcolorbox}
+	\begin{tcolorbox}[sharp corners, colback=white, colframe=mkgreen]
+		}
+		{
+	\end{tcolorbox}
 }
 
 % Box für interessante Infos
 \newenvironment{info}{
-    \begin{tcolorbox}[sharp corners, colback=white, colframe=mkblue, title=Info]
-}
-{
-    \end{tcolorbox}
+	\begin{tcolorbox}[sharp corners, colback=white, colframe=mkblue, title=Info]
+		}
+		{
+	\end{tcolorbox}
 }
 
 % Box für wichtige Hinweise
 \newenvironment{achtung}{
-    \begin{tcolorbox}[sharp corners, colback=white, colframe=red, title=Achtung]
-}
-{
-    \end{tcolorbox}
+	\begin{tcolorbox}[sharp corners, colback=white, colframe=red, title=Achtung]
+		}
+		{
+	\end{tcolorbox}
 }
 
 % Eine nach rechts zusammenfassende Klammer
 \newenvironment{rcases} {
-    \left.\begin{aligned}
-}
-{
-    \end{aligned}\right\rbrace{}
+	\left.\begin{aligned}
+		}
+		{
+	\end{aligned}\right\rbrace{}
 }
 
 % Für array Umgebungen mit displaystyle math
 \newenvironment{bigarray} {
-    \everymath={\displaystyle}
-    \renewcommand{\arraystretch}{2.5}
-    \[
+	\everymath={\displaystyle}
+	\renewcommand{\arraystretch}{2.5}
+	\[
 }
 {
-    \]
+	\]
 }

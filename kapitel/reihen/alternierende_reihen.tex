@@ -1,7 +1,7 @@
 \subsection{Alternierende Reihen}
 
 \[
-    a_0 - a_1 + a_2 - a_3 + a_4 - a_5 + a_6 - a_7 + a_8 - \ldots
+	a_0 - a_1 + a_2 - a_3 + a_4 - a_5 + a_6 - a_7 + a_8 - \ldots
 \]
 
 \subsubsection{Leibnizisches Konvergenzkriterium}
@@ -9,101 +9,100 @@
 Wenn ihre Reihenglieder vom Betrag eine monoton abnehmende Nullfolge bildet, ist eine alternierende Reihe konvergent.
 
 \[
-    a_{n-2} > a_{n-1} > a_n > a_{n+1} > a_{n+2} \ldots  
+	a_{n-2} > a_{n-1} > a_n > a_{n+1} > a_{n+2} \ldots
 \]
 
 \paragraph{Beispiel}
 
 \[
-    \underbrace{\underbrace{\underbrace{1 - \frac{1}{2}}_{S_1} + \frac{1}{3}}_{S_2} - \frac{1}{4}}_{S_3} + \frac{1}{5} - \frac{1}{6} + \frac{1}{7} \ldots \quad \Rightarrow \text{monoton abnehmende Nullfolge} \Rightarrow \text{konvergent}
+	\underbrace{\underbrace{\underbrace{1 - \frac{1}{2}}_{S_1} + \frac{1}{3}}_{S_2} - \frac{1}{4}}_{S_3} + \frac{1}{5} - \frac{1}{6} + \frac{1}{7} \ldots \quad \Rightarrow \text{monoton abnehmende Nullfolge} \Rightarrow \text{konvergent}
 \]
 
 \[
-    \limtoinfty{n} S_n = ?
+	\limtoinfty{n} S_n = ?
 \]
 
 \begin{align*}
-    (&a_0 - a_1) + (a_2 - a_3) + (a_4 - a_5) + (a_6 - a_7) + \ldots \\
-    &a_0 - (a_1 - a_2) - (a_3 - a_4) - (a_5 - a_6) - (a_7 - a_8) - \ldots
+	( & a_0 - a_1) + (a_2 - a_3) + (a_4 - a_5) + (a_6 - a_7) + \ldots        \\
+	  & a_0 - (a_1 - a_2) - (a_3 - a_4) - (a_5 - a_6) - (a_7 - a_8) - \ldots
 \end{align*}
 
 \begin{align*}
-    \left .
-    \begin{array}{l}
-        S_1 = (a_0 - a_1) \\
-        S_3 = (a_0 - a_1) + (a_2 - a_3) \\
-        S_5 = (a_0 - a_1) + (a_2 - a_3) + (a_4 - a_5) \\
-        S_0 = a_0 \\
-        S_2 = a_0 - (a_1 - a_2) \\
-        S_4 = a_0 - (a_1 - a_2) - (a_3 - a_4)
-    \end{array}
-    \right \}
-    \begin{array}{c}
-        \text{nähern sich} \\
-        \text{dem Summenwert}
-    \end{array}
+	\left .
+	\begin{array}{l}
+		S_1 = (a_0 - a_1)                             \\
+		S_3 = (a_0 - a_1) + (a_2 - a_3)               \\
+		S_5 = (a_0 - a_1) + (a_2 - a_3) + (a_4 - a_5) \\
+		S_0 = a_0                                     \\
+		S_2 = a_0 - (a_1 - a_2)                       \\
+		S_4 = a_0 - (a_1 - a_2) - (a_3 - a_4)
+	\end{array}
+	\right \}
+	\begin{array}{c}
+		\text{nähern sich} \\
+		\text{dem Summenwert}
+	\end{array}
 \end{align*}
 
 \begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-                default,
-                xmin=-0.5, xmax=7.5,
-                ymin=-0.5, ymax=4.5,
-                width=10cm,
-                xlabel={\( n \)},
-                ylabel={\( S_n \)},
-                xticklabels={},
-                yticklabels={},
-            ]
-            \draw (0,2) -- (8,2);
-            \node[left] at (0,2) {\( S \)};
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+				default,
+				xmin=-0.5, xmax=7.5,
+				ymin=-0.5, ymax=4.5,
+				width=10cm,
+				xlabel={\( n \)},
+				ylabel={\( S_n \)},
+				xticklabels={},
+				yticklabels={},
+			]
+			\draw (0,2) -- (8,2);
+			\node[left] at (0,2) {\( S \)};
 
-            \coordinate[label=left:\( S_0 \)] (S0) at (0, 4);
-            \coordinate[label=left:\( S_1 \)] (S1) at (1, 0.25);
-            \coordinate[label=left:\( S_2 \)] (S2) at (2, 3.5);
-            \coordinate[label=left:\( S_3 \)] (S3) at (3, 0.75);
-            \coordinate[label=above left:\( S_4 \)] (S4) at (4, 3);
-            \coordinate[label=left:\( S_5 \)] (S5) at (5, 1.25);
-            \coordinate[label=left:\( S_6 \)] (S6) at (6, 2.5);
-            \coordinate[label=left:\( S_7 \)] (S7) at (7, 1.75);
+			\coordinate[label=left:\( S_0 \)] (S0) at (0, 4);
+			\coordinate[label=left:\( S_1 \)] (S1) at (1, 0.25);
+			\coordinate[label=left:\( S_2 \)] (S2) at (2, 3.5);
+			\coordinate[label=left:\( S_3 \)] (S3) at (3, 0.75);
+			\coordinate[label=above left:\( S_4 \)] (S4) at (4, 3);
+			\coordinate[label=left:\( S_5 \)] (S5) at (5, 1.25);
+			\coordinate[label=left:\( S_6 \)] (S6) at (6, 2.5);
+			\coordinate[label=left:\( S_7 \)] (S7) at (7, 1.75);
 
-            \fill (S0) circle [radius=2pt];
-            \fill (S1) circle [radius=2pt];
-            \fill (S2) circle [radius=2pt];
-            \fill (S3) circle [radius=2pt];
-            \fill (S4) circle [radius=2pt];
-            \fill (S5) circle [radius=2pt];
-            \fill (S6) circle [radius=2pt];
-            \fill (S7) circle [radius=2pt];
-            
-            \draw[decoration={brace, mirror, raise=5pt}, decorate]
-            (4,3) -- node[left=6pt] {$F$} (4,2);
-        \end{axis}
-    \end{tikzpicture}
-    \[
-        F = | S - S_n | < a_n + 1  
-    \]
-    \caption{Alternierende Reihe -- die Werte nähern sich einem Summenwert \( S \)}
+			\fill (S0) circle [radius=2pt];
+			\fill (S1) circle [radius=2pt];
+			\fill (S2) circle [radius=2pt];
+			\fill (S3) circle [radius=2pt];
+			\fill (S4) circle [radius=2pt];
+			\fill (S5) circle [radius=2pt];
+			\fill (S6) circle [radius=2pt];
+			\fill (S7) circle [radius=2pt];
+
+			\draw[decoration={brace, mirror, raise=5pt}, decorate]
+			(4,3) -- node[left=6pt] {$F$} (4,2);
+		\end{axis}
+	\end{tikzpicture}
+	\[
+		F = | S - S_n | < a_n + 1
+	\]
+	\caption{Alternierende Reihe -- die Werte nähern sich einem Summenwert \( S \)}
 \end{figure}
 
 \subsubsection{Alternierende harmonische Reihe}
 
 \[
-    \begin{array}{ccccc ccccc ccccc}
-        S & = & 1 &- \frac{1}{2} &+ \frac{1}{3} &- \frac{1}{4} &+ \frac{1}{5} &- \frac{1}{6} &+ \frac{1}{7} &- \frac{1}{8} &+ \frac{1}{9} &- \frac{1}{10} &+ \frac{1}{11} &- \frac{1}{12} & \cdots \\
-        \\
-        \frac{1}{2}\ S & = & &+ \frac{1}{2} & &-\frac{1}{4} & &+ \frac{1}{6} & &- \frac{1}{8} & &+ \frac{1}{10} & &- \frac{1}{12} & \cdots \\
-        \\
-        \midrule
-        \\
-        \frac{3}{2}\ S & = & 1 & &+ \frac{1}{3} &- \frac{1}{2} &+ \frac{1}{5} & &+ \frac{1}{7} &- \frac{1}{4} &+ \frac{1}{9} & &+ \frac{1}{11} &- \frac{1}{6} & \cdots
-    \end{array}
+	\begin{array}{ccccc ccccc ccccc}
+		S              & = & 1 & - \frac{1}{2} & + \frac{1}{3} & - \frac{1}{4} & + \frac{1}{5} & - \frac{1}{6} & + \frac{1}{7} & - \frac{1}{8} & + \frac{1}{9} & - \frac{1}{10} & + \frac{1}{11} & - \frac{1}{12} & \cdots \\
+		\\
+		\frac{1}{2}\ S & = &   & + \frac{1}{2} &               & -\frac{1}{4}  &               & + \frac{1}{6} &               & - \frac{1}{8} &               & + \frac{1}{10} &                & - \frac{1}{12} & \cdots \\
+		\\
+		\midrule
+		\\
+		\frac{3}{2}\ S & = & 1 &               & + \frac{1}{3} & - \frac{1}{2} & + \frac{1}{5} &               & + \frac{1}{7} & - \frac{1}{4} & + \frac{1}{9} &                & + \frac{1}{11} & - \frac{1}{6}  & \cdots
+	\end{array}
 \]
 
 \begin{tabular} {rl}
-    alternierende harmonische Reihe: & (bedingt) konvergent \\
-    harmonische Reihe: & divergent
+	alternierende harmonische Reihe: & (bedingt) konvergent \\
+	harmonische Reihe:               & divergent
 \end{tabular}
- 
