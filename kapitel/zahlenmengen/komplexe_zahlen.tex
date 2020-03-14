@@ -21,8 +21,8 @@ Imaginäre Zahlen setzen sich aus einem Imaginärteil und einem Realteil zusamme
 				xlabel={\( \mathrm{Re}(z) \)},
 				ylabel={\( \mathrm{Im}(z) \)}
 			]
-			\addplot[mark=x] coordinates {(2, 2)};
-			\addplot[mark=x] coordinates {(2, -2)};
+			\addplot[mkblue, thick, mark=x] coordinates {(2, 2)};
+			\addplot[mkblue, thick, mark=x] coordinates {(2, -2)};
 
 			\draw (2, -0.1) -- (2, 0.1);
 			\draw (-0.1, 2) -- (0.1, 2);
@@ -32,8 +32,8 @@ Imaginäre Zahlen setzen sich aus einem Imaginärteil und einem Realteil zusamme
 			\node[left] at (axis cs: 0, -2) {\( -b \)};
 			\node[below] at (axis cs: 2, 0) {\( a \)};
 
-			\draw[dotted, thick] (0, 0) -- (2, 2);
-			\draw[dotted, thick] (0, 0) -- (2, -2);
+			\draw[mkblue, dashed, thick] (0, 0) -- (2, 2);
+			\draw[mkblue, dashed, thick] (0, 0) -- (2, -2);
 
 			\node[above right] at (axis cs: 2, 2) {\( z=a+ib \)};
 			\node[below right] at (axis cs: 2, -2) {\( z=a-ib \)};
@@ -87,8 +87,8 @@ Imaginäre Zahlen setzen sich aus einem Imaginärteil und einem Realteil zusamme
 				xlabel={\( \mathrm{Re}(z) \)},
 				ylabel={\( \mathrm{Im}(z) \)}
 			]
-			\addplot[mark=x] coordinates {(2, 2)};
-			\addplot[mark=x] coordinates {(2, -2)};
+			\addplot[mkblue, thick, mark=x] coordinates {(2, 2)};
+			\addplot[mkblue, thick, mark=x] coordinates {(2, -2)};
 
 			\draw (2, -0.1) -- (2, 0.1);
 			\draw (-0.1, 2) -- (0.1, 2);
@@ -98,16 +98,17 @@ Imaginäre Zahlen setzen sich aus einem Imaginärteil und einem Realteil zusamme
 			\node[left] at (axis cs: 0, -2) {\( -b \)};
 			\node[below] at (axis cs: 2, 0) {\( a \)};
 
-			\draw[dotted, thick] (0, 0) -- (2, 2);
-			\draw[dotted, thick] (0, 2) -- (2, 2);
-			\draw[dotted, thick] (2, 0) -- (2, 2);
+			\draw[mkblue, dashed, thick] (0, 0) -- (2, 2);
+
+			\draw[mkred, dashed, thick] (0, 2) -- (2, 2);
+			\draw[mkgreen, dashed, thick] (2, 0) -- (2, 2);
 
 			\node[above right] at (axis cs: 2, 2) {\( z=a+ib \)};
-			\node[right] at (axis cs: 2, 1) {\( r \cdot \sin \varphi \)};
-			\node[above] at (axis cs: 1, 2) {\( r \cdot \cos \varphi \)};
+			\node[mkgreen, right] at (axis cs: 2, 1) {\( r \cdot \sin \varphi \)};
+			\node[mkred, above] at (axis cs: 1, 2) {\( r \cdot \cos \varphi \)};
 			\node[below right] at (axis cs: 2, -2) {\( z=a-ib \)};
 			\node[below] at (axis cs: 0.6, 0.6) {\( \varphi \)};
-			\node[above, rotate=45] at (axis cs: 1, 1) {\( |z|=r \)};
+			\node[mkblue, above, rotate=45] at (axis cs: 1, 1) {\( |z|=r \)};
 
 			\draw[->] (1, 0) arc (0 : 45 : 1);
 		\end{axis}
