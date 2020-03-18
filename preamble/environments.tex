@@ -62,11 +62,11 @@
 }
 
 % Für array Umgebungen mit displaystyle math
-\newenvironment{bigarray} {
+\newenvironment{bigarray}[1] {
 	\everymath={\displaystyle}
 	\renewcommand{\arraystretch}{2.5}
-	\[
+	\begin{array}{#1}	
 }
 {
-	\]
+	\end{array}
 }
