@@ -1,6 +1,6 @@
 % Box für Übungen
 \newenvironment{uebung}[1][\unskip]{
-	\begin{tcolorbox}[sharp corners, colback=white, colframe=orange, title=Übung #1]
+	\begin{tcolorbox}[sharp corners, colback=white, colframe=orange, title=\textbf{Übung #1}]
 		}
 		{
 	\end{tcolorbox}
@@ -65,7 +65,7 @@
 \newenvironment{bigarray}[1] {
 	\everymath={\displaystyle}
 	\renewcommand{\arraystretch}{2.5}
-	\begin{array}{#1}	
+	\begin{array}{#1}
 }
 {
 	\end{array}

@@ -85,47 +85,68 @@
 	% \caption{}
 \end{figure}
 
-\begin{uebung}[1]
-	\begin{equation*}
-		\begin{array}{lrl}
-			                & 9^{x-1}       & = 27          \\
-			\Leftrightarrow & 9^{x-1}       & = 3^3         \\
-			\Leftrightarrow & {(3^2)}^{x-1} & = 3^3         \\
-			\Leftrightarrow & 3^{2x-2}      & = 3^3         \\
-			\Rightarrow     & 2x-2          & = 3           \\
-			\Leftrightarrow & 2x            & = 5           \\
-			\Leftrightarrow & x             & = \frac{5}{2}
-		\end{array}
-	\end{equation*}
-\end{uebung}
+\begin{uebung}
+	\begin{question}
+		\[
+			9^{x-1} = 27
+		\]
+	\end{question}
 
-\begin{uebung}[2]
-	\begin{equation*}
-		\begin{array}{lrl}
-			                & {\left(\frac{4}{9}\right)}^{x-2}                    & = \frac{8}{27} \\
-			\Leftrightarrow & {\left(\frac{4}{9}\right)}^{x-2}                    & =
-			{\left(\frac{2}{3}\right)}^{3}                                                         \\
-			\Leftrightarrow & {\left({\left(\frac{2}{3}\right)}^{2}\right)}^{x-2} & =
-			{\left(\frac{2}{3}\right)}^{3}                                                         \\
-			\Leftrightarrow & {\left(\frac{2}{3}\right)}^{2x-4}                   & =
-			{\left(\frac{2}{3}\right)}^{3}                                                         \\
-			\Rightarrow     & 2x-4                                                & = 3            \\
-			\Leftrightarrow & 2x                                                  & = 7            \\
-			\Leftrightarrow & x                                                   & = \frac{7}{2}
-		\end{array}
-	\end{equation*}
-\end{uebung}
+	\begin{solution}
+		\begin{equation*}
+			\begin{array}{lrl}
+				                & 9^{x-1}       & = 27          \\
+				\Leftrightarrow & 9^{x-1}       & = 3^3         \\
+				\Leftrightarrow & {(3^2)}^{x-1} & = 3^3         \\
+				\Leftrightarrow & 3^{2x-2}      & = 3^3         \\
+				\Rightarrow     & 2x-2          & = 3           \\
+				\Leftrightarrow & 2x            & = 5           \\
+				\Leftrightarrow & x             & = \frac{5}{2}
+			\end{array}
+		\end{equation*}
+	\end{solution}
 
-\begin{uebung}[3]
-	\begin{equation*}
-		\begin{array}{lrlr}
-			                & 8 \cdot 9^{x-3} + 4^{x-3}     & = 3^{2x-4}                                    &                            \\
-			\Leftrightarrow & 8 \cdot 3^{2x-9} + 4^{x-3}    & = 3^{2x-4}                                    &                            \\
-			\Leftrightarrow & 2^3 \cdot 3^{2x-9} + 2^{2x-6} & = 3^{2x-4}                                    & \mid -(2^3 \cdot 3^{2x-9}) \\
-			\Leftrightarrow & 2^{2x-6}                      & = 3^{2x-4} - 2^3 \cdot 3^{2x-9}               &                            \\
-			\Leftrightarrow & 2^{2x-6}                      & = 3^{2} \cdot 3^{2x-6} - 2^{3} \cdot 3^{2x-9}                              \\
-			\Leftrightarrow & 2^{2x-6}                      & = (3^2 - 2^3)
-			% TODO: siehe Zettel - ergänzen 
-		\end{array}
-	\end{equation*}
+	\begin{question}
+		\[
+			{\left(\frac{4}{9}\right)}^{x-2} = \frac{8}{27}
+		\]
+	\end{question}
+
+	\begin{solution}
+		\begin{equation*}
+			\begin{array}{lrl}
+				                & {\left(\frac{4}{9}\right)}^{x-2}                    & = \frac{8}{27} \\
+				\Leftrightarrow & {\left(\frac{4}{9}\right)}^{x-2}                    & =
+				{\left(\frac{2}{3}\right)}^{3}                                                         \\
+				\Leftrightarrow & {\left({\left(\frac{2}{3}\right)}^{2}\right)}^{x-2} & =
+				{\left(\frac{2}{3}\right)}^{3}                                                         \\
+				\Leftrightarrow & {\left(\frac{2}{3}\right)}^{2x-4}                   & =
+				{\left(\frac{2}{3}\right)}^{3}                                                         \\
+				\Rightarrow     & 2x-4                                                & = 3            \\
+				\Leftrightarrow & 2x                                                  & = 7            \\
+				\Leftrightarrow & x                                                   & = \frac{7}{2}
+			\end{array}
+		\end{equation*}
+	\end{solution}
+
+	% Momentan auskommentier, da nicht vollständig
+	% \begin{question}
+	% 	\[
+	% 		8 \cdot 9^{x-3} + 4^{x-3} = 3^{2x-4}
+	% 	\]
+	% \end{question}
+	%
+	% \begin{solution}
+	% 	\begin{equation*}
+	% 		\begin{array}{lrlr}
+	% 			                & 8 \cdot 9^{x-3} + 4^{x-3}     & = 3^{2x-4}                                    &                            \\
+	% 			\Leftrightarrow & 8 \cdot 3^{2x-9} + 4^{x-3}    & = 3^{2x-4}                                    &                            \\
+	% 			\Leftrightarrow & 2^3 \cdot 3^{2x-9} + 2^{2x-6} & = 3^{2x-4}                                    & \mid -(2^3 \cdot 3^{2x-9}) \\
+	% 			\Leftrightarrow & 2^{2x-6}                      & = 3^{2x-4} - 2^3 \cdot 3^{2x-9}               &                            \\
+	% 			\Leftrightarrow & 2^{2x-6}                      & = 3^{2} \cdot 3^{2x-6} - 2^{3} \cdot 3^{2x-9}                              \\
+	% 			\Leftrightarrow & 2^{2x-6}                      & = (3^2 - 2^3)
+	% 			% TODO: siehe Zettel - ergänzen
+	% 		\end{array}
+	% 	\end{equation*}
+	% \end{solution}
 \end{uebung}
