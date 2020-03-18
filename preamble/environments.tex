@@ -1,25 +1,10 @@
 % Box für Übungen
-\newenvironment{uebung}[1][\unskip]{
-	\begin{tcolorbox}[sharp corners, colback=white, colframe=orange, title=\textbf{Übung #1}]
+\newenvironment{uebung}{
+	\begin{tcolorbox}[sharp corners, colback=white, colframe=orange, title=\textbf{Übung}]
 		}
 		{
 	\end{tcolorbox}
 }
-
-% "Box" für Aufgabe
-\newenvironment{aufgabe}{
-	\paragraph{Aufgabe}
-}{}
-
-% "Box" für Lösungsweg
-\newenvironment{loesungsweg}{
-	\paragraph{Lösungsweg}
-}{}
-
-% "Box" für Lösung
-\newenvironment{loesung}{
-	\paragraph{Lösung}
-}{}
 
 % Box für Gesetze, die hervorgehoben werden sollen
 \newenvironment{gesetz}{
@@ -66,7 +51,7 @@
 	\everymath={\displaystyle}
 	\renewcommand{\arraystretch}{2.5}
 	\begin{array}{#1}
-}
-{
+		}
+		{
 	\end{array}
 }
