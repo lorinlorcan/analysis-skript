@@ -3,9 +3,10 @@
 ## [latest]
 
 - Behebt kleine mathematische Fehler
+- Setzt blau als Primärfarbe ein
 - Verschönert ein paar Graphen
 - Verbessert einige Zwischenräume
-- Nutzt für die ersten Aufgaben ein System, so dass die Lösungen nach hinten geschrieben werden
+- Schreibt die Lösungen von Übungen nach hinten
 
 ## [v0.9]
 
