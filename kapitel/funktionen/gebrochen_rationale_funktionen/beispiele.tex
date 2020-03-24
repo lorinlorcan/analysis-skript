@@ -17,8 +17,8 @@ punktsymmetrisch
 				ymin=-4.2, ymax=4.2,
 				width=6cm
 			]
-			\draw [orange, smooth, samples=100, domain=-4:-1/100] plot (\x, {1 / \x});
-			\draw [orange, smooth, samples=100, domain=1/100:4] plot (\x, {1 / \x});
+			\draw [color1, smooth, samples=100, domain=-4:-1/100] plot (\x, {1 / \x});
+			\draw [color1, smooth, samples=100, domain=1/100:4] plot (\x, {1 / \x});
 		\end{axis}
 	\end{tikzpicture}
 	\caption{\(f(x) = \frac{1}{x}\)}\label{fig:gebrochenefunktionen_beispiel1}
@@ -41,9 +41,9 @@ achsensymmetrisch
 				ymin=-4.2, ymax=4.2,
 				width=6cm
 			]
-			\draw [orange, smooth, samples=100, domain=-4:-1/10] plot (\x, {1 /
+			\draw [color1, smooth, samples=100, domain=-4:-1/10] plot (\x, {1 /
 					(pow(\x, 2))});
-			\draw [orange, smooth, samples=100, domain=1/10:4] plot (\x, {1 /
+			\draw [color1, smooth, samples=100, domain=1/10:4] plot (\x, {1 /
 					(pow(\x, 2))});
 		\end{axis}
 	\end{tikzpicture}
@@ -65,9 +65,9 @@ achsensymmetrisch
 				ymin=-4.2, ymax=4.2,
 				width=6cm
 			]
-			\draw [orange, smooth, samples=100, domain=-4:9/10] plot (\x, {1 /
+			\draw [color1, smooth, samples=100, domain=-4:9/10] plot (\x, {1 /
 					(pow((\x - 1), 2))});
-			\draw [orange, smooth, samples=100, domain=11/10:4] plot (\x, {1 /
+			\draw [color1, smooth, samples=100, domain=11/10:4] plot (\x, {1 /
 					(pow((\x - 1), 2))});
 			\draw[dashed, gray] (1, -4) -- (1, 4);
 		\end{axis}

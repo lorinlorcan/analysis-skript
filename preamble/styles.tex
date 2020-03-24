@@ -4,6 +4,10 @@
 \definecolor{mkyellow}{RGB}{237,162,9}
 \definecolor{mkred}{RGB}{214,0,113}
 
+\definecolor{color1}{named}{mkblue}
+\definecolor{color2}{named}{orange}
+\definecolor{color3}{named}{mkgreen}
+
 % Basisstil für TikZ-Graphen
 \pgfplotsset{defaultpure/.style={
 			xmin=-4.2, xmax=4.2,
@@ -27,10 +31,9 @@
 			unit vector ratio*=1 1 1
 		}}
 
-% Graphenstil, der nicht beschriftete Achsen hat 
+% Graphenstil, der nicht beschriftete Achsen hat
 \pgfplotsset{defaultnonumbers/.style={
 			default,
 			xticklabels={},
 			yticklabels={}
 		}}
-

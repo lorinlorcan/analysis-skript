@@ -18,7 +18,7 @@
 			"\t\tymin=$3, ymax=$4,",
 			"\t\twidth=$5cm,",
 			"\t]",
-			"\t\t\\addplot[orange, smooth, samples=100, domain=$1:$2]",
+			"\t\t\\addplot[color1, smooth, samples=100, domain=$1:$2]",
 			"\t\t{$6};",
 			"\t\\end{axis}",
 			"\\end{tikzpicture}"

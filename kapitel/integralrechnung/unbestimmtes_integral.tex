@@ -12,14 +12,14 @@
 				xticklabels={},
 				yticklabels={}
 			]
-			\addplot[name path=e, orange, smooth, samples=100, domain=-2.5:4.5]
+			\addplot[name path=e, color1, smooth, samples=100, domain=-2.5:4.5]
 			{0.5*e^(0.5*x)};
 			\addplot[name path=o, transparent, smooth, samples=100, domain=-0.5:4.5]
 			{0};
 
-			\addplot[mkyellow, opacity=0.5]
+			\addplot[color2, opacity=0.5]
 			fill between [of=e and o, soft clip={domain=2.5:4}];
-			\addplot[mkblue, opacity=0.5]
+			\addplot[color3, opacity=0.5]
 			fill between [of=e and o, soft clip={domain=0.5:2.5}];
 
 			\draw (0.5, 0) -- (0.5, 0.6420);

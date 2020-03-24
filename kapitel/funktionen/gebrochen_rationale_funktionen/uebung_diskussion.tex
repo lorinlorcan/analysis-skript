@@ -38,8 +38,8 @@
 						ymin=-8.2, ymax=8.2,
 						width=8cm
 					]
-					\draw [orange, smooth, samples=100, domain=-8.2:0.9] plot (\x, {pow(\x, 3) / pow((\x - 1), 2)});
-					\draw [orange, smooth, samples=100, domain=1.1:8.2] plot (\x, {pow(\x, 3) / pow((\x - 1), 2)});
+					\draw [color1, smooth, samples=100, domain=-8.2:0.9] plot (\x, {pow(\x, 3) / pow((\x - 1), 2)});
+					\draw [color1, smooth, samples=100, domain=1.1:8.2] plot (\x, {pow(\x, 3) / pow((\x - 1), 2)});
 					\draw [dashed, cyan, samples=100, domain=-8.2:8.2] plot (\x, {\x+2});
 					\draw[dashed, gray] (1, -8.2) -- (1, 8.2);
 				\end{axis}
@@ -91,7 +91,7 @@
 						ylabel style={font=\tiny},
 						xlabel={x}, ylabel={y}
 					]
-					\draw [orange, smooth, samples=100, domain=-4:4] plot
+					\draw [color1, smooth, samples=100, domain=-4:4] plot
 					(\x, {pow(\x, 3) + pow(\x,2) - 8 * \x - 12});
 				\end{axis}
 			\end{tikzpicture}

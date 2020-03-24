@@ -18,7 +18,7 @@ ausschließlich geraden Exponetenten.
 				ymin=-2.2, ymax=6.2,
 				width=6cm
 			]
-			\addplot[orange, smooth, samples=100] {x^2};
+			\addplot[color1, smooth, samples=100] {x^2};
 			\draw[dotted, thick] (2,0) -- (2,4);
 			\draw[dotted, thick] (-2,0) -- (-2,4);
 			\draw[dotted, thick] (-2,4) -- (2,4);
@@ -48,7 +48,7 @@ ausschließlich ungeraden Exponetenten.
 				ymin=-4.2, ymax=4.2,
 				width=6cm
 			]
-			\draw[orange, smooth, samples=100] plot (\x, {pow(\x, 3)});
+			\draw[color1, smooth, samples=100] plot (\x, {pow(\x, 3)});
 			\draw[dotted, thick] (1.5,0) -- (1.5,27/8);
 			\draw[dotted, thick] (-1.5,0) -- (-1.5,-27/8);
 			\draw[dotted, thick] (0,27/8) -- (1.5,27/8);

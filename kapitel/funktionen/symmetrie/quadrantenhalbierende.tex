@@ -19,11 +19,11 @@
 				ylabel style={font=\tiny},
 				xlabel={x}, ylabel={y}
 			]
-			\draw [orange, smooth, samples=100] plot (\x, {exp(\x)});
+			\draw [color1, smooth, samples=100] plot (\x, {exp(\x)});
 			\draw [cyan, smooth, samples=100, domain=1/100:5] plot (\x,
 			{ln(\x)});
 			\draw[dashed, thick] (-4,-4) -- (4,4);
-			\node[orange] at (axis cs: -2, 1) {\( f(x) \)};
+			\node[color1] at (axis cs: -2, 1) {\( f(x) \)};
 			\node[cyan] at (axis cs: 2, -1) {\( f^{-1}(x) \)};
 		\end{axis}
 	\end{tikzpicture}
@@ -81,10 +81,10 @@
 				ymin=-4.2, ymax=4.2,
 				width=4.4cm
 			]
-			\draw[orange] plot (\x, {2 * \x - 1});
+			\draw[color1] plot (\x, {2 * \x - 1});
 			\draw[cyan] plot (\x, {(\x + 1) / 2 });
 			\draw[dashed] (-4,-4) -- (4,4);
-			\node[orange] at (axis cs: 2, -1) {\( f(x) \)};
+			\node[color1] at (axis cs: 2, -1) {\( f(x) \)};
 			\node[cyan] at (axis cs: -2, 1) {\( f^{-1}(x) \)};
 		\end{axis}
 	\end{tikzpicture}
@@ -117,8 +117,8 @@
 				ymin=-10.2, ymax=10.2,
 				width=6.4cm
 			]
-			\draw[orange, smooth, samples=100, domain=-10:-1-1/10] plot (\x, {(5*\x)/(\x + 1)-2});
-			\draw[orange, smooth, samples=100, domain=-1+1/10:10] plot (\x, {(5*\x)/(\x + 1)-2});
+			\draw[color1, smooth, samples=100, domain=-10:-1-1/10] plot (\x, {(5*\x)/(\x + 1)-2});
+			\draw[color1, smooth, samples=100, domain=-1+1/10:10] plot (\x, {(5*\x)/(\x + 1)-2});
 			\draw[cyan, smooth, samples=100, domain=-10:3-1/10] plot (\x, {(\x + 2) / (3 - \x) });
 			\draw[cyan, smooth, samples=100, domain=3+1/10:10] plot (\x, {(\x + 2) / (3 - \x) });
 			\draw[dashed] (-10,-10) -- (10,10);
@@ -154,9 +154,9 @@
 				ymin=-10.2, ymax=10.2,
 				width=6.4cm
 			]
-			\draw[orange, smooth, samples=100, domain=-10:1-1/10] plot (\x,
+			\draw[color1, smooth, samples=100, domain=-10:1-1/10] plot (\x,
 			{(\x + 1)/(\x - 1)});
-			\draw[orange, smooth, samples=100, domain=1+1/10:10] plot (\x,
+			\draw[color1, smooth, samples=100, domain=1+1/10:10] plot (\x,
 			{(\x + 1)/(\x - 1)});
 			\draw[cyan, dashed, smooth, samples=100, domain=-10:1-1/10] plot (\x,
 			{(\x + 1)/(\x - 1)});

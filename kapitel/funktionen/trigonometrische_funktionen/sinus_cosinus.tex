@@ -9,8 +9,8 @@
 				ymin=-1.2, ymax=1.2,
 				width=12cm
 			]
-			\draw [mkgreen, smooth, samples=100, domain=-1.2:3*pi] plot (\x, {sin(\x r)});
-			\draw [mkblue, smooth, samples=100, domain=-1.2:3*pi] plot (\x, {cos(\x r)});
+			\draw [color1, smooth, samples=100, domain=-1.2:3*pi] plot (\x, {sin(\x r)});
+			\draw [color2, smooth, samples=100, domain=-1.2:3*pi] plot (\x, {cos(\x r)});
 
 			\draw[] (pi,-0.1) -- (pi,0.1);
 			\node[] at (axis cs: pi, 0.3) {\(\pi\)};
@@ -19,8 +19,8 @@
 		\end{axis}
 	\end{tikzpicture}
 	\caption{Sinus und Cosinus}
-	\textbf{\color{mkgreen}---} \(\sin(x)\)
-	\textbf{\color{mkblue}---} \(\cos(x)\)
+	\textbf{\color{color1}---} \(\sin(x)\)
+	\textbf{\color{color2}---} \(\cos(x)\)
 \end{figure}
 
 \begin{align*}

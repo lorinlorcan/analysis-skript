@@ -11,10 +11,10 @@
 				xticklabels={},
 				yticklabels={}
 			]
-			\addplot[mkblue, smooth, samples=100, domain=-1:4.5] {2};
-			\addplot[mkblue, dashed, smooth, samples=100, domain=-1:4.5] { (x-2) + 2};
-			\addplot[orange, smooth, samples=100, domain=-1:4.5] { (x-2)^2 + (x-2) + 2};
-			\addplot[orange, smooth, samples=100, domain=-1:4.5] {(x-2)^3 + (x-2)^2 + (x-2) + 2};
+			\addplot[color2, smooth, samples=100, domain=-1:4.5] {2};
+			\addplot[color2, dashed, smooth, samples=100, domain=-1:4.5] { (x-2) + 2};
+			\addplot[color1, smooth, samples=100, domain=-1:4.5] { (x-2)^2 + (x-2) + 2};
+			\addplot[color1, smooth, samples=100, domain=-1:4.5] {(x-2)^3 + (x-2)^2 + (x-2) + 2};
 
 			\node[left] at (-0.1, 2.2) {\( P_1 \)};
 			\node[left] at (-0.1, 0.2) {\( P_2 \)};

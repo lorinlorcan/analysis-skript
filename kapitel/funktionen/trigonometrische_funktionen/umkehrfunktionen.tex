@@ -19,8 +19,8 @@
 			\node at (axis cs: 0.2, 0.08) {x};
 			\draw (0.3,0) arc (0:39.81:0.3);
 
-			\draw[mkblue, thick] (1, 0) arc (0:39.81:1);
-			\node[mkblue, rotate=90] at (axis cs: 1.1, 0.25) {arcsin(x)};
+			\draw[color2, thick] (1, 0) arc (0:39.81:1);
+			\node[color2, rotate=90] at (axis cs: 1.1, 0.25) {arcsin(x)};
 			\draw[mkgreen, thick] (0.77,0) -- (0.77, 0.64);
 			\node[mkgreen, left] at (axis cs: 0.8, 0.25) {sin(x)};
 		\end{axis}
@@ -91,15 +91,15 @@
 			\draw[mkred, very thin, smooth, samples=100, domain=-4.2:4.2]
 			plot (\x, {cos(\x r)});
 
-			\draw[mkblue, very thick, smooth, samples=100, domain=-1:1]
+			\draw[color2, very thick, smooth, samples=100, domain=-1:1]
 			plot (\x, {rad(asin(\x))});
 
 			\draw[mkgreen, very thick, smooth, samples=100, domain=-1:1]
 			plot (\x, {rad(acos(\x))});
 
 			\draw[mkgreen, polstelle] (-2.2, pi) -- (4.2, pi);
-			\draw[mkblue, polstelle] (-2.2, pi/2) -- (4.2, pi/2);
-			\draw[mkblue, polstelle] (-2.2, -pi/2) -- (4.2, -pi/2);
+			\draw[color2, polstelle] (-2.2, pi/2) -- (4.2, pi/2);
+			\draw[color2, polstelle] (-2.2, -pi/2) -- (4.2, -pi/2);
 		\end{axis}
 	\end{tikzpicture}
 	\caption{Die Umkehrfunktionen zu Sinus und Cosinus}
