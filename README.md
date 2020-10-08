@@ -28,6 +28,10 @@ Folgendes sollte installiert sein:
 - TexLive (vollständig) 
 - Python 3.7
 
+*Wenn diese Abhängigkeiten installiert sind, dann kann der Rest über `make` geregelt werden. Der Befehl `make pdf` installiert die fehlenden Python-Bibliotheken, plottet die externen Graphen und baut ein PDF.*
+
+*Für die weiteren definierten Ziele für make siehe `make help`*
+
 Python Abhängigkeiten:
 
 ```console
