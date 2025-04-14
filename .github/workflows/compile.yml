@@ -15,9 +15,9 @@ jobs:
       matrix:
         python-version: [3.9]
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
         cache: 'pip'
@@ -36,7 +36,7 @@ jobs:
       run: |
         sed -i "s/\\\\newcommand{\\\\version}{}/\\\\newcommand{\\\\version}{$(git rev-parse --short HEAD)}/" config.tex
     - name: Compile LaTeX document (classic)
-      uses: xu-cheng/latex-action@master
+      uses: xu-cheng/latex-action@v3
       with:
         root_file: main.tex
     - name: Rename document
@@ -45,7 +45,7 @@ jobs:
     - id: getfilenamenormal
       run: echo "::set-output name=file::$(ls Analysis-Skript-*-Classic.pdf)"
     - name: Upload document (Classic)
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: Analysis-Skript-Classic
         path: ${{ steps.getfilenamenormal.outputs.file }}
@@ -53,7 +53,7 @@ jobs:
       run: |
         sed -i 's/\\notesfalse/\\notestrue/' config.tex
     - name: Compile LaTeX document (for notes)
-      uses: xu-cheng/latex-action@master
+      uses: xu-cheng/latex-action@v3
       with:
         root_file: main.tex
     - name: Rename document
@@ -62,7 +62,7 @@ jobs:
     - id: getfilenamenotes
       run: echo "::set-output name=file::$(ls Analysis-Skript-*-Notizrand.pdf)"
     - name: Upload document (Notes)
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: Analysis-Skript-Notes
         path: ${{ steps.getfilenamenotes.outputs.file }}
