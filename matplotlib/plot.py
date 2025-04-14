@@ -2,7 +2,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d import axes3d
 
 
 def plot_example(filename):
@@ -17,7 +17,8 @@ def plot_example(filename):
     Y = np.arange(-axis_limit, axis_limit, steps)
     X, Y = np.meshgrid(X, Y)
 
-    ax = Axes3D(plt.figure(figsize=(3, 3)))
+    ax = plt.figure(figsize=(3,3)).add_subplot(projection='3d')
+
     ticks = [i for i in range(-axis_limit, axis_limit + 1, axis_limit // 2)]
     ax.set_xticks(ticks)
     ax.set_yticks(ticks)
