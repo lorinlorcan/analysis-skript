@@ -29,7 +29,7 @@ githash:
 help:
 	@echo "REQUIREMENTS:"
 	@echo "  - texlive (or a similiar TeX-Distribution)"
-	@echo "  - python 3.7+"
+	@echo "  - python 3.13+"
 	@echo
 	@echo "TARGETS:"
 	@echo "  all"
