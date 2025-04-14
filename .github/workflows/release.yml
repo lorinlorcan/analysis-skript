@@ -12,9 +12,9 @@ jobs:
       matrix:
         python-version: [3.9]
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
         cache: 'pip'
@@ -33,7 +33,7 @@ jobs:
       run: |
         sed -i "s/\\\\newcommand{\\\\version}{}/\\\\newcommand{\\\\version}{${GITHUB_REF##*/}}/" config.tex
     - name: Compile document (classic)
-      uses: xu-cheng/latex-action@master
+      uses: xu-cheng/latex-action@v3
       with:
         root_file: main.tex
     - name: Rename document (classic)
@@ -43,7 +43,7 @@ jobs:
       run: |
         sed -i 's/\\notesfalse/\\notestrue/' config.tex
     - name: Compile document (notes)
-      uses: xu-cheng/latex-action@master
+      uses: xu-cheng/latex-action@v3
       with:
         root_file: main.tex
     - name: Rename document (notes)

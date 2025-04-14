@@ -9,6 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: LaTeX linter (chktex)
-      uses: j2kun/chktex-action@v1.0.2
+      uses: j2kun/chktex-action@v2
